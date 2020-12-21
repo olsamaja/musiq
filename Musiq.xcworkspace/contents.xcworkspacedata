@@ -4,4 +4,7 @@
    <FileRef
       location = "group:MusiqApp/MusiqApp.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MusiqCore/MusiqCore.xcodeproj">
+   </FileRef>
 </Workspace>
