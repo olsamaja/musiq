@@ -8,7 +8,7 @@
 import Foundation
 import Logging
 
-struct OLLogger {
+public struct OLLogger {
     
     private static var shared = OLLogger()
     private lazy var logger = {

@@ -15,6 +15,8 @@
 		7D833FC425916A940093B94C /* MusiqAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D833FC325916A940093B94C /* MusiqAppUITests.swift */; };
 		7D833FFC25916C200093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FFB25916C200093B94C /* MusiqCore.framework */; };
 		7D833FFD25916C200093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FFB25916C200093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D834051259171870093B94C /* MusiqShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834050259171870093B94C /* MusiqShared.framework */; };
+		7D834052259171870093B94C /* MusiqShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834050259171870093B94C /* MusiqShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7D833FFD25916C200093B94C /* MusiqCore.framework in Embed Frameworks */,
+				7D834052259171870093B94C /* MusiqShared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		7D833FC325916A940093B94C /* MusiqAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqAppUITests.swift; sourceTree = "<group>"; };
 		7D833FC525916A940093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D833FFB25916C200093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D834050259171870093B94C /* MusiqShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D833FFC25916C200093B94C /* MusiqCore.framework in Frameworks */,
+				7D834051259171870093B94C /* MusiqShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +157,7 @@
 		7D833FFA25916C200093B94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D834050259171870093B94C /* MusiqShared.framework */,
 				7D833FFB25916C200093B94C /* MusiqCore.framework */,
 			);
 			name = Frameworks;

@@ -1,14 +1,14 @@
 //
-//  MusiqCoreTests.swift
-//  MusiqCoreTests
+//  MusiqSharedTests.swift
+//  MusiqSharedTests
 //
-//  Created by Olivier Rigault on 21/12/2020.
+//  Created by Olivier Rigault on 22/12/2020.
 //
 
 import XCTest
-@testable import MusiqCore
+@testable import MusiqShared
 
-class MusiqCoreTests: XCTestCase {
+class MusiqSharedTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

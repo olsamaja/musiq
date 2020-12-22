@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
-		7D833FED25916B670093B94C /* MusiqCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D833FEC25916B670093B94C /* MusiqCoreTests.swift */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D83400125916C7C0093B94C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D83400025916C7C0093B94C /* Logging */; };
 		7D83400725916CE40093B94C /* OLLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83400625916CE40093B94C /* OLLogger.swift */; };
@@ -37,7 +36,6 @@
 		7D833FE125916B670093B94C /* MusiqCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqCore.h; sourceTree = "<group>"; };
 		7D833FE225916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D833FE725916B670093B94C /* MusiqCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D833FEC25916B670093B94C /* MusiqCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqCoreTests.swift; sourceTree = "<group>"; };
 		7D833FEE25916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D83400625916CE40093B94C /* OLLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLLogger.swift; sourceTree = "<group>"; };
 		7D83400A25916D140093B94C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 		7D833FEB25916B670093B94C /* MusiqCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				7D833FEC25916B670093B94C /* MusiqCoreTests.swift */,
 				7D83400E25916D4E0093B94C /* BundleExtensionsTests.swift */,
 				7D83401625916DDE0093B94C /* StringExtensionsTests.swift */,
 				7D83402225916EFC0093B94C /* DataExtensionsTests.swift */,
@@ -245,7 +242,6 @@
 			files = (
 				7D83401725916DDE0093B94C /* StringExtensionsTests.swift in Sources */,
 				7D83402325916EFC0093B94C /* DataExtensionsTests.swift in Sources */,
-				7D833FED25916B670093B94C /* MusiqCoreTests.swift in Sources */,
 				7D83400F25916D4E0093B94C /* BundleExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
