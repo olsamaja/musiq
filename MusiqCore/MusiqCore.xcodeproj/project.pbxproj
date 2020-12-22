@@ -3,13 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
 		7D833FED25916B670093B94C /* MusiqCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D833FEC25916B670093B94C /* MusiqCoreTests.swift */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D83400125916C7C0093B94C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D83400025916C7C0093B94C /* Logging */; };
+		7D83400725916CE40093B94C /* OLLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83400625916CE40093B94C /* OLLogger.swift */; };
+		7D83400B25916D140093B94C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83400A25916D140093B94C /* Bundle+Extensions.swift */; };
+		7D83400F25916D4E0093B94C /* BundleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83400E25916D4E0093B94C /* BundleExtensionsTests.swift */; };
+		7D83401325916DAB0093B94C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83401225916DAB0093B94C /* String+Extensions.swift */; };
+		7D83401725916DDE0093B94C /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83401625916DDE0093B94C /* StringExtensionsTests.swift */; };
+		7D83401B25916E410093B94C /* prettySample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D83401A25916E410093B94C /* prettySample.json */; };
+		7D83401F25916EB90093B94C /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83401E25916EB90093B94C /* Data+Extensions.swift */; };
+		7D83402325916EFC0093B94C /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83402225916EFC0093B94C /* DataExtensionsTests.swift */; };
+		7D83402725916F350093B94C /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D83402625916F350093B94C /* sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,15 @@
 		7D833FE725916B670093B94C /* MusiqCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D833FEC25916B670093B94C /* MusiqCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqCoreTests.swift; sourceTree = "<group>"; };
 		7D833FEE25916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D83400625916CE40093B94C /* OLLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLLogger.swift; sourceTree = "<group>"; };
+		7D83400A25916D140093B94C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		7D83400E25916D4E0093B94C /* BundleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionsTests.swift; sourceTree = "<group>"; };
+		7D83401225916DAB0093B94C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7D83401625916DDE0093B94C /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
+		7D83401A25916E410093B94C /* prettySample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prettySample.json; sourceTree = "<group>"; };
+		7D83401E25916EB90093B94C /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		7D83402225916EFC0093B94C /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
+		7D83402625916F350093B94C /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83400125916C7C0093B94C /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +93,10 @@
 			children = (
 				7D833FE125916B670093B94C /* MusiqCore.h */,
 				7D833FE225916B670093B94C /* Info.plist */,
+				7D83400625916CE40093B94C /* OLLogger.swift */,
+				7D83400A25916D140093B94C /* Bundle+Extensions.swift */,
+				7D83401E25916EB90093B94C /* Data+Extensions.swift */,
+				7D83401225916DAB0093B94C /* String+Extensions.swift */,
 			);
 			path = MusiqCore;
 			sourceTree = "<group>";
@@ -81,6 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				7D833FEC25916B670093B94C /* MusiqCoreTests.swift */,
+				7D83400E25916D4E0093B94C /* BundleExtensionsTests.swift */,
+				7D83401625916DDE0093B94C /* StringExtensionsTests.swift */,
+				7D83402225916EFC0093B94C /* DataExtensionsTests.swift */,
+				7D83401A25916E410093B94C /* prettySample.json */,
+				7D83402625916F350093B94C /* sample.json */,
 				7D833FEE25916B670093B94C /* Info.plist */,
 			);
 			path = MusiqCoreTests;
@@ -114,6 +143,9 @@
 			dependencies = (
 			);
 			name = MusiqCore;
+			packageProductDependencies = (
+				7D83400025916C7C0093B94C /* Logging */,
+			);
 			productName = MusiqCore;
 			productReference = 7D833FDE25916B670093B94C /* MusiqCore.framework */;
 			productType = "com.apple.product-type.framework";
@@ -147,6 +179,7 @@
 				TargetAttributes = {
 					7D833FDD25916B670093B94C = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					7D833FE625916B670093B94C = {
 						CreatedOnToolsVersion = 12.3;
@@ -162,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 7D833FD425916B670093B94C;
+			packageReferences = (
+				7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			productRefGroup = 7D833FDF25916B670093B94C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83401B25916E410093B94C /* prettySample.json in Resources */,
+				7D83402725916F350093B94C /* sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83400725916CE40093B94C /* OLLogger.swift in Sources */,
+				7D83401F25916EB90093B94C /* Data+Extensions.swift in Sources */,
+				7D83401325916DAB0093B94C /* String+Extensions.swift in Sources */,
+				7D83400B25916D140093B94C /* Bundle+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83401725916DDE0093B94C /* StringExtensionsTests.swift in Sources */,
+				7D83402325916EFC0093B94C /* DataExtensionsTests.swift in Sources */,
 				7D833FED25916B670093B94C /* MusiqCoreTests.swift in Sources */,
+				7D83400F25916D4E0093B94C /* BundleExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +386,7 @@
 		7D833FF325916B670093B94C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
@@ -357,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +412,7 @@
 		7D833FF425916B670093B94C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
@@ -389,6 +437,7 @@
 		7D833FF625916B670093B94C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
 				INFOPLIST_FILE = MusiqCoreTests/Info.plist;
@@ -407,6 +456,7 @@
 		7D833FF725916B670093B94C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
 				INFOPLIST_FILE = MusiqCoreTests/Info.plist;
@@ -453,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D83400025916C7C0093B94C /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D833FD525916B670093B94C /* Project object */;
 }
