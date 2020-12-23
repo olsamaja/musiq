@@ -7,218 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D83403E259171650093B94C /* MusiqShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834034259171650093B94C /* MusiqShared.framework */; };
-		7D834043259171650093B94C /* MusiqSharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D834042259171650093B94C /* MusiqSharedTests.swift */; };
-		7D834045259171650093B94C /* MusiqShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D834037259171650093B94C /* MusiqShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D834055259171980093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; };
-		7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83405B2591730F0093B94C /* Data+Decode.swift */; };
-		7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D834060259173670093B94C /* URLSession+Extensions.swift */; };
-		7D8340642591749E0093B94C /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8340632591749E0093B94C /* DataError.swift */; };
-		7DDE3A4925929369005750CC /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A4825929369005750CC /* DataFetcher.swift */; };
+		7DDE3A63259298EC005750CC /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */; };
+		7DDE3A68259298EC005750CC /* ApiDataNetworkConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */; };
+		7DDE3A6A259298EC005750CC /* MusiqConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DDE3A762592992C005750CC /* ApiDataNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D83403F259171650093B94C /* PBXContainerItemProxy */ = {
+		7DDE3A64259298EC005750CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7D83402B259171650093B94C /* Project object */;
+			containerPortal = 7DDE3A50259298EC005750CC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D834033259171650093B94C;
-			remoteInfo = MusiqShared;
+			remoteGlobalIDString = 7DDE3A58259298EC005750CC;
+			remoteInfo = MusiqConfiguration;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		7D834057259171980093B94C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		7D834034259171650093B94C /* MusiqShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D834037259171650093B94C /* MusiqShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqShared.h; sourceTree = "<group>"; };
-		7D834038259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D83403D259171650093B94C /* MusiqSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D834042259171650093B94C /* MusiqSharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqSharedTests.swift; sourceTree = "<group>"; };
-		7D834044259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D834054259171980093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D83405B2591730F0093B94C /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
-		7D834060259173670093B94C /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
-		7D8340632591749E0093B94C /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
-		7DDE3A4825929369005750CC /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTest.xcconfig; sourceTree = "<group>"; };
+		7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqConfiguration.h; sourceTree = "<group>"; };
+		7DDE3A5D259298EC005750CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DDE3A62259298EC005750CC /* MusiqConfigurationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqConfigurationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfigurationTests.swift; sourceTree = "<group>"; };
+		7DDE3A69259298EC005750CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D834031259171650093B94C /* Frameworks */ = {
+		7DDE3A56259298EC005750CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D834055259171980093B94C /* MusiqCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D83403A259171650093B94C /* Frameworks */ = {
+		7DDE3A5F259298EC005750CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D83403E259171650093B94C /* MusiqShared.framework in Frameworks */,
+				7DDE3A63259298EC005750CC /* MusiqConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D83402A259171650093B94C = {
+		7DDE3A4F259298EC005750CC = {
 			isa = PBXGroup;
 			children = (
-				7D834036259171650093B94C /* MusiqShared */,
-				7D834041259171650093B94C /* MusiqSharedTests */,
-				7D834035259171650093B94C /* Products */,
-				7D834053259171980093B94C /* Frameworks */,
+				7DDE3A5B259298EC005750CC /* MusiqConfiguration */,
+				7DDE3A66259298EC005750CC /* MusiqConfigurationTests */,
+				7DDE3A5A259298EC005750CC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7D834035259171650093B94C /* Products */ = {
+		7DDE3A5A259298EC005750CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D834034259171650093B94C /* MusiqShared.framework */,
-				7D83403D259171650093B94C /* MusiqSharedTests.xctest */,
+				7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */,
+				7DDE3A62259298EC005750CC /* MusiqConfigurationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D834036259171650093B94C /* MusiqShared */ = {
+		7DDE3A5B259298EC005750CC /* MusiqConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				7D834037259171650093B94C /* MusiqShared.h */,
-				7D834038259171650093B94C /* Info.plist */,
-				7D83405E2591731A0093B94C /* Network */,
+				7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */,
+				7DDE3A5D259298EC005750CC /* Info.plist */,
+				7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */,
 			);
-			path = MusiqShared;
+			path = MusiqConfiguration;
 			sourceTree = "<group>";
 		};
-		7D834041259171650093B94C /* MusiqSharedTests */ = {
+		7DDE3A66259298EC005750CC /* MusiqConfigurationTests */ = {
 			isa = PBXGroup;
 			children = (
-				7D834042259171650093B94C /* MusiqSharedTests.swift */,
-				7D834044259171650093B94C /* Info.plist */,
+				7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */,
+				7DDE3A69259298EC005750CC /* Info.plist */,
+				7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */,
 			);
-			path = MusiqSharedTests;
-			sourceTree = "<group>";
-		};
-		7D834053259171980093B94C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7D834054259171980093B94C /* MusiqCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7D83405E2591731A0093B94C /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				7D834066259174AE0093B94C /* API */,
-				7D8340682591E0FC0093B94C /* Helpers */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		7D834066259174AE0093B94C /* API */ = {
-			isa = PBXGroup;
-			children = (
-				7DDE3A4825929369005750CC /* DataFetcher.swift */,
-				7D8340632591749E0093B94C /* DataError.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		7D8340682591E0FC0093B94C /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7D83405B2591730F0093B94C /* Data+Decode.swift */,
-				7D834060259173670093B94C /* URLSession+Extensions.swift */,
-			);
-			path = Helpers;
+			path = MusiqConfigurationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7D83402F259171650093B94C /* Headers */ = {
+		7DDE3A54259298EC005750CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D834045259171650093B94C /* MusiqShared.h in Headers */,
+				7DDE3A6A259298EC005750CC /* MusiqConfiguration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7D834033259171650093B94C /* MusiqShared */ = {
+		7DDE3A58259298EC005750CC /* MusiqConfiguration */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqShared" */;
+			buildConfigurationList = 7DDE3A6D259298EC005750CC /* Build configuration list for PBXNativeTarget "MusiqConfiguration" */;
 			buildPhases = (
-				7D83402F259171650093B94C /* Headers */,
-				7D834030259171650093B94C /* Sources */,
-				7D834031259171650093B94C /* Frameworks */,
-				7D834032259171650093B94C /* Resources */,
-				7D834057259171980093B94C /* Embed Frameworks */,
+				7DDE3A54259298EC005750CC /* Headers */,
+				7DDE3A55259298EC005750CC /* Sources */,
+				7DDE3A56259298EC005750CC /* Frameworks */,
+				7DDE3A57259298EC005750CC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MusiqShared;
-			productName = MusiqShared;
-			productReference = 7D834034259171650093B94C /* MusiqShared.framework */;
+			name = MusiqConfiguration;
+			productName = MusiqConfiguration;
+			productReference = 7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7D83403C259171650093B94C /* MusiqSharedTests */ = {
+		7DDE3A61259298EC005750CC /* MusiqConfigurationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqSharedTests" */;
+			buildConfigurationList = 7DDE3A70259298EC005750CC /* Build configuration list for PBXNativeTarget "MusiqConfigurationTests" */;
 			buildPhases = (
-				7D834039259171650093B94C /* Sources */,
-				7D83403A259171650093B94C /* Frameworks */,
-				7D83403B259171650093B94C /* Resources */,
+				7DDE3A5E259298EC005750CC /* Sources */,
+				7DDE3A5F259298EC005750CC /* Frameworks */,
+				7DDE3A60259298EC005750CC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D834040259171650093B94C /* PBXTargetDependency */,
+				7DDE3A65259298EC005750CC /* PBXTargetDependency */,
 			);
-			name = MusiqSharedTests;
-			productName = MusiqSharedTests;
-			productReference = 7D83403D259171650093B94C /* MusiqSharedTests.xctest */;
+			name = MusiqConfigurationTests;
+			productName = MusiqConfigurationTests;
+			productReference = 7DDE3A62259298EC005750CC /* MusiqConfigurationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D83402B259171650093B94C /* Project object */ = {
+		7DDE3A50259298EC005750CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					7D834033259171650093B94C = {
+					7DDE3A58259298EC005750CC = {
 						CreatedOnToolsVersion = 12.3;
 						LastSwiftMigration = 1230;
 					};
-					7D83403C259171650093B94C = {
+					7DDE3A61259298EC005750CC = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = 7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqShared" */;
+			buildConfigurationList = 7DDE3A53259298EC005750CC /* Build configuration list for PBXProject "MusiqConfiguration" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,26 +167,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D83402A259171650093B94C;
-			productRefGroup = 7D834035259171650093B94C /* Products */;
+			mainGroup = 7DDE3A4F259298EC005750CC;
+			productRefGroup = 7DDE3A5A259298EC005750CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D834033259171650093B94C /* MusiqShared */,
-				7D83403C259171650093B94C /* MusiqSharedTests */,
+				7DDE3A58259298EC005750CC /* MusiqConfiguration */,
+				7DDE3A61259298EC005750CC /* MusiqConfigurationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D834032259171650093B94C /* Resources */ = {
+		7DDE3A57259298EC005750CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D83403B259171650093B94C /* Resources */ = {
+		7DDE3A60259298EC005750CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,38 +196,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D834030259171650093B94C /* Sources */ = {
+		7DDE3A55259298EC005750CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */,
-				7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */,
-				7D8340642591749E0093B94C /* DataError.swift in Sources */,
-				7DDE3A4925929369005750CC /* DataFetcher.swift in Sources */,
+				7DDE3A762592992C005750CC /* ApiDataNetworkConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D834039259171650093B94C /* Sources */ = {
+		7DDE3A5E259298EC005750CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D834043259171650093B94C /* MusiqSharedTests.swift in Sources */,
+				7DDE3A68259298EC005750CC /* ApiDataNetworkConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D834040259171650093B94C /* PBXTargetDependency */ = {
+		7DDE3A65259298EC005750CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D834033259171650093B94C /* MusiqShared */;
-			targetProxy = 7D83403F259171650093B94C /* PBXContainerItemProxy */;
+			target = 7DDE3A58259298EC005750CC /* MusiqConfiguration */;
+			targetProxy = 7DDE3A64259298EC005750CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7D834046259171650093B94C /* Debug */ = {
+		7DDE3A6B259298EC005750CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -349,7 +288,7 @@
 			};
 			name = Debug;
 		};
-		7D834047259171650093B94C /* Release */ = {
+		7DDE3A6C259298EC005750CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -407,7 +346,7 @@
 			};
 			name = Release;
 		};
-		7D834049259171650093B94C /* Debug */ = {
+		7DDE3A6E259298EC005750CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -417,14 +356,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqShared/Info.plist;
+				INFOPLIST_FILE = MusiqConfiguration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqShared;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -433,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		7D83404A259171650093B94C /* Release */ = {
+		7DDE3A6F259298EC005750CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -443,14 +382,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqShared/Info.plist;
+				INFOPLIST_FILE = MusiqConfiguration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqShared;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,38 +397,38 @@
 			};
 			name = Release;
 		};
-		7D83404C259171650093B94C /* Debug */ = {
+		7DDE3A71259298EC005750CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqSharedTests/Info.plist;
+				INFOPLIST_FILE = MusiqConfigurationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqSharedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqConfigurationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D83404D259171650093B94C /* Release */ = {
+		7DDE3A72259298EC005750CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqSharedTests/Info.plist;
+				INFOPLIST_FILE = MusiqConfigurationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqSharedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqConfigurationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,34 +438,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqShared" */ = {
+		7DDE3A53259298EC005750CC /* Build configuration list for PBXProject "MusiqConfiguration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D834046259171650093B94C /* Debug */,
-				7D834047259171650093B94C /* Release */,
+				7DDE3A6B259298EC005750CC /* Debug */,
+				7DDE3A6C259298EC005750CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqShared" */ = {
+		7DDE3A6D259298EC005750CC /* Build configuration list for PBXNativeTarget "MusiqConfiguration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D834049259171650093B94C /* Debug */,
-				7D83404A259171650093B94C /* Release */,
+				7DDE3A6E259298EC005750CC /* Debug */,
+				7DDE3A6F259298EC005750CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqSharedTests" */ = {
+		7DDE3A70259298EC005750CC /* Build configuration list for PBXNativeTarget "MusiqConfigurationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D83404C259171650093B94C /* Debug */,
-				7D83404D259171650093B94C /* Release */,
+				7DDE3A71259298EC005750CC /* Debug */,
+				7DDE3A72259298EC005750CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7D83402B259171650093B94C /* Project object */;
+	rootObject = 7DDE3A50259298EC005750CC /* Project object */;
 }

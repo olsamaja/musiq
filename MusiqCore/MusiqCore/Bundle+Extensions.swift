@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     
-    public func loadContents(of file: String, ofType type: String) -> String? {
+    func loadContents(of file: String, ofType type: String) -> String? {
         
         var contents: String?
         
@@ -25,4 +25,9 @@ extension Bundle {
         
         return contents
     }
+
+    func infoForKey(_ key: String) -> String? {
+            return (self.infoDictionary?[key] as? String)?
+                .replacingOccurrences(of: "\\", with: "")
+     }
 }

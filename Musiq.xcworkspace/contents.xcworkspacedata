@@ -5,6 +5,9 @@
       location = "group:MusiqApp/MusiqApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MusiqConfiguration/MusiqConfiguration.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MusiqShared/MusiqShared.xcodeproj">
    </FileRef>
    <FileRef

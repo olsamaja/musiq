@@ -1,0 +1,14 @@
+//
+//  ConfigTest.xcconfig
+//  MusiqConfiguration
+//
+//  Created by Olivier Rigault on 25/12/2020.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MSQ_API_SCHEME = https
+MSQ_API_HOST = www.thisisahost.com
+MSQ_API_PATH = /thisisapath/
+MSQ_API_KEY = thisisakey
