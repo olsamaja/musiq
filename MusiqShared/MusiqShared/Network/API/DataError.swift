@@ -8,6 +8,8 @@
 import Foundation
 
 enum DataError: Error {
+    case invalidRequest
+    case invalidResponse
     case parsing(description: String)
     case network(description: String)
 }

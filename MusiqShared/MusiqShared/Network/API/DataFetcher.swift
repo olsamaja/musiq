@@ -51,6 +51,10 @@ private extension DataFetcher {
 
 extension DataFetcher {
     
+    func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
+        return loadData(with: makeSearchArtistsComponents(term: term))
+    }
+    
     // MARK: - Helpers
 
     private func makeTopTagsComponents() -> URLComponents {

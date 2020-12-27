@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */; };
+		7D5E7F09259740770058DDDA /* ConfigurationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */; };
+		7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */; };
+		7D5E7F1B2597876F0058DDDA /* ConfigurationDTOMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F1A2597876F0058DDDA /* ConfigurationDTOMapperTests.swift */; };
+		7D5E7F2125991ECD0058DDDA /* ConfigurationDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F2025991ECD0058DDDA /* ConfigurationDTOMapper.swift */; };
+		7D5E7F2A2599314D0058DDDA /* ConfigurationDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */; };
 		7DDE3A63259298EC005750CC /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */; };
-		7DDE3A68259298EC005750CC /* ApiDataNetworkConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */; };
 		7DDE3A6A259298EC005750CC /* MusiqConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DDE3A762592992C005750CC /* ApiDataNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */; };
+		7DDE3A762592992C005750CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A752592992C005750CC /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,14 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTO.swift; sourceTree = "<group>"; };
+		7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProvider.swift; sourceTree = "<group>"; };
+		7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTOTests.swift; sourceTree = "<group>"; };
+		7D5E7F1A2597876F0058DDDA /* ConfigurationDTOMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTOMapperTests.swift; sourceTree = "<group>"; };
+		7D5E7F2025991ECD0058DDDA /* ConfigurationDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTOMapper.swift; sourceTree = "<group>"; };
+		7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProviderTests.swift; sourceTree = "<group>"; };
 		7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTest.xcconfig; sourceTree = "<group>"; };
 		7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqConfiguration.h; sourceTree = "<group>"; };
 		7DDE3A5D259298EC005750CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DDE3A62259298EC005750CC /* MusiqConfigurationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqConfigurationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfigurationTests.swift; sourceTree = "<group>"; };
 		7DDE3A69259298EC005750CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfiguration.swift; sourceTree = "<group>"; };
+		7DDE3A752592992C005750CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D5E7EFF25973E940058DDDA /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		7D5E7F0C259740820058DDDA /* Domain Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DDE3A752592992C005750CC /* Configuration.swift */,
+			);
+			path = "Domain Models";
+			sourceTree = "<group>";
+		};
+		7D5E7F0F2597408B0058DDDA /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		7D5E7F2425991ED20058DDDA /* Data Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E7F2025991ECD0058DDDA /* ConfigurationDTOMapper.swift */,
+			);
+			path = "Data Mappers";
+			sourceTree = "<group>";
+		};
 		7DDE3A4F259298EC005750CC = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +118,10 @@
 			children = (
 				7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */,
 				7DDE3A5D259298EC005750CC /* Info.plist */,
-				7DDE3A752592992C005750CC /* ApiDataNetworkConfiguration.swift */,
+				7D5E7F0F2597408B0058DDDA /* Data Providers */,
+				7D5E7F2425991ED20058DDDA /* Data Mappers */,
+				7D5E7F0C259740820058DDDA /* Domain Models */,
+				7D5E7EFF25973E940058DDDA /* Data Models */,
 			);
 			path = MusiqConfiguration;
 			sourceTree = "<group>";
@@ -84,7 +129,9 @@
 		7DDE3A66259298EC005750CC /* MusiqConfigurationTests */ = {
 			isa = PBXGroup;
 			children = (
-				7DDE3A67259298EC005750CC /* ApiDataNetworkConfigurationTests.swift */,
+				7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */,
+				7D5E7F1A2597876F0058DDDA /* ConfigurationDTOMapperTests.swift */,
+				7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */,
 				7DDE3A69259298EC005750CC /* Info.plist */,
 				7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */,
 			);
@@ -200,7 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDE3A762592992C005750CC /* ApiDataNetworkConfiguration.swift in Sources */,
+				7D5E7F09259740770058DDDA /* ConfigurationDataProvider.swift in Sources */,
+				7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */,
+				7DDE3A762592992C005750CC /* Configuration.swift in Sources */,
+				7D5E7F2125991ECD0058DDDA /* ConfigurationDTOMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDE3A68259298EC005750CC /* ApiDataNetworkConfigurationTests.swift in Sources */,
+				7D5E7F2A2599314D0058DDDA /* ConfigurationDataProviderTests.swift in Sources */,
+				7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */,
+				7D5E7F1B2597876F0058DDDA /* ConfigurationDTOMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
