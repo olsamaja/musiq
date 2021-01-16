@@ -11,6 +11,9 @@
       location = "group:MusiqShared/MusiqShared.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MusiqCoreUI/MusiqCoreUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MusiqCore/MusiqCore.xcodeproj">
    </FileRef>
 </Workspace>
