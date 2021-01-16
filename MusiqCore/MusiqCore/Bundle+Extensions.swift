@@ -27,7 +27,7 @@ public extension Bundle {
     }
 
     func infoForKey(_ key: String) -> String? {
-            return (self.infoDictionary?[key] as? String)?
-                .replacingOccurrences(of: "\\", with: "")
+        return (self.infoDictionary?[key] as? String)?
+            .replacingOccurrences(of: "\\", with: "")
      }
 }

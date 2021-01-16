@@ -13,3 +13,5 @@ enum DataError: Error {
     case parsing(description: String)
     case network(description: String)
 }
+
+extension DataError: Equatable {}

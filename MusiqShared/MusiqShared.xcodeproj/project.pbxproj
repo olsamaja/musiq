@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D01560E25A117CA001BDAB6 /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */; };
+		7D16619925B355D7003B7AA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16619825B355D7003B7AA1 /* String+Extensions.swift */; };
 		7D5E7EE92596BB3B0058DDDA /* SearchArtistsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EE82596BB3B0058DDDA /* SearchArtistsDTO.swift */; };
 		7D5E7EEE2596BB740058DDDA /* ArtistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EED2596BB740058DDDA /* ArtistDTO.swift */; };
 		7D5E7EF22596BBB10058DDDA /* ImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EF12596BBB10058DDDA /* ImageDTO.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
+		7D16619825B355D7003B7AA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7D5E7EE82596BB3B0058DDDA /* SearchArtistsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistsDTO.swift; sourceTree = "<group>"; };
 		7D5E7EED2596BB740058DDDA /* ArtistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTO.swift; sourceTree = "<group>"; };
 		7D5E7EF12596BBB10058DDDA /* ImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTO.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D16619B25B355DD003B7AA1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7D16619825B355D7003B7AA1 /* String+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7D5E7EEB2596BB410058DDDA /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 				7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */,
 				7D5E7F39259A9F300058DDDA /* MockSearchArtistsSuccessful.json */,
 				7D834044259171650093B94C /* Info.plist */,
+				7D16619B25B355DD003B7AA1 /* Helpers */,
 			);
 			path = MusiqSharedTests;
 			sourceTree = "<group>";
@@ -332,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D16619925B355D7003B7AA1 /* String+Extensions.swift in Sources */,
 				7D834043259171650093B94C /* DataFetcherTests.swift in Sources */,
 				7D5E7F3F259BD0230058DDDA /* ArtistDTOTests.swift in Sources */,
 				7D01560E25A117CA001BDAB6 /* ImageDTOTests.swift in Sources */,

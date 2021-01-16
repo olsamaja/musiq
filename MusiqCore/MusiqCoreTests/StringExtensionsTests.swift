@@ -51,6 +51,7 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("\n\n".trimmed(), "")
         XCTAssertEqual("\n \n".trimmed(), "")
         XCTAssertEqual(" \n \n ".trimmed(), "")
+        XCTAssertEqual("\nstring\n".trimmed(), "string")
     }
 
     func testTrimWhiteSpaces() throws {

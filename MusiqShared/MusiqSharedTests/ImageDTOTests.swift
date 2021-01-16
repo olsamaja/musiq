@@ -28,8 +28,9 @@ class ImageDTOTests: XCTestCase {
         """
         
         let expectation = XCTestExpectation(description: "Decoding ImageDTO")
-        
-        cancellable = parseData(with: jsonString)
+        let publisher: AnyPublisher<ImageDTO, DataError> = jsonString.parse()
+
+        cancellable = publisher
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in })
             { image in
@@ -40,9 +41,26 @@ class ImageDTOTests: XCTestCase {
         
         wait(for: [expectation], timeout: 1)
     }
+    
+    func testImageDTOInvalid() {
+        let expectation = XCTestExpectation(description: "Decoding invalid ImageDTO")
+        let publisher: AnyPublisher<ImageDTO, DataError> = "invalid dto".parse()
 
-    private func parseData(with jsonString: String) -> AnyPublisher<ImageDTO, DataError> {
-        return Data(jsonString.utf8).decode()
+        cancellable = publisher
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    let expectedError = MusiqShared.DataError.parsing(description: "The data couldn’t be read because it isn’t in the correct format.")
+                    XCTAssertEqual(error, expectedError)
+                default:
+                    XCTAssert(false, "Was expected an error, got a success instead")
+                }
+                
+                expectation.fulfill()
+            })
+            { _ in }
+        
+        wait(for: [expectation], timeout: 1)
     }
 }
-

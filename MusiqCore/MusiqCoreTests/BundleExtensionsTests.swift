@@ -10,11 +10,16 @@ import XCTest
 
 class BundleExtensionsTests: XCTestCase {
 
+    var bundle: Bundle!
+    
+    override func setUp() {
+        bundle = Bundle(for: type(of: self))
+    }
+    
     func testLoadFileFromBundle() throws {
         
         let fileName = "prettySample"
         let fileExtension = "json"
-        let bundle = Bundle(for: type(of: self))
         guard let contents = bundle.loadContents(of: fileName, ofType: fileExtension) else {
             XCTFail("Unable to load " + fileName + "." + fileExtension)
             return
@@ -28,6 +33,18 @@ class BundleExtensionsTests: XCTestCase {
         """
         
         XCTAssertEqual(contents.trimmed(), jsonString)
+    }
+    
+    func testInfoForValidKey() {
+        
+        let validKey = bundle.infoForKey("CFBundleInfoDictionaryVersion")
+        XCTAssertEqual(validKey, "6.0")
+    }
+    
+    func testInfoForInvalidKey() {
+        
+        let invalidKey = bundle.infoForKey("Invalid key")
+        XCTAssertNil(invalidKey)
     }
 
 }
