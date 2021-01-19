@@ -10,6 +10,7 @@ import Foundation
 public struct ConfigurationDataProvider {
     
     static func load(with bundle: Bundle) throws -> Configuration {
+        
         let dto = ConfigurationDTO(with: bundle)
         
         do {

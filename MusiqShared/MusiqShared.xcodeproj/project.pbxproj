@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		7D01560E25A117CA001BDAB6 /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */; };
 		7D16619925B355D7003B7AA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16619825B355D7003B7AA1 /* String+Extensions.swift */; };
+		7D1661AA25B3907F003B7AA1 /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; };
+		7D1661AB25B3907F003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1661AE25B39600003B7AA1 /* SearchArtistsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661AD25B39600003B7AA1 /* SearchArtistsDataProvider.swift */; };
+		7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */; };
+		7D1661B525B4B399003B7AA1 /* ArtistRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661B425B4B399003B7AA1 /* ArtistRepositoryProtocol.swift */; };
+		7D1661B825B4D852003B7AA1 /* ArtistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661B725B4D852003B7AA1 /* ArtistDataManager.swift */; };
+		7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */; };
 		7D5E7EE92596BB3B0058DDDA /* SearchArtistsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EE82596BB3B0058DDDA /* SearchArtistsDTO.swift */; };
 		7D5E7EEE2596BB740058DDDA /* ArtistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EED2596BB740058DDDA /* ArtistDTO.swift */; };
 		7D5E7EF22596BBB10058DDDA /* ImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EF12596BBB10058DDDA /* ImageDTO.swift */; };
@@ -49,6 +56,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */,
+				7D1661AB25B3907F003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +66,12 @@
 /* Begin PBXFileReference section */
 		7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
 		7D16619825B355D7003B7AA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1661AD25B39600003B7AA1 /* SearchArtistsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistsDataProvider.swift; sourceTree = "<group>"; };
+		7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		7D1661B425B4B399003B7AA1 /* ArtistRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRepositoryProtocol.swift; sourceTree = "<group>"; };
+		7D1661B725B4D852003B7AA1 /* ArtistDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataManager.swift; sourceTree = "<group>"; };
+		7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
 		7D5E7EE82596BB3B0058DDDA /* SearchArtistsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistsDTO.swift; sourceTree = "<group>"; };
 		7D5E7EED2596BB740058DDDA /* ArtistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTO.swift; sourceTree = "<group>"; };
 		7D5E7EF12596BBB10058DDDA /* ImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTO.swift; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D834055259171980093B94C /* MusiqCore.framework in Frameworks */,
+				7D1661AA25B3907F003B7AA1 /* MusiqConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,15 @@
 				7D16619825B355D7003B7AA1 /* String+Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7D1661C725B4FDEF003B7AA1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */,
+				7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7D5E7EEB2596BB410058DDDA /* Data Models */ = {
@@ -155,6 +179,10 @@
 			children = (
 				7D834037259171650093B94C /* MusiqShared.h */,
 				7D834038259171650093B94C /* Info.plist */,
+				7D1661AD25B39600003B7AA1 /* SearchArtistsDataProvider.swift */,
+				7D1661C725B4FDEF003B7AA1 /* Protocols */,
+				7D1661B425B4B399003B7AA1 /* ArtistRepositoryProtocol.swift */,
+				7D1661B725B4D852003B7AA1 /* ArtistDataManager.swift */,
 				7D5E7F44259BE5ED0058DDDA /* Domain Models */,
 				7D83405E2591731A0093B94C /* Network */,
 			);
@@ -177,6 +205,7 @@
 		7D834053259171980093B94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */,
 				7D834054259171980093B94C /* MusiqCore.framework */,
 			);
 			name = Frameworks;
@@ -325,10 +354,14 @@
 			files = (
 				7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */,
 				7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */,
+				7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */,
 				7D5E7F47259BE6230058DDDA /* ArtistBio.swift in Sources */,
+				7D1661B825B4D852003B7AA1 /* ArtistDataManager.swift in Sources */,
 				7D5E7EF22596BBB10058DDDA /* ImageDTO.swift in Sources */,
 				7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */,
+				7D1661AE25B39600003B7AA1 /* SearchArtistsDataProvider.swift in Sources */,
 				7D8340642591749E0093B94C /* DataError.swift in Sources */,
+				7D1661B525B4B399003B7AA1 /* ArtistRepositoryProtocol.swift in Sources */,
 				7D5E7EF82596BC910058DDDA /* ArtistStatsDTO.swift in Sources */,
 				7D5E7F42259BE5E70058DDDA /* Artist.swift in Sources */,
 				7DDE3A4925929369005750CC /* DataFetcher.swift in Sources */,
@@ -336,6 +369,7 @@
 				7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */,
 				7D5E7EF52596BC3A0058DDDA /* ArtistBioDTO.swift in Sources */,
 				7D5E7EE92596BB3B0058DDDA /* SearchArtistsDTO.swift in Sources */,
+				7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

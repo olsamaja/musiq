@@ -7,16 +7,28 @@
 
 import Foundation
 import Combine
+import MusiqConfiguration
 
 final class DataFetcher {
+    
     private let session: URLSession
+    private var configuration: Configuration?
   
     init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-// MARK: - DataFetcher
+// MARK: - Configurable
+
+extension DataFetcher: ConfigurableProtocol {
+    
+    func configure(with configuration: Configuration) {
+        self.configuration = configuration
+    }
+}
+
+// MARK: - Private extensions
 
 private extension DataFetcher {
     
