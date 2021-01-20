@@ -7,9 +7,14 @@
 
 import Foundation
 import Combine
+import MusiqCore
 
 final class ArtistsViewModel: ObservableObject {
     
     @Published var searchTerm = ""
+    
+    init() {
+        OLLogger.info("ArtistsViewModel - init()")
+    }
 
 }

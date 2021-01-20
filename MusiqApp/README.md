@@ -32,6 +32,7 @@ git clone https://github.com/olsamaja/musiqall.git
 
 ### View Model
 
+- Where should dependencies (network configuration) should be injected?
 - Should get data from the data manager
 
 ### Data Manager
