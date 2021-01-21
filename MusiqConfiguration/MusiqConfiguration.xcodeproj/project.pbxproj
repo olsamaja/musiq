@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D1661C125B4FB8C003B7AA1 /* ConfigurableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */; };
+		7D40ABDD25BA2ADA003A768C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; };
+		7D40ABDE25BA2ADA003A768C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */; };
 		7D5E7F09259740770058DDDA /* ConfigurationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */; };
 		7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */; };
@@ -29,8 +31,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7D40ABDF25BA2ADA003A768C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D40ABDE25BA2ADA003A768C /* MusiqCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableProtocol.swift; sourceTree = "<group>"; };
+		7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTO.swift; sourceTree = "<group>"; };
 		7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProvider.swift; sourceTree = "<group>"; };
 		7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTOTests.swift; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D40ABDD25BA2ADA003A768C /* MusiqCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +89,14 @@
 				7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7D40ABDB25BA2ADA003A768C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7D5E7EFF25973E940058DDDA /* Data Models */ = {
@@ -111,6 +137,7 @@
 				7DDE3A5B259298EC005750CC /* MusiqConfiguration */,
 				7DDE3A66259298EC005750CC /* MusiqConfigurationTests */,
 				7DDE3A5A259298EC005750CC /* Products */,
+				7D40ABDB25BA2ADA003A768C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +198,7 @@
 				7DDE3A55259298EC005750CC /* Sources */,
 				7DDE3A56259298EC005750CC /* Frameworks */,
 				7DDE3A57259298EC005750CC /* Resources */,
+				7D40ABDF25BA2ADA003A768C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
