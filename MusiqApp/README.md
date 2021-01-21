@@ -1,4 +1,4 @@
-# Musiqall
+# Musiq
 
 Musiqall is a sample project that I built to test some iOS frameworks, such as SwiftUI or Combine, as well as some popular design patterns.
 
@@ -7,7 +7,7 @@ Musiqall is a sample project that I built to test some iOS frameworks, such as S
 To get started, clone this repository.
 
 ```
-git clone https://github.com/olsamaja/musiqall.git
+git clone https://github.com/olsamaja/musiq.git
 ```
 
 ## Design Patterns
