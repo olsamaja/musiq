@@ -1,6 +1,6 @@
 # Musiq
 
-Musiqall is a sample project that I built to test some iOS frameworks, such as SwiftUI or Combine, as well as some popular design patterns.
+Musiq is a sample project that I built to test some iOS frameworks, such as SwiftUI or Combine, as well as some popular design patterns.
 
 ## Installation
 
