@@ -27,6 +27,8 @@ git clone https://github.com/olsamaja/musiq.git
 
 * [Dependency Injection Tutorial for iOS: Getting Started](https://www.raywenderlich.com/14223279-dependency-injection-tutorial-for-ios-getting-started). Use of Interface Injection and DI Container.
 * [Protocol oriented Dependency Injection with Swift](https://medium.com/@nfrugoni19/protocol-oriented-dependency-injection-with-swift-605b3d5b72ce)
+* [Resolver - An ultralight Dependency Injection / Service Locator framework](https://github.com/hmlongco/Resolver)
+
 
 ## Architecture
 

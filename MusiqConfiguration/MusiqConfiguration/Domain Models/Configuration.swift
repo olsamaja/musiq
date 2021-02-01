@@ -9,12 +9,13 @@ import Foundation
 import MusiqCore
 
 public struct Configuration {
-    let scheme: Scheme
-    let host: String
-    let path: String
-    let key: String
     
-    enum Scheme: String {
+    public let scheme: Scheme
+    public let host: String
+    public let path: String
+    public let key: String
+    
+    public enum Scheme: String {
         case http
         case https
     }

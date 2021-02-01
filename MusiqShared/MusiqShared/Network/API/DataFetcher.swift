@@ -8,11 +8,13 @@
 import Foundation
 import Combine
 import MusiqConfiguration
+import MusiqCore
+import Resolver
 
 final class DataFetcher {
     
     private let session: URLSession
-    private var configuration: Configuration?
+    @Injected var configuration: Configuration
   
     init(session: URLSession = .shared) {
         self.session = session
@@ -24,7 +26,7 @@ final class DataFetcher {
 extension DataFetcher: ConfigurableProtocol {
     
     func configure(with configuration: Configuration) {
-        self.configuration = configuration
+//        self.configuration = configuration
     }
 }
 
@@ -64,6 +66,7 @@ private extension DataFetcher {
 extension DataFetcher {
     
     func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
+        OLLogger.info("configuration.host = \(configuration.host)")
         return loadData(with: makeSearchArtistsComponents(term: term))
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1661D325B50014003B7AA1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661D225B50014003B7AA1 /* DIContainer.swift */; };
+		7D7733DB25BB568200D28781 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7733DA25BB568200D28781 /* Resolver */; };
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D83400125916C7C0093B94C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D83400025916C7C0093B94C /* Logging */; };
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D7733DB25BB568200D28781 /* Resolver in Frameworks */,
 				7D83400125916C7C0093B94C /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +163,7 @@
 			name = MusiqCore;
 			packageProductDependencies = (
 				7D83400025916C7C0093B94C /* Logging */,
+				7D7733DA25BB568200D28781 /* Resolver */,
 			);
 			productName = MusiqCore;
 			productReference = 7D833FDE25916B670093B94C /* MusiqCore.framework */;
@@ -213,6 +216,7 @@
 			mainGroup = 7D833FD425916B670093B94C;
 			packageReferences = (
 				7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */,
+				7D7733D925BB568200D28781 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 7D833FDF25916B670093B94C /* Products */;
 			projectDirPath = "";
@@ -521,6 +525,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7D7733D925BB568200D28781 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 		7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-log.git";
@@ -532,6 +544,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7D7733DA25BB568200D28781 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D7733D925BB568200D28781 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
 		7D83400025916C7C0093B94C /* Logging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7D833FFF25916C7C0093B94C /* XCRemoteSwiftPackageReference "swift-log" */;
