@@ -184,7 +184,6 @@ extension ArtistsViewModel: Identifiable {
             self.id = UUID()
             self.name = artist.name
             self.listeners = artist.listeners
-            OLLogger.info("name: \(name)")
         }
     }
 }
