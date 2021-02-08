@@ -10,7 +10,7 @@ import Combine
 import MusiqCore
 import MusiqShared
 
-final class ArtistsViewModel: ObservableObject {
+public final class ArtistsViewModel: ObservableObject {
     
     @Published private(set) var state = State.idle
     @Published var searchTerm = ""
@@ -82,101 +82,10 @@ final class ArtistsViewModel: ObservableObject {
     }
 }
 
-extension ArtistsViewModel {
-    
-    enum State {
-        case idle
-        case searching(String)
-        case loaded([ListItem])
-        case error(Error)
-    }
-    
-    enum Event {
-        case onAppear
-        case onDataLoaded([ListItem])
-        case onFailedToLoadData(Error)
-        case onPerform(Action)
-    }
-    
-    enum Action {
-        case search(String)
-        case select(Artist)
-        case clear
-    }
-}
-
-extension ArtistsViewModel {
-    
-    static func reduce(_ state: State, _ event: Event) -> State {
-        switch state {
-        case .idle:
-            return reduceIdle(state, event)
-        case .searching(let term):
-            return reduceSearching(state, event, searchTerm: term)
-        case .loaded(let items):
-            return reduceLoaded(state, event, items: items)
-        case .error:
-            return reduceError(state, event)
-        }
-    }
-    
-    static func reduceIdle(_ state: State, _ event: Event) -> State {
-        switch event {
-        case .onPerform(.search(let term)):
-            return .searching(term)
-        default:
-            return state
-        }
-    }
-
-    static func reduceLoading(_ state: State, _ event: Event) -> State {
-        switch event {
-        case .onFailedToLoadData(let error):
-            return .error(error)
-        case .onDataLoaded(let artists):
-            return .loaded(artists)
-        default:
-            return state
-        }
-    }
-    
-    static func reduceSearching(_ state: State, _ event: Event, searchTerm: String) -> State {
-        switch event {
-        case .onFailedToLoadData(let error):
-            return .error(error)
-        case .onDataLoaded(let artists):
-            return .loaded(artists)
-        default:
-            return state
-        }
-    }
-
-    static func reduceLoaded(_ state: State, _ event: Event, items: [ListItem]) -> State {
-        switch event {
-        case .onPerform(.search(let term)):
-            return .searching(term)
-        case .onPerform(.clear):
-            return .idle
-        default:
-            return state
-        }
-    }
-    
-    static func reduceError(_ state: State, _ event: Event) -> State {
-        return state
-    }
-}
-
-extension ArtistsViewModel {
-    static func userAction(action: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
-        Feedback { _ in action }
-    }
-}
-
 extension ArtistsViewModel: Identifiable {
     
-    struct ListItem: Identifiable {
-        let id: UUID
+    public struct ListItem: Identifiable {
+        public let id: UUID
         let name: String
         let listeners: String?
         
