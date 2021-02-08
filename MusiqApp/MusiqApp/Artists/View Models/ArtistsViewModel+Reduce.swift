@@ -36,14 +36,12 @@ public extension ArtistsViewModel {
 extension ArtistsViewModel.State: Equatable {
     public static func == (lhs: ArtistsViewModel.State, rhs: ArtistsViewModel.State) -> Bool {
         switch (lhs, rhs) {
-        case (.idle, .idle):
+        case (.idle, .idle),
+             (.loaded, .loaded),
+             (.error, .error):
             return true
         case (let .searching(string1), let .searching(string2)):
             return string1 == string2
-        case (.loaded, .loaded):
-            return true
-        case (.error, .error):
-            return true
         default:
             return false
         }
@@ -56,10 +54,10 @@ extension ArtistsViewModel {
         switch state {
         case .idle:
             return reduceIdle(state, event)
-        case .searching(let term):
-            return reduceSearching(state, event, searchTerm: term)
-        case .loaded(let items):
-            return reduceLoaded(state, event, items: items)
+        case .searching:
+            return reduceSearching(state, event)
+        case .loaded:
+            return reduceLoaded(state, event)
         case .error:
             return reduceError(state, event)
         }
@@ -74,7 +72,7 @@ extension ArtistsViewModel {
         }
     }
     
-    static func reduceSearching(_ state: State, _ event: Event, searchTerm: String) -> State {
+    static func reduceSearching(_ state: State, _ event: Event) -> State {
         switch event {
         case .onFailedToLoadData(let error):
             return .error(error)
@@ -85,7 +83,7 @@ extension ArtistsViewModel {
         }
     }
 
-    static func reduceLoaded(_ state: State, _ event: Event, items: [ListItem]) -> State {
+    static func reduceLoaded(_ state: State, _ event: Event) -> State {
         switch event {
         case .onPerform(.search(let term)):
             return .searching(term)

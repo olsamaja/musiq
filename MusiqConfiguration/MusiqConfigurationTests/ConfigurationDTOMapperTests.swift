@@ -20,7 +20,7 @@ class ConfigurationDTOMapperTests: XCTestCase {
         let dto = ConfigurationDTO(scheme: scheme, host: host, path: path, key: key)
         do {
             let configuration = try ConfigurationDTOMapper.map(dto)
-            XCTAssertEqual(configuration.scheme, Configuration.Scheme.https)
+            XCTAssertEqual(configuration.scheme, scheme)
             XCTAssertEqual(configuration.host, host)
             XCTAssertEqual(configuration.path, path)
             XCTAssertEqual(configuration.key, key)

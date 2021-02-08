@@ -14,19 +14,10 @@ import Resolver
 final class DataFetcher {
     
     private let session: URLSession
-    @Injected var configuration: Configuration
-  
+    @OptionalInjected var configuration: Configuration?
+    
     init(session: URLSession = .shared) {
         self.session = session
-    }
-}
-
-// MARK: - Configurable
-
-extension DataFetcher: ConfigurableProtocol {
-    
-    func configure(with configuration: Configuration) {
-//        self.configuration = configuration
     }
 }
 
@@ -34,22 +25,20 @@ extension DataFetcher: ConfigurableProtocol {
 
 private extension DataFetcher {
     
-    enum LastFmAPI {
-        static let scheme = "https"
-        static let host = "ws.audioscrobbler.com"
-        static let path = "/2.0/"
-        static let key = "a7698279d4bc40eba58c2338961937c1"
-    }
-    
     func makeDefaultComponents() -> URLComponents {
         
         var components = URLComponents()
-        components.scheme = LastFmAPI.scheme
-        components.host = LastFmAPI.host
-        components.path = LastFmAPI.path
+        
+        guard let configuration = configuration else {
+            return components
+        }
+        
+        components.scheme = configuration.scheme
+        components.host = configuration.host
+        components.path = configuration.path
         
         components.queryItems = [
-            URLQueryItem(name: "api_key", value: LastFmAPI.key),
+            URLQueryItem(name: "api_key", value: configuration.key),
             URLQueryItem(name: "format", value: "json")
         ]
         
@@ -66,7 +55,6 @@ private extension DataFetcher {
 extension DataFetcher {
     
     func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
-        OLLogger.info("configuration.host = \(configuration.host)")
         return loadData(with: makeSearchArtistsComponents(term: term))
     }
     

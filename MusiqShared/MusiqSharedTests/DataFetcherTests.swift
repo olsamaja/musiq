@@ -14,14 +14,11 @@ import Combine
 
 final class DataFetcherTests: XCTestCase {
     
-    var configuration: Configuration!
     var dataFetcher: DataFetcher!
     private var cancellable: AnyCancellable?
 
     override func setUp() {
-        configuration = Configuration(scheme: .https, host: "host", path: "path", key: "key")
         dataFetcher = DataFetcher(session: URLSession.makeMockURLSession())
-        dataFetcher.configure(with: configuration)
     }
     
     override func tearDown() {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D1661C125B4FB8C003B7AA1 /* ConfigurableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */; };
 		7D40ABDD25BA2ADA003A768C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; };
 		7D40ABDE25BA2ADA003A768C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableProtocol.swift; sourceTree = "<group>"; };
 		7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTO.swift; sourceTree = "<group>"; };
 		7D5E7F08259740760058DDDA /* ConfigurationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProvider.swift; sourceTree = "<group>"; };
@@ -85,14 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D1661C425B4FC03003B7AA1 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				7D1661C025B4FB8C003B7AA1 /* ConfigurableProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		7D40ABDB25BA2ADA003A768C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +156,6 @@
 				7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */,
 				7DDE3A5D259298EC005750CC /* Info.plist */,
 				7D7733E825BB7F8900D28781 /* Services */,
-				7D1661C425B4FC03003B7AA1 /* Protocols */,
 				7D5E7F0F2597408B0058DDDA /* Data Providers */,
 				7D5E7F2425991ED20058DDDA /* Data Mappers */,
 				7D5E7F0C259740820058DDDA /* Domain Models */,
@@ -302,7 +291,6 @@
 				7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */,
 				7DDE3A762592992C005750CC /* Configuration.swift in Sources */,
 				7D5E7F2125991ECD0058DDDA /* ConfigurationDTOMapper.swift in Sources */,
-				7D1661C125B4FB8C003B7AA1 /* ConfigurableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
