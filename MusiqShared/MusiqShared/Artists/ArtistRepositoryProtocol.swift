@@ -47,7 +47,12 @@ struct ArtistLocalRepository: ArtistRepositoryProtocol, CachedDataProtocol {
 struct ArtistRemoteRepository: ArtistRepositoryProtocol {
     
     typealias T = Artist
-    
+    private var dataFetcher: DataFetcher
+
+    public init() {
+        self.dataFetcher = DataFetcher()
+    }
+
     func getAll() -> AnyPublisher<[Artist], DataError> {
         let artists = [Artist]()
         return Just(artists)
@@ -56,22 +61,13 @@ struct ArtistRemoteRepository: ArtistRepositoryProtocol {
             }
             .eraseToAnyPublisher()
     }
-
-    func add(a: Artist) -> AnyPublisher<Bool, DataError> {
-        return Just(true)
-            .mapError { error in
-                .parsing(description: error.localizedDescription)
-            }
-            .eraseToAnyPublisher()
-    }
     
     func search(with term: String) -> AnyPublisher<[Artist], DataError> {
-        let artists = [Artist]()
-        return Just(artists)
-            .mapError { error in
-                .parsing(description: error.localizedDescription)
+        return dataFetcher.searchArtists(term: term)
+            .mapError { $0 }
+            .map { dto in
+                return SearchArtistsDTOMapper.map(dto)
             }
             .eraseToAnyPublisher()
     }
-
 }

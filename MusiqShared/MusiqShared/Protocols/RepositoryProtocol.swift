@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 protocol RepositoryProtocol {
-    
     associatedtype T
     
     func getAll() -> AnyPublisher<[T], DataError>
-    func add(a: T) -> AnyPublisher<Bool, DataError>
 }
