@@ -42,20 +42,21 @@ public final class ArtistsViewModel: ObservableObject {
     }
     
     private func setupBindings() {
-        $searchTerm
-            .dropFirst(1)
-            .debounce(for: 1, scheduler: RunLoop.main)
-            .removeDuplicates()
+        
+        let searchPublisher = $searchTerm
+                .dropFirst(1)
+                .debounce(for: 1, scheduler: RunLoop.main)
+                .removeDuplicates()
+        
+        searchPublisher
             .filter { $0.count > 2 }
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] (term) in
                 self?.send(event: .onPerform(.search(term)))
             })
         .store(in: &cancellables)
-
-        $searchTerm
-            .dropFirst(1)
-            .removeDuplicates()
+        
+        searchPublisher
             .filter { $0.count == 0 }
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] (_) in
@@ -82,7 +83,7 @@ public final class ArtistsViewModel: ObservableObject {
     }
 }
 
-extension ArtistsViewModel: Identifiable {
+extension ArtistsViewModel {
     
     public struct ListItem: Identifiable {
         public let id: UUID

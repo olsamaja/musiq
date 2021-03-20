@@ -57,6 +57,7 @@ struct ArtistsView: View {
 //                label: { ArtistListItemView(item: item) }
 //            )
         }
+        .listStyle(PlainListStyle())
     }
 }
 

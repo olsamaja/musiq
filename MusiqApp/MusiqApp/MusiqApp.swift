@@ -1,5 +1,5 @@
 //
-//  MusiqAppApp.swift
+//  MusiqApp.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 21/12/2020.
@@ -11,7 +11,7 @@ import MusiqShared
 import MusiqCore
 
 @main
-struct MusiqAppApp: App {
+struct MusiqApp: App {
     
     var body: some Scene {
         WindowGroup {

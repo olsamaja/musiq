@@ -45,7 +45,6 @@ public struct SearchBar: View {
                     self.isEditing = false
                     self.text = ""
                     self.hideKeyboard()
-
                 }) {
                     Text("Cancel")
                 }
