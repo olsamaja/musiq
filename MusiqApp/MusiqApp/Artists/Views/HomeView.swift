@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var filteredItems = artists
+    @Binding var filteredItems: [ArtistItem]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -20,11 +20,5 @@ struct HomeView: View {
             }
             .padding()
         }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }

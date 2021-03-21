@@ -15,8 +15,8 @@ struct MusiqApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ArtistsView(viewModel: ArtistsViewModel())
-//            HomeView()
+//            ArtistsView(viewModel: ArtistsViewModel())
+            ContentView()
         }
     }
 }
