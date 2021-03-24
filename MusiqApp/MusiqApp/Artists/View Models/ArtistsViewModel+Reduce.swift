@@ -15,21 +15,58 @@ public extension ArtistsViewModel {
     enum State {
         case idle
         case searching(String)
-        case loaded([ListItem])
+        case loaded([ArtistItem])
         case error(Error)
+        
+        var debugString: String {
+            switch self {
+            case .idle:
+                return "State.idle"
+            case .searching(let searchText):
+                return "State.searching(\(searchText))"
+            case .loaded(let items):
+                return "State.loaded(\(items.count))"
+            case .error(_):
+                return "State.error"
+            }
+        }
     }
     
     enum Event {
         case onAppear
-        case onDataLoaded([ListItem])
+        case onDataLoaded([ArtistItem])
         case onFailedToLoadData(Error)
         case onPerform(Action)
+        
+        var debugString: String {
+            switch self {
+            case .onAppear:
+                return "Event.onAppear"
+            case .onDataLoaded(let items):
+                return "Event.onDataLoaded(\(items.count))"
+            case .onFailedToLoadData(_):
+                return "Event.error"
+            case .onPerform(let action):
+                return "Event.onPerform(\(action.debugString)"
+            }
+        }
     }
     
     enum Action {
         case search(String)
         case select(Artist)
         case clear
+        
+        var debugString: String {
+            switch self {
+            case .search(let term):
+                return "Action.search(\(term))"
+            case .select(let artist):
+                return "Action.select(\(artist.name)"
+            case .clear:
+                return "Action.clear"
+            }
+        }
     }
 }
 
@@ -51,6 +88,7 @@ extension ArtistsViewModel.State: Equatable {
 extension ArtistsViewModel {
     
     public static func reduce(_ state: State, _ event: Event) -> State {
+        OLLogger.info("****** State: \(state.debugString)")
         switch state {
         case .idle:
             return reduceIdle(state, event)

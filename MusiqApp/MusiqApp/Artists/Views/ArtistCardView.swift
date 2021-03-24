@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MusiqCoreUI
 
 struct ArtistCardView: View {
     var item: ArtistItem
@@ -15,8 +16,11 @@ struct ArtistCardView: View {
                 Text(item.name)
                     .font(.title2)
                 Spacer(minLength: 10)
-                Text(String(item.listeners))
-                    .font(.title3)
+                    .background(Color.yellow)
+                item.listeners.map { listeners in
+                    BadgeView(text: listeners, backgroundColor: .purple)
+                        .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .trailing)
+                }
             }
             Divider()
         }

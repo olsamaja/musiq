@@ -43,7 +43,8 @@ struct ArtistsView: View {
                 .multilineTextAlignment(.center)
                 .font(.body)
         case .loaded(let artists):
-            list(of: artists)
+            Text("List")
+//            list(of: artists)
         case .searching:
             Spinner(isAnimating: true, style: .large)
         }

@@ -12,9 +12,9 @@ import MusiqShared
 
 public final class ArtistsViewModel: ObservableObject {
     
-    @Published private(set) var state = State.idle
+    @Published var state = State.idle
     @Published var searchTerm = ""
-
+    
     private var cancellables = Set<AnyCancellable>()
     private let action = PassthroughSubject<Event, Never>()
     
@@ -69,13 +69,21 @@ public final class ArtistsViewModel: ObservableObject {
         action.send(event)
     }
     
+    func search(with searchTerm: String) {
+        self.searchTerm = searchTerm
+    }
+    
+    func clear() {
+        send(event: .onPerform(.clear))
+    }
+    
     static func whenSearching() -> Feedback<State, Event> {
 
         Feedback { (state: State) -> AnyPublisher<Event, Never> in
             guard case .searching(let term) = state else { return Empty().eraseToAnyPublisher() }
             
             return ArtistDataManager().search(with: term)
-                .map { $0.map(ListItem.init) }
+                .map { $0.map(ArtistItem.init) }
                 .map(Event.onDataLoaded)
                 .catch { Just(Event.onFailedToLoadData($0)) }
                 .eraseToAnyPublisher()
