@@ -7,10 +7,11 @@
 
 import SwiftUI
 import MusiqCoreUI
+import Resolver
 
 struct SearchContentView: View {
     
-    var viewModel: ArtistsViewModel
+    @Injected var viewModel: ArtistsViewModel
     
     var body: some View {
         SearchNavigationView(
@@ -20,10 +21,7 @@ struct SearchContentView: View {
             placeholder: "Search artists",
             onSearch: { (searchTerm) in
                 viewModel.search(with: searchTerm)
-            },
-            onCancel: {
-                viewModel.clear()
-             })
-            . ignoresSafeArea()
+            })
+            .ignoresSafeArea()
     }
 }

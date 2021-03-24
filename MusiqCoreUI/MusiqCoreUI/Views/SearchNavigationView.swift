@@ -28,7 +28,7 @@ public struct SearchNavigationView: UIViewControllerRepresentable {
          title: String,
          placeholder: String?,
          onSearch: @escaping (String) -> (),
-         onCancel: @escaping () -> ()) {
+         onCancel: @escaping () -> () = {}) {
         self.view = view
         self.title = title
         self.placeholder = placeholder ?? "Search"
