@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import MusiqCore
+import MusiqCoreUI
 
 struct SearchContentView: View {
     
     var viewModel: ArtistsViewModel
     
     var body: some View {
-        CustomNavigationView(
+        SearchNavigationView(
             view: AnyView(SearchView(viewModel: viewModel)),
             useLargeTitle: true,
             title: "Search",

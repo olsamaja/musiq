@@ -1,5 +1,5 @@
 //
-//  CustomNavigationView.swift
+//  SearchNavigationView.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 20/03/2021.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct CustomNavigationView: UIViewControllerRepresentable {
+public struct SearchNavigationView: UIViewControllerRepresentable {
     
-    func makeCoordinator() -> Coordinator {
-        return CustomNavigationView.Coordinator(parent: self)
+    public func makeCoordinator() -> Coordinator {
+        return SearchNavigationView.Coordinator(parent: self)
     }
     
     var view: AnyView
@@ -23,7 +23,7 @@ struct CustomNavigationView: UIViewControllerRepresentable {
     var onSearch: (String) -> ()
     var onCancel: () -> ()
     
-    init(view: AnyView,
+    public init(view: AnyView,
          useLargeTitle: Bool?,
          title: String,
          placeholder: String?,
@@ -37,7 +37,7 @@ struct CustomNavigationView: UIViewControllerRepresentable {
     }
     
     // Integrating UIKot navigation controllerwith SwiftUI View...
-    func makeUIViewController(context: Context) -> UINavigationController {
+    public func makeUIViewController(context: Context) -> UINavigationController {
         
         let childView = UIHostingController(rootView: view)
         let controller = UINavigationController(rootViewController: childView)
@@ -56,25 +56,25 @@ struct CustomNavigationView: UIViewControllerRepresentable {
         return controller
     }
     
-    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
+    public func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
         uiViewController.navigationBar.topItem?.title = title
         uiViewController.navigationBar.prefersLargeTitles = useLargeTitle
         uiViewController.navigationBar.topItem?.searchController?.searchBar.placeholder = placeholder
     }
     
-    class Coordinator: NSObject, UISearchBarDelegate {
+    public class Coordinator: NSObject, UISearchBarDelegate {
         
-        var parent: CustomNavigationView
+        var parent: SearchNavigationView
         
-        init(parent: CustomNavigationView) {
+        init(parent: SearchNavigationView) {
             self.parent = parent
         }
         
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             self.parent.onSearch(searchText)
         }
         
-        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
             self.parent.onCancel()
         }
     }

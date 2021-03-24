@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import MusiqCoreUI
 
 struct ContentView: View {
     
     @State var filteredItems = artists
     
     var body: some View {
-        CustomNavigationView(
+        SearchNavigationView(
             view: AnyView(HomeView(filteredItems: $filteredItems)),
             useLargeTitle: true,
             title: "Search",

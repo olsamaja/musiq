@@ -31,7 +31,6 @@
 		7D90A1282606AD63002F31D1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A1272606AD63002F31D1 /* HomeView.swift */; };
 		7D90A12C2606AE4C002F31D1 /* ArtistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A12B2606AE4C002F31D1 /* ArtistItem.swift */; };
 		7D90A1302606AFC6002F31D1 /* ArtistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A12F2606AFC6002F31D1 /* ArtistCardView.swift */; };
-		7D90A1342606BED3002F31D1 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A1332606BED3002F31D1 /* CustomNavigationView.swift */; };
 		7D90A1382606C0C9002F31D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A1372606C0C9002F31D1 /* ContentView.swift */; };
 		7D90A14426077ED8002F31D1 /* SearchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A14326077ED8002F31D1 /* SearchContentView.swift */; };
 		7D90A14826077F0B002F31D1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A14726077F0B002F31D1 /* SearchView.swift */; };
@@ -98,7 +97,6 @@
 		7D90A1272606AD63002F31D1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D90A12B2606AE4C002F31D1 /* ArtistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistItem.swift; sourceTree = "<group>"; };
 		7D90A12F2606AFC6002F31D1 /* ArtistCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCardView.swift; sourceTree = "<group>"; };
-		7D90A1332606BED3002F31D1 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		7D90A1372606C0C9002F31D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D90A14326077ED8002F31D1 /* SearchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentView.swift; sourceTree = "<group>"; };
 		7D90A14726077F0B002F31D1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				7D833FA825916A930093B94C /* ArtistsView.swift */,
 				7D90A14326077ED8002F31D1 /* SearchContentView.swift */,
 				7D90A14726077F0B002F31D1 /* SearchView.swift */,
-				7D90A1332606BED3002F31D1 /* CustomNavigationView.swift */,
 				7D90A1372606C0C9002F31D1 /* ContentView.swift */,
 				7D90A1272606AD63002F31D1 /* HomeView.swift */,
 				7D90A12F2606AFC6002F31D1 /* ArtistCardView.swift */,
@@ -413,7 +410,6 @@
 				7D833FA725916A930093B94C /* MusiqApp.swift in Sources */,
 				7D90A1282606AD63002F31D1 /* HomeView.swift in Sources */,
 				7D90A14826077F0B002F31D1 /* SearchView.swift in Sources */,
-				7D90A1342606BED3002F31D1 /* CustomNavigationView.swift in Sources */,
 				7D01561D25A518F1001BDAB6 /* ArtistsViewModel.swift in Sources */,
 				7D7733FE25BC45B800D28781 /* Publisher+System.swift in Sources */,
 			);
