@@ -83,7 +83,7 @@ public final class ArtistsViewModel: ObservableObject {
             guard case .searching(let term) = state else { return Empty().eraseToAnyPublisher() }
             
             return ArtistDataManager().search(with: term)
-                .map { $0.map(ArtistItem.init) }
+                .map { $0.map(ArtistCardItem.init) }
                 .map(Event.onDataLoaded)
                 .catch { Just(Event.onFailedToLoadData($0)) }
                 .eraseToAnyPublisher()
