@@ -13,6 +13,7 @@
 		7D1661BD25B4F230003B7AA1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D1661BC25B4F230003B7AA1 /* README.md */; };
 		7D1661E125B8A1BF003B7AA1 /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */; };
 		7D1661E225B8A1BF003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5A15D5260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15D4260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift */; };
 		7D7733EB25BB80C200D28781 /* AppServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */; };
 		7D7733FE25BC45B800D28781 /* Publisher+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7733FD25BC45B800D28781 /* Publisher+System.swift */; };
 		7D77340225BC45EA00D28781 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77340125BC45EA00D28781 /* Feedback.swift */; };
@@ -72,6 +73,7 @@
 		7D01565825A53072001BDAB6 /* MusiqCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1661BC25B4F230003B7AA1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5A15D4260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce+Debug.swift"; sourceTree = "<group>"; };
 		7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppServices+Injection.swift"; sourceTree = "<group>"; };
 		7D7733FD25BC45B800D28781 /* Publisher+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+System.swift"; sourceTree = "<group>"; };
 		7D77340125BC45EA00D28781 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				7D90A12B2606AE4C002F31D1 /* ArtistCardItem.swift */,
 				7D01561C25A518F1001BDAB6 /* ArtistsViewModel.swift */,
 				7D8B904325CF451000306758 /* ArtistsViewModel+Reduce.swift */,
+				7D5A15D4260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				7D8B904425CF451000306758 /* ArtistsViewModel+Reduce.swift in Sources */,
 				7D90A12C2606AE4C002F31D1 /* ArtistCardItem.swift in Sources */,
 				7D90A14426077ED8002F31D1 /* SearchContentView.swift in Sources */,
+				7D5A15D5260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift in Sources */,
 				7D90A1302606AFC6002F31D1 /* ArtistCardView.swift in Sources */,
 				7D7733EB25BB80C200D28781 /* AppServices+Injection.swift in Sources */,
 				7D77340225BC45EA00D28781 /* Feedback.swift in Sources */,

@@ -17,19 +17,6 @@ public extension ArtistsViewModel {
         case searching(String)
         case loaded([ArtistCardItem])
         case error(Error)
-        
-        var debugString: String {
-            switch self {
-            case .idle:
-                return "State.idle"
-            case .searching(let searchText):
-                return "State.searching(\(searchText))"
-            case .loaded(let items):
-                return "State.loaded(\(items.count))"
-            case .error(_):
-                return "State.error"
-            }
-        }
     }
     
     enum Event {
@@ -37,36 +24,12 @@ public extension ArtistsViewModel {
         case onDataLoaded([ArtistCardItem])
         case onFailedToLoadData(Error)
         case onPerform(Action)
-        
-        var debugString: String {
-            switch self {
-            case .onAppear:
-                return "Event.onAppear"
-            case .onDataLoaded(let items):
-                return "Event.onDataLoaded(\(items.count))"
-            case .onFailedToLoadData(_):
-                return "Event.error"
-            case .onPerform(let action):
-                return "Event.onPerform(\(action.debugString)"
-            }
-        }
     }
     
     enum Action {
         case search(String)
         case select(Artist)
         case clear
-        
-        var debugString: String {
-            switch self {
-            case .search(let term):
-                return "Action.search(\(term))"
-            case .select(let artist):
-                return "Action.select(\(artist.name)"
-            case .clear:
-                return "Action.clear"
-            }
-        }
     }
 }
 
