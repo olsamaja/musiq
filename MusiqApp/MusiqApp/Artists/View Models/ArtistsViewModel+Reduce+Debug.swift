@@ -9,7 +9,7 @@ import Foundation
 
 public extension ArtistsViewModel.State {
     
-    var debugString: String {
+    var debugDescription: String {
         switch self {
         case .idle:
             return "State.idle"
@@ -25,7 +25,7 @@ public extension ArtistsViewModel.State {
 
 public extension ArtistsViewModel.Event {
     
-    var debugString: String {
+    var debugDescription: String {
         switch self {
         case .onAppear:
             return "Event.onAppear"
@@ -34,19 +34,19 @@ public extension ArtistsViewModel.Event {
         case .onFailedToLoadData(_):
             return "Event.error"
         case .onPerform(let action):
-            return "Event.onPerform(\(action.debugString)"
+            return "Event.onPerform(\(action.debugDescription))"
         }
     }
 }
 
 public extension ArtistsViewModel.Action {
     
-    var debugString: String {
+    var debugDescription: String {
         switch self {
         case .search(let term):
             return "Action.search(\(term))"
         case .select(let artist):
-            return "Action.select(\(artist.name)"
+            return "Action.select(\(artist.name))"
         case .clear:
             return "Action.clear"
         }

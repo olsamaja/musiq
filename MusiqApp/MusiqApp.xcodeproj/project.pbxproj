@@ -14,6 +14,7 @@
 		7D1661E125B8A1BF003B7AA1 /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */; };
 		7D1661E225B8A1BF003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5A15D5260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15D4260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift */; };
+		7D5A15E6260C7A8A0064E34E /* ArtistsViewModel_ReduceDebugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15E5260C7A8A0064E34E /* ArtistsViewModel_ReduceDebugTests.swift */; };
 		7D7733EB25BB80C200D28781 /* AppServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */; };
 		7D7733FE25BC45B800D28781 /* Publisher+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7733FD25BC45B800D28781 /* Publisher+System.swift */; };
 		7D77340225BC45EA00D28781 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77340125BC45EA00D28781 /* Feedback.swift */; };
@@ -74,6 +75,7 @@
 		7D1661BC25B4F230003B7AA1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D1661E025B8A1BF003B7AA1 /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5A15D4260C77A40064E34E /* ArtistsViewModel+Reduce+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce+Debug.swift"; sourceTree = "<group>"; };
+		7D5A15E5260C7A8A0064E34E /* ArtistsViewModel_ReduceDebugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel_ReduceDebugTests.swift; sourceTree = "<group>"; };
 		7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppServices+Injection.swift"; sourceTree = "<group>"; };
 		7D7733FD25BC45B800D28781 /* Publisher+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+System.swift"; sourceTree = "<group>"; };
 		7D77340125BC45EA00D28781 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				7D833FB825916A940093B94C /* MusiqAppTests.swift */,
 				7D8B905425CF472C00306758 /* ArtistsViewModel+ReduceTests.swift */,
+				7D5A15E5260C7A8A0064E34E /* ArtistsViewModel_ReduceDebugTests.swift */,
 				7D833FBA25916A940093B94C /* Info.plist */,
 			);
 			path = MusiqAppTests;
@@ -413,6 +416,7 @@
 			files = (
 				7D833FB925916A940093B94C /* MusiqAppTests.swift in Sources */,
 				7D8B905525CF472C00306758 /* ArtistsViewModel+ReduceTests.swift in Sources */,
+				7D5A15E6260C7A8A0064E34E /* ArtistsViewModel_ReduceDebugTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

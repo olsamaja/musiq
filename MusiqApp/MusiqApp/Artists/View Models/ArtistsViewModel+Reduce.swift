@@ -51,7 +51,7 @@ extension ArtistsViewModel.State: Equatable {
 extension ArtistsViewModel {
     
     public static func reduce(_ state: State, _ event: Event) -> State {
-        OLLogger.info("****** State: \(state.debugString)")
+        OLLogger.info("\(state.debugDescription)")
         switch state {
         case .idle:
             return reduceIdle(state, event)
