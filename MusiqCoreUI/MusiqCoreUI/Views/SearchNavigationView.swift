@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resolver
 
 public struct SearchNavigationView: UIViewControllerRepresentable {
     
@@ -14,25 +15,24 @@ public struct SearchNavigationView: UIViewControllerRepresentable {
     }
     
     var view: AnyView
-    
-    var useLargeTitle: Bool
-    var title: String
-    var placeholder: String
+    let useLargeTitle: Bool
+    let title: String?
+    let placeholder: String?
     
     // onSearch and onCancel closures
-    var onSearch: (String) -> ()
-    var onCancel: () -> ()
+    var onSearch: ((String) -> ())?
+    var onCancel: (() -> ())?
     
     public init(view: AnyView,
-         useLargeTitle: Bool?,
-         title: String,
+         useLargeTitle: Bool,
+         title: String?,
          placeholder: String?,
-         onSearch: @escaping (String) -> (),
-         onCancel: @escaping () -> () = {}) {
+         onSearch: ((String) -> ())?,
+         onCancel: (() -> ())?) {
         self.view = view
         self.title = title
-        self.placeholder = placeholder ?? "Search"
-        self.useLargeTitle = useLargeTitle ?? true
+        self.placeholder = placeholder
+        self.useLargeTitle = useLargeTitle
         self.onSearch = onSearch
         self.onCancel = onCancel
     }
@@ -72,11 +72,68 @@ public struct SearchNavigationView: UIViewControllerRepresentable {
         }
         
         public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            self.parent.onSearch(searchText)
+            guard let onSearch = parent.onSearch else { return }
+            onSearch(searchText)
         }
         
         public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-            self.parent.onCancel()
+            guard let onCancel = parent.onCancel else { return }
+            onCancel()
+        }
+    }
+}
+
+public class SearchNavigationViewBuilder {
+
+    private var view: AnyView?
+    private var useLargeTitle: Bool = true
+    private var title: String?
+    private var placeholder: String?
+    private var onSearch: ((String) -> ())?
+    private var onCancel: (() -> ())?
+    
+    public init() {}
+    
+    public func withView(_ view: AnyView) -> SearchNavigationViewBuilder {
+        self.view = view
+        return self
+    }
+    
+    public func withTitle(_ title: String) -> SearchNavigationViewBuilder {
+        self.title = title
+        return self
+    }
+    
+    public func withPlaceholder(_ placeholder: String) -> SearchNavigationViewBuilder {
+        self.placeholder = placeholder
+        return self
+    }
+    
+    public func onSearch(_ onSearch: @escaping (String) -> ()) -> SearchNavigationViewBuilder {
+        self.onSearch = onSearch
+        return self
+    }
+    
+    public func onCancel(_ onCancel: @escaping () -> ()) -> SearchNavigationViewBuilder {
+        self.onCancel = onCancel
+        return self
+    }
+    
+    @ViewBuilder
+    public func build() -> some View {
+        if let view = view {
+            SearchNavigationView(
+                view: view,
+                useLargeTitle: useLargeTitle,
+                title: title,
+                placeholder: placeholder,
+                onSearch: onSearch,
+                onCancel: onCancel)
+        } else {
+            ErrorViewBuilder()
+                .withSymbol("xmark.octagon.fill")
+                .withMessage("Sorry, there is no content.")
+                .build()
         }
     }
 }

@@ -14,14 +14,14 @@ struct SearchContentView: View {
     @Injected var viewModel: ArtistsViewModel
     
     var body: some View {
-        SearchNavigationView(
-            view: AnyView(SearchView(viewModel: viewModel)),
-            useLargeTitle: true,
-            title: "Search",
-            placeholder: "Search artists",
-            onSearch: { (searchTerm) in
+        SearchNavigationViewBuilder()
+            .withView(AnyView(SearchView(viewModel: viewModel)))
+            .withTitle("Search")
+            .withPlaceholder("Search artists")
+            .onSearch { (searchTerm) in
                 viewModel.search(with: searchTerm)
-            })
+            }
+            .build()
             .ignoresSafeArea()
     }
 }
