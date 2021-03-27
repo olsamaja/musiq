@@ -43,9 +43,17 @@ extension ArtistDTO: Decodable {
         
         var bio: ArtistBioDTO? = nil
         if let artistBio = try? container.decode(ArtistBioDTO.self, forKey: .bio) {
-            bio = ArtistBioDTO(summary: artistBio.summary, content: artistBio.content, published: artistBio.published)
+            bio = ArtistBioDTO(summary: artistBio.summary,
+                               content: artistBio.content,
+                               published: artistBio.published)
         }
 
-        self.init(name: name, mbid: mbid, url: url, imageURL: imageURL, listeners: listenersStat, playcount: plapycountStat, bio: bio)
+        self.init(name: name,
+                  mbid: mbid,
+                  url: url,
+                  imageURL: imageURL,
+                  listeners: listenersStat,
+                  playcount: plapycountStat,
+                  bio: bio)
     }
 }

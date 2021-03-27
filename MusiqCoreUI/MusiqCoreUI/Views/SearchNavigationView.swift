@@ -109,6 +109,11 @@ public class SearchNavigationViewBuilder {
         return self
     }
     
+    public func withUseLargeTitle(_ useLargeTitle: Bool) -> SearchNavigationViewBuilder {
+        self.useLargeTitle = useLargeTitle
+        return self
+    }
+    
     public func onSearch(_ onSearch: @escaping (String) -> ()) -> SearchNavigationViewBuilder {
         self.onSearch = onSearch
         return self
