@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7D01564125A5304A001BDAB6 /* MusiqCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01563725A5304A001BDAB6 /* MusiqCoreUI.framework */; };
-		7D01564625A5304A001BDAB6 /* MusiqCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01564525A5304A001BDAB6 /* MusiqCoreUITests.swift */; };
 		7D01564825A5304A001BDAB6 /* MusiqCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D01563A25A5304A001BDAB6 /* MusiqCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D01565525A53060001BDAB6 /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01565425A53060001BDAB6 /* MusiqCore.framework */; };
 		7D01565625A53060001BDAB6 /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01565425A53060001BDAB6 /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,6 +15,7 @@
 		7D5A15EA260E4B5F0064E34E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15E9260E4B5F0064E34E /* ErrorView.swift */; };
 		7D5A15F6260E93610064E34E /* ErrorViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F5260E93610064E34E /* ErrorViewBuilderTests.swift */; };
 		7D5A15F9260F48430064E34E /* SearchNavigationViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F8260F48430064E34E /* SearchNavigationViewBuilderTests.swift */; };
+		7D5A15FD260F907D0064E34E /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5A15FC260F907D0064E34E /* ViewInspector */; };
 		7D90A168260B2BE7002F31D1 /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A167260B2BE7002F31D1 /* SearchNavigationView.swift */; };
 		7DF1AC1225CDED5E003CB716 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF1AC1125CDED5E003CB716 /* Spinner.swift */; };
 		7DF1AC1E25CDEDBF003CB716 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF1AC1D25CDEDBF003CB716 /* BadgeView.swift */; };
@@ -50,7 +50,6 @@
 		7D01563A25A5304A001BDAB6 /* MusiqCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqCoreUI.h; sourceTree = "<group>"; };
 		7D01563B25A5304A001BDAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D01564025A5304A001BDAB6 /* MusiqCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D01564525A5304A001BDAB6 /* MusiqCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqCoreUITests.swift; sourceTree = "<group>"; };
 		7D01564725A5304A001BDAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D01565425A53060001BDAB6 /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4D785225AA4643007C46DC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D01564125A5304A001BDAB6 /* MusiqCoreUI.framework in Frameworks */,
+				7D5A15FD260F907D0064E34E /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,6 @@
 		7D01564425A5304A001BDAB6 /* MusiqCoreUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7D01564525A5304A001BDAB6 /* MusiqCoreUITests.swift */,
 				7D5A15F5260E93610064E34E /* ErrorViewBuilderTests.swift */,
 				7D5A15F8260F48430064E34E /* SearchNavigationViewBuilderTests.swift */,
 				7D01564725A5304A001BDAB6 /* Info.plist */,
@@ -205,6 +204,9 @@
 				7D01564325A5304A001BDAB6 /* PBXTargetDependency */,
 			);
 			name = MusiqCoreUITests;
+			packageProductDependencies = (
+				7D5A15FC260F907D0064E34E /* ViewInspector */,
+			);
 			productName = MusiqCoreUITests;
 			productReference = 7D01564025A5304A001BDAB6 /* MusiqCoreUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -236,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 7D01562D25A5304A001BDAB6;
+			packageReferences = (
+				7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 7D01563825A5304A001BDAB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D01564625A5304A001BDAB6 /* MusiqCoreUITests.swift in Sources */,
 				7D5A15F9260F48430064E34E /* SearchNavigationViewBuilderTests.swift in Sources */,
 				7D5A15F6260E93610064E34E /* ErrorViewBuilderTests.swift in Sources */,
 			);
@@ -539,6 +543,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D5A15FC260F907D0064E34E /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D01562E25A5304A001BDAB6 /* Project object */;
 }

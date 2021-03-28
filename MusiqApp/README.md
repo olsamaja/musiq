@@ -29,6 +29,9 @@ git clone https://github.com/olsamaja/musiq.git
 * [Protocol oriented Dependency Injection with Swift](https://medium.com/@nfrugoni19/protocol-oriented-dependency-injection-with-swift-605b3d5b72ce)
 * [Resolver - An ultralight Dependency Injection / Service Locator framework](https://github.com/hmlongco/Resolver)
 
+### SwiftUI Reflection
+
+* [ViewInspector](https://github.com/nalexn/ViewInspector)
 
 ## Architecture
 
