@@ -5,10 +5,7 @@
 //  Created by Olivier Rigault on 17/01/2021.
 //
 
-import Foundation
 import Combine
-import MusiqConfiguration
-import MusiqCore
 import MusiqShared
 
 public class ArtistDataManager {
@@ -29,14 +26,3 @@ public class ArtistDataManager {
     }
 }
 
-extension DataFetcher {
-    
-    func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
-        return loadData(with: makeSearchArtistsComponents(term: term))
-    }
-
-    private func makeSearchArtistsComponents(term: String) -> URLComponents {
-        return makeComponents(with: ["method": "artist.search", "artist": term])
-    }
-
-}
