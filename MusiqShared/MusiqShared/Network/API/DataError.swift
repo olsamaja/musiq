@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DataError: Error {
+public enum DataError: Error {
     case invalidRequest
     case invalidResponse
     case parsing(description: String)

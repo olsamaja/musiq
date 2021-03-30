@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CachedDataProtocol {
+public protocol CachedDataProtocol {
     
     associatedtype T
     

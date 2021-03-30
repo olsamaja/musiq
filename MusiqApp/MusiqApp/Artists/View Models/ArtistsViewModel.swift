@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import MusiqCore
 import MusiqShared
+import MusiqModuleArtists
 
 public final class ArtistsViewModel: ObservableObject {
     

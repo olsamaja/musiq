@@ -11,12 +11,12 @@ import MusiqConfiguration
 import MusiqCore
 import Resolver
 
-final class DataFetcher {
+public final class DataFetcher {
     
     private let session: URLSession
     @OptionalInjected var configuration: Configuration?
     
-    init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
 }
@@ -44,19 +44,9 @@ private extension DataFetcher {
         
         return components
     }
-    
-    func makeComponents(with queryItems: [String: String]) -> URLComponents {
-        var components = makeDefaultComponents()
-        queryItems.forEach { components.queryItems?.append(URLQueryItem(name: $0.key, value: $0.value)) }
-        return components
-    }
 }
 
-extension DataFetcher {
-    
-    func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
-        return loadData(with: makeSearchArtistsComponents(term: term))
-    }
+public extension DataFetcher {
     
     // MARK: - Helpers
 
@@ -64,19 +54,17 @@ extension DataFetcher {
         return makeComponents(with: ["method": "chart.gettoptags"])
     }
 
-    private func makeSearchArtistsComponents(term: String) -> URLComponents {
-        return makeComponents(with: ["method": "artist.search", "artist": term])
-    }
-
-    private func makeSearchTracksComponents(term: String) -> URLComponents {
-        return makeComponents(with: ["method": "track.search", "track": term])
-    }
-
     private func makeArtistInfoComponents(artist: String) -> URLComponents {
         return makeComponents(with: ["method": "artist.getinfo", "artist": artist])
     }
+    
+    func makeComponents(with queryItems: [String: String]) -> URLComponents {
+        var components = makeDefaultComponents()
+        queryItems.forEach { components.queryItems?.append(URLQueryItem(name: $0.key, value: $0.value)) }
+        return components
+    }
 
-    private func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
+    func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
         
         guard let url = components.url else {
             let error = DataError.network(description: "Couldn't create URL")

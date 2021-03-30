@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import MusiqShared
+import MusiqCore
 
 protocol ArtistRepositoryProtocol: RepositoryProtocol {
     func search(with term: String) -> AnyPublisher<[Artist], DataError>

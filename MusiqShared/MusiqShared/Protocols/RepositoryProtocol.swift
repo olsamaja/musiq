@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol RepositoryProtocol {
+public protocol RepositoryProtocol {
     associatedtype T
     
     func getAll() -> AnyPublisher<[T], DataError>

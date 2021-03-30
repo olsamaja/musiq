@@ -7,6 +7,7 @@
 
 import Foundation
 import MusiqShared
+import MusiqModuleArtists
 
 public struct ArtistCardItem: Identifiable {
     
