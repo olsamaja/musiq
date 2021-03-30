@@ -9,7 +9,6 @@ import Foundation
 import Combine
 import MusiqCore
 import MusiqShared
-import MusiqModuleArtists
 
 public extension ArtistsViewModel {
     

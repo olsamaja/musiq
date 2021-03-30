@@ -7,6 +7,7 @@
 
 import MusiqConfiguration
 import Resolver
+import MusiqModuleArtists
 
 extension Resolver: ResolverRegistering {
     

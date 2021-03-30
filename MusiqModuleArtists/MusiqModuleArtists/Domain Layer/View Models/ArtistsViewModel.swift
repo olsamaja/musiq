@@ -9,7 +9,6 @@ import Foundation
 import Combine
 import MusiqCore
 import MusiqShared
-import MusiqModuleArtists
 
 public final class ArtistsViewModel: ObservableObject {
     
@@ -19,7 +18,7 @@ public final class ArtistsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let action = PassthroughSubject<Event, Never>()
     
-    init() {
+    public init() {
         setupFeedbacks()
         setupBindings()
     }

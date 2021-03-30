@@ -9,11 +9,13 @@ import SwiftUI
 import MusiqCoreUI
 import Resolver
 
-struct SearchContentView: View {
+public struct SearchContentView: View {
     
     @Injected var viewModel: ArtistsViewModel
     
-    var body: some View {
+    public init() {}
+    
+    public var body: some View {
         SearchNavigationViewBuilder()
             .withView(AnyView(SearchView(viewModel: viewModel)))
             .withTitle("Search")

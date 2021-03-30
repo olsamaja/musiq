@@ -7,8 +7,7 @@
 
 import SwiftUI
 import MusiqConfiguration
-import MusiqShared
-import MusiqCore
+import MusiqModuleArtists
 
 @main
 struct MusiqApp: App {
