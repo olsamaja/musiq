@@ -8,7 +8,7 @@
 import XCTest
 import Combine
 @testable import MusiqShared
-@testable import MusiqCore
+@testable import MusiqModuleArtists
 
 class ImageDTOTests: XCTestCase {
 

@@ -12,7 +12,7 @@ public extension Resolver {
     
     static func registerConfigurationServices(with bundle: Bundle) {
         do {
-            let configuration = try ConfigurationDataProvider.load(with: bundle)
+            let configuration = try ConfigurationDataManager.load(with: bundle)
             register { configuration as Configuration }
         } catch {
             OLLogger.info("\(error) - Unable to load configuration")

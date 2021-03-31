@@ -1,5 +1,5 @@
 //
-//  ConfigurationDataProvider.swift
+//  ConfigurationDataManager.swift
 //  MusiqConfiguration
 //
 //  Created by Olivier Rigault on 26/12/2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ConfigurationDataProvider {
+public struct ConfigurationDataManager {
     
     public static func load(with bundle: Bundle) throws -> Configuration {
         

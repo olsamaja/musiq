@@ -7,18 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D01560E25A117CA001BDAB6 /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */; };
-		7D16619925B355D7003B7AA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16619825B355D7003B7AA1 /* String+Extensions.swift */; };
 		7D1661AA25B3907F003B7AA1 /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; };
 		7D1661AB25B3907F003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */; };
 		7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */; };
+		7D3E523C261459AC00BC649C /* String+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E523B261459AC00BC649C /* String+Parse.swift */; };
 		7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */; };
 		7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F36259A90200058DDDA /* MockURLSession.swift */; };
-		7D5E7F3A259A9F300058DDDA /* MockSearchArtistsSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E7F39259A9F300058DDDA /* MockSearchArtistsSuccessful.json */; };
-		7D5E7F3F259BD0230058DDDA /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F3E259BD0230058DDDA /* ArtistDTOTests.swift */; };
 		7D83403E259171650093B94C /* MusiqShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834034259171650093B94C /* MusiqShared.framework */; };
-		7D834043259171650093B94C /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D834042259171650093B94C /* DataFetcherTests.swift */; };
 		7D834045259171650093B94C /* MusiqShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D834037259171650093B94C /* MusiqShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D834055259171980093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; };
 		7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -54,20 +50,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
-		7D16619825B355D7003B7AA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
+		7D3E523B261459AC00BC649C /* String+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parse.swift"; sourceTree = "<group>"; };
 		7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		7D5E7F36259A90200058DDDA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		7D5E7F39259A9F300058DDDA /* MockSearchArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSearchArtistsSuccessful.json; sourceTree = "<group>"; };
-		7D5E7F3E259BD0230058DDDA /* ArtistDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTOTests.swift; sourceTree = "<group>"; };
 		7D834034259171650093B94C /* MusiqShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D834037259171650093B94C /* MusiqShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqShared.h; sourceTree = "<group>"; };
 		7D834038259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D83403D259171650093B94C /* MusiqSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D834042259171650093B94C /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
 		7D834044259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D834054259171980093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D83405B2591730F0093B94C /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
@@ -97,14 +89,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D16619B25B355DD003B7AA1 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7D16619825B355D7003B7AA1 /* String+Extensions.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		7D1661C725B4FDEF003B7AA1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +131,7 @@
 		7D834041259171650093B94C /* MusiqSharedTests */ = {
 			isa = PBXGroup;
 			children = (
-				7D834042259171650093B94C /* DataFetcherTests.swift */,
-				7D5E7F3E259BD0230058DDDA /* ArtistDTOTests.swift */,
-				7D01560D25A117CA001BDAB6 /* ImageDTOTests.swift */,
-				7D5E7F39259A9F300058DDDA /* MockSearchArtistsSuccessful.json */,
 				7D834044259171650093B94C /* Info.plist */,
-				7D16619B25B355DD003B7AA1 /* Helpers */,
 			);
 			path = MusiqSharedTests;
 			sourceTree = "<group>";
@@ -188,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				7D83405B2591730F0093B94C /* Data+Decode.swift */,
+				7D3E523B261459AC00BC649C /* String+Parse.swift */,
 				7D834060259173670093B94C /* URLSession+Extensions.swift */,
 				7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */,
 				7D5E7F36259A90200058DDDA /* MockURLSession.swift */,
@@ -295,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5E7F3A259A9F300058DDDA /* MockSearchArtistsSuccessful.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +290,7 @@
 				7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */,
 				7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */,
 				7D8340642591749E0093B94C /* DataError.swift in Sources */,
+				7D3E523C261459AC00BC649C /* String+Parse.swift in Sources */,
 				7DDE3A4925929369005750CC /* DataFetcher.swift in Sources */,
 				7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */,
 				7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */,
@@ -321,10 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D16619925B355D7003B7AA1 /* String+Extensions.swift in Sources */,
-				7D834043259171650093B94C /* DataFetcherTests.swift in Sources */,
-				7D5E7F3F259BD0230058DDDA /* ArtistDTOTests.swift in Sources */,
-				7D01560E25A117CA001BDAB6 /* ImageDTOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

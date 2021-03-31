@@ -10,7 +10,7 @@ import XCTest
 import Combine
 @testable import MusiqShared
 @testable import MusiqConfiguration
-@testable import MusiqCore
+@testable import MusiqModuleArtists
 
 final class DataFetcherTests: XCTestCase {
     
@@ -109,7 +109,7 @@ final class DataFetcherTests: XCTestCase {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 1)
+        wait(for: [expectation], timeout: 2)
     }
 
 }
