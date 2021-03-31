@@ -85,7 +85,7 @@ public struct SearchNavigationView: UIViewControllerRepresentable {
 
 public class SearchNavigationViewBuilder {
 
-    private var view: AnyView?
+    private var contentView: AnyView?
     private var useLargeTitle: Bool = true
     private var title: String?
     private var placeholder: String?
@@ -94,8 +94,8 @@ public class SearchNavigationViewBuilder {
     
     public init() {}
     
-    public func withView(_ view: AnyView) -> SearchNavigationViewBuilder {
-        self.view = view
+    public func withContentView(_ view: AnyView) -> SearchNavigationViewBuilder {
+        self.contentView = view
         return self
     }
     
@@ -126,7 +126,7 @@ public class SearchNavigationViewBuilder {
     
     @ViewBuilder
     public func build() -> some View {
-        if let view = view {
+        if let view = contentView {
             SearchNavigationView(
                 view: view,
                 useLargeTitle: useLargeTitle,

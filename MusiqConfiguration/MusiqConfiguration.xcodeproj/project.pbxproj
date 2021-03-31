@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDE3A752592992C005750CC /* Configuration.swift */,
+				7D5E7F2425991ED20058DDDA /* Data Mappers */,
 			);
 			path = "Domain Models";
 			sourceTree = "<group>";
@@ -157,7 +158,6 @@
 				7DDE3A5D259298EC005750CC /* Info.plist */,
 				7D7733E825BB7F8900D28781 /* Services */,
 				7D5E7F0F2597408B0058DDDA /* Data Manager */,
-				7D5E7F2425991ED20058DDDA /* Data Mappers */,
 				7D5E7F0C259740820058DDDA /* Domain Models */,
 				7D5E7EFF25973E940058DDDA /* Data Models */,
 			);

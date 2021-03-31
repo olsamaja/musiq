@@ -13,11 +13,6 @@ struct SearchView: View {
     @ObservedObject var viewModel: ArtistsViewModel
     
     var body: some View {
-        subContent
-    }
-    
-    @ViewBuilder
-    private var subContent: some View {
         switch viewModel.state {
         case .idle:
             VStack {

@@ -5,7 +5,6 @@
 //  Created by Olivier Rigault on 05/01/2021.
 //
 
-import Foundation
 import Combine
 import MusiqCore
 import MusiqShared
@@ -87,21 +86,6 @@ public final class ArtistsViewModel: ObservableObject {
                 .map(Event.onDataLoaded)
                 .catch { Just(Event.onFailedToLoadData($0)) }
                 .eraseToAnyPublisher()
-        }
-    }
-}
-
-extension ArtistsViewModel {
-    
-    public struct ListItem: Identifiable {
-        public let id: UUID
-        let name: String
-        let listeners: String?
-        
-        init(artist: Artist) {
-            self.id = UUID()
-            self.name = artist.name
-            self.listeners = artist.listeners
         }
     }
 }

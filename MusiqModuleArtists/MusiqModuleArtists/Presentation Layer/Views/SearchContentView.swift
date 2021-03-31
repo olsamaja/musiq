@@ -17,7 +17,7 @@ public struct SearchContentView: View {
     
     public var body: some View {
         SearchNavigationViewBuilder()
-            .withView(AnyView(SearchView(viewModel: viewModel)))
+            .withContentView(AnyView(SearchView(viewModel: viewModel)))
             .withTitle("Search")
             .withPlaceholder("Search artists")
             .onSearch { (searchTerm) in

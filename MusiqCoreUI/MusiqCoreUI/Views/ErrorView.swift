@@ -43,7 +43,6 @@ public class ErrorViewBuilder {
         return self
     }
 
-    @ViewBuilder
     public func build() -> some View {
         ErrorView(message: message, symbol: symbol)
     }
