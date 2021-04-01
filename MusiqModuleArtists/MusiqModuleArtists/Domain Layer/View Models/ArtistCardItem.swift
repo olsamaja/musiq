@@ -19,4 +19,10 @@ public struct ArtistCardItem: Identifiable {
         self.name = artist.name
         self.listeners = artist.listeners
     }
+    
+    init(name: String, listeners: String? = nil) {
+        self.id = UUID().uuidString
+        self.name = name
+        self.listeners = listeners
+    }
 }
