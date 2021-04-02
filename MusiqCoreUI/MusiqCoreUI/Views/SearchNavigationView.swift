@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Resolver
+import MusiqCore
 
 public struct SearchNavigationView: UIViewControllerRepresentable {
     
@@ -83,7 +84,7 @@ public struct SearchNavigationView: UIViewControllerRepresentable {
     }
 }
 
-public class SearchNavigationViewBuilder {
+public class SearchNavigationViewBuilder: BuilderProtocol {
 
     private var contentView: AnyView?
     private var useLargeTitle: Bool = true

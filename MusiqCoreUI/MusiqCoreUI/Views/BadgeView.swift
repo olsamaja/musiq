@@ -6,41 +6,132 @@
 //
 
 import SwiftUI
+import MusiqCore
 
 public struct BadgeView: View {
     
-    private enum Constants {
-        static let cornerRadius: CGFloat = 20
-        static let horizontalInset: CGFloat = 8
-        static let verticalInset: CGFloat = 4
-        static let defaultTextColor = Color.white
-    }
+    let text: String?
+    let font: Font
+    let backgroundColor: Color
+    let textColor: Color
+    let cornerRadius: CGFloat
+    let horizontalInset: CGFloat
+    let verticalInset: CGFloat
     
-    var text: String
-    var backgroundColor: Color
-    var textColor: Color
-    
-    public init(text: String, backgroundColor: Color, textColor: Color? = nil) {
+    public init(text: String?,
+                font: Font,
+                backgroundColor: Color,
+                textColor: Color,
+                cornerRadius: CGFloat,
+                horizontalInset: CGFloat,
+                verticalInset: CGFloat) {
         self.text = text
+        self.font = font
         self.backgroundColor = backgroundColor
-        self.textColor = textColor ?? Constants.defaultTextColor
+        self.textColor = textColor
+        self.cornerRadius = cornerRadius
+        self.horizontalInset = horizontalInset
+        self.verticalInset = verticalInset
     }
 
+    @ViewBuilder
     public var body: some View {
-        Text(text)
-            .font(.caption)
-            .padding(EdgeInsets(top: Constants.verticalInset,
-                                leading: Constants.horizontalInset,
-                                bottom: Constants.verticalInset,
-                                trailing: Constants.horizontalInset))
-            .background(
-                RoundedRectangle(cornerRadius: Constants.cornerRadius).fill(backgroundColor))
-            .foregroundColor(textColor)
+        if let text = text {
+            Text(text)
+                .font(font)
+                .padding(EdgeInsets(top: verticalInset,
+                                    leading: horizontalInset,
+                                    bottom: verticalInset,
+                                    trailing: horizontalInset))
+                .background(
+                    RoundedRectangle(cornerRadius: cornerRadius).fill(backgroundColor))
+                .foregroundColor(textColor)
+        } else {
+            EmptyView()
+        }
     }
 }
 
-struct BadgeView_Previews: PreviewProvider {
-    static var previews: some View {
-        BadgeView(text: "String", backgroundColor: .purple)
+public class BadgeViewBuilder: BuilderProtocol {
+    
+    private var text: String? = nil
+    private var font = Font.caption
+    private var backgroundColor = Color.purple
+    private var textColor = Color.white
+    private var cornerRadius: CGFloat = 20
+    private var horizontalInset: CGFloat = 8
+    private var verticalInset: CGFloat = 4
+
+    public init() {}
+    
+    public func withText(_ text: String) -> BadgeViewBuilder {
+        self.text = text
+        return self
+    }
+    
+    public func withFont(_ font: Font) -> BadgeViewBuilder {
+        self.font = font
+        return self
+    }
+    
+    public func withBackgroundColor(_ backgroundColor: Color) -> BadgeViewBuilder {
+        self.backgroundColor = backgroundColor
+        return self
+    }
+    
+    public func withTextColor(_ textColor: Color) -> BadgeViewBuilder {
+        self.textColor = textColor
+        return self
+    }
+    
+    public func withCornerRadius(_ cornerRadius: CGFloat) -> BadgeViewBuilder {
+        self.cornerRadius = cornerRadius
+        return self
+    }
+    
+    public func withHorizontalInset(_ horizontalInset: CGFloat) -> BadgeViewBuilder {
+        self.horizontalInset = horizontalInset
+        return self
+    }
+    
+    public func withVerticalInset(_ verticalInset: CGFloat) -> BadgeViewBuilder {
+        self.verticalInset = verticalInset
+        return self
+    }
+    
+    public func build() -> some View {
+        BadgeView(text: text,
+                  font: font,
+                  backgroundColor: backgroundColor,
+                  textColor: textColor,
+                  cornerRadius: cornerRadius,
+                  horizontalInset: horizontalInset,
+                  verticalInset: verticalInset)
+    }
+}
+
+
+public class BadgeView_Previews: PreviewProvider {
+    
+    public static var previews: some View {
+        Group {
+            BadgeViewBuilder()
+                .build()
+                .sizeThatFitPreview(with: "No text, so should be empty")
+            BadgeViewBuilder()
+                .withText("Hello, world!")
+                .build()
+                .sizeThatFitPreview(with: "Default")
+            BadgeViewBuilder()
+                .withText("Hello, world!")
+                .withFont(.title)
+                .withBackgroundColor(.gray)
+                .withTextColor(.purple)
+                .withCornerRadius(8)
+                .withHorizontalInset(30)
+                .withVerticalInset(20)
+                .build()
+                .sizeThatFitPreview(with: "Big badge")
+        }
     }
 }

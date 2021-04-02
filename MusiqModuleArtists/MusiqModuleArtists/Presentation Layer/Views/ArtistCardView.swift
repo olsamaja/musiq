@@ -18,7 +18,9 @@ struct ArtistCardView: View {
                 Spacer(minLength: 10)
                     .background(Color.yellow)
                 item.listeners.map { listeners in
-                    BadgeView(text: listeners, backgroundColor: .purple)
+                    BadgeViewBuilder()
+                        .withText(listeners)
+                        .build()
                         .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .trailing)
                 }
             }
@@ -38,26 +40,18 @@ struct ArtistCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ArtistCardView(item: Constants.item1)
-                .previewLayout(PreviewLayout.sizeThatFits)
-                .padding()
-                .previewDisplayName("Short artist name")
-            
+                .sizeThatFitPreview(with: "Short artist name")
+
             ArtistCardView(item: Constants.item2)
-                .previewLayout(PreviewLayout.sizeThatFits)
-                .padding()
-                .previewDisplayName("Long artist name")
+                .sizeThatFitPreview(with: "Long artist name")
 
             ArtistCardView(item: Constants.item3)
-                .previewLayout(PreviewLayout.sizeThatFits)
-                .padding()
-                .previewDisplayName("Default preview")
-            
+                .sizeThatFitPreview(with: "Default")
+
             ArtistCardView(item: Constants.item3)
-                .previewLayout(PreviewLayout.sizeThatFits)
                 .background(Color(.systemBackground))
                 .environment(\.colorScheme, .dark)
-                .padding()
-                .previewDisplayName("Default dark mode")
+                .sizeThatFitPreview(with: "Long artist name")
         }
     }
 }

@@ -10,8 +10,8 @@ import MusiqCore
 
 struct ErrorView: View {
 
-    let symbol: String?
     let message: String?
+    let symbol: String?
 
     var body: some View {
         VStack {
@@ -46,7 +46,7 @@ public class ErrorViewBuilder: BuilderProtocol {
     }
 
     public func build() -> some View {
-        ErrorView(symbol: symbol, message: message)
+        ErrorView(message: message, symbol: symbol)
     }
 }
 
