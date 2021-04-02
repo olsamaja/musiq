@@ -19,52 +19,8 @@ public final class DataFetcher {
     public init(session: URLSession = .shared) {
         self.session = session
     }
-}
-
-// MARK: - Private extensions
-
-private extension DataFetcher {
     
-    func makeDefaultComponents() -> URLComponents {
-        
-        var components = URLComponents()
-        
-        guard let configuration = configuration else {
-            return components
-        }
-        
-        components.scheme = configuration.scheme
-        components.host = configuration.host
-        components.path = configuration.path
-        
-        components.queryItems = [
-            URLQueryItem(name: "api_key", value: configuration.key),
-            URLQueryItem(name: "format", value: "json")
-        ]
-        
-        return components
-    }
-}
-
-public extension DataFetcher {
-    
-    // MARK: - Helpers
-
-    private func makeTopTagsComponents() -> URLComponents {
-        return makeComponents(with: ["method": "chart.gettoptags"])
-    }
-
-    private func makeArtistInfoComponents(artist: String) -> URLComponents {
-        return makeComponents(with: ["method": "artist.getinfo", "artist": artist])
-    }
-    
-    func makeComponents(with queryItems: [String: String]) -> URLComponents {
-        var components = makeDefaultComponents()
-        queryItems.forEach { components.queryItems?.append(URLQueryItem(name: $0.key, value: $0.value)) }
-        return components
-    }
-
-    func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
+    public func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
         
         guard let url = components.url else {
             let error = DataError.network(description: "Couldn't create URL")

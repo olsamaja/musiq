@@ -11,11 +11,12 @@ import MusiqShared
 extension DataFetcher {
     
     func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
-        return loadData(with: makeSearchArtistsComponents(term: term))
+        
+        let urlComponents = URLComponentsBuilder()
+            .with(key: "method", value: "artist.search")
+            .with(key: "artist", value: term)
+            .build()
+        
+        return loadData(with: urlComponents)
     }
-
-    private func makeSearchArtistsComponents(term: String) -> URLComponents {
-        return makeComponents(with: ["method": "artist.search", "artist": term])
-    }
-
 }
