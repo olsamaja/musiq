@@ -23,10 +23,10 @@ struct SearchContentView: View {
                 Spacer()
             }
         case .error(let error):
-            Text(error.localizedDescription)
-                .padding()
-                .multilineTextAlignment(.center)
-                .font(.body)
+            ErrorViewBuilder()
+                .withSymbol("xmark.octagon")
+                .withMessage(error.localizedDescription)
+                .build()
         case .loaded(let artists):
             VStack {
                 ScrollView(.vertical, showsIndicators: true) {

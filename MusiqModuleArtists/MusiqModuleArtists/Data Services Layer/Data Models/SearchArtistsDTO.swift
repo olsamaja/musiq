@@ -9,11 +9,8 @@ import Foundation
 
 // MARK: - Used in method=search.artist
 
-struct ArtistMatchesDTO {
+struct ArtistMatchesDTO: Decodable {
     let artist: [ArtistDTO]
-}
-
-extension ArtistMatchesDTO: Decodable {
 }
 
 struct SearchArtistsResultsDTO {
