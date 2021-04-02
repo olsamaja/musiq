@@ -13,7 +13,7 @@ struct MusiqApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SearchContentView()
+            SearchContainerView()
         }
     }
 }
