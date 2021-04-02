@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import MusiqCore
 
 struct ErrorView: View {
 
-    let message: String?
     let symbol: String?
+    let message: String?
 
     var body: some View {
         VStack {
@@ -21,12 +22,13 @@ struct ErrorView: View {
             }
             if let message = message {
                 Text(message)
+                    .multilineTextAlignment(.center)
             }
         }
     }
 }
 
-public class ErrorViewBuilder {
+public class ErrorViewBuilder: BuilderProtocol {
     
     private var message: String?
     private var symbol: String?
@@ -44,6 +46,36 @@ public class ErrorViewBuilder {
     }
 
     public func build() -> some View {
-        ErrorView(message: message, symbol: symbol)
+        ErrorView(symbol: symbol, message: message)
+    }
+}
+
+struct ErrorView_Previews: PreviewProvider {
+    
+    enum Constants {
+        static let symbol = "xmark.octagon"
+        static let message = """
+        This is a pointless, useless and very
+        long explanatioon for an error,
+        that we just use for testing this view
+        """
+    }
+    
+    static var previews: some View {
+        Group {
+            ErrorViewBuilder()
+                .withMessage(Constants.message)
+                .build()
+                .screenPreview(with: "Message only")
+            ErrorViewBuilder()
+                .withSymbol(Constants.symbol)
+                .build()
+                .screenPreview(with: "Symbol only")
+            ErrorViewBuilder()
+                .withSymbol(Constants.symbol)
+                .withMessage(Constants.message)
+                .build()
+                .screenPreview(with: "Full error view")
+        }
     }
 }
