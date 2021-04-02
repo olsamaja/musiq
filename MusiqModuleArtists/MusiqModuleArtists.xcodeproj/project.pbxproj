@@ -13,6 +13,7 @@
 		7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522A2614585600BC649C /* ImageDTOTests.swift */; };
 		7D3E522D2614585700BC649C /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataFetcherTests.swift */; };
 		7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52282614585600BC649C /* ArtistDTOTests.swift */; };
+		7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */; };
 		7DBC5EEA26130CF40016408C /* MusiqModuleArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */; };
 		7DBC5EF126130CF40016408C /* MusiqModuleArtists.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DBC5F0D26135BD80016408C /* ArtistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F0C26135BD80016408C /* ArtistDataManager.swift */; };
@@ -73,6 +74,7 @@
 		7D3E52292614585600BC649C /* MockSearchArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSearchArtistsSuccessful.json; sourceTree = "<group>"; };
 		7D3E522A2614585600BC649C /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
 		7D3E522B2614585600BC649C /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
+		7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleArtistsServices+Injection.swift"; sourceTree = "<group>"; };
 		7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleArtists.h; sourceTree = "<group>"; };
 		7DBC5EE426130CF40016408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 			path = Ressources;
 			sourceTree = "<group>";
 		};
+		7DAB17AB2617DADD00BD134B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		7DBC5ED626130CF40016408C = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 			children = (
 				7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */,
 				7DBC5EE426130CF40016408C /* Info.plist */,
+				7DAB17AB2617DADD00BD134B /* Configuration */,
 				7DD251582613E81A003EC3BE /* Presentation Layer */,
 				7DD251562613E808003EC3BE /* Domain Layer */,
 				7DBC5F832613B4580016408C /* Data Services Layer */,
@@ -415,6 +426,7 @@
 				7DE136C82613B5FD00FFABE7 /* SearchView.swift in Sources */,
 				7DE136BC2613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift in Sources */,
 				7DE136BF2613B5E400FFABE7 /* ArtistCardItem.swift in Sources */,
+				7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */,
 				7DBC5F6C2613B3080016408C /* SearchArtistsDTOMapper.swift in Sources */,
 				7DBC5F6B2613B3080016408C /* ArtistDTOMapper.swift in Sources */,
 				7DE136C92613B5FD00FFABE7 /* ArtistCardView.swift in Sources */,

@@ -13,10 +13,6 @@ extension Resolver: ResolverRegistering {
     
     public static func registerAllServices() {
         registerConfigurationServices(with: Bundle.main)
-        registerAppServices()
-    }
-    
-    private static func registerAppServices() {
-        register { ArtistsViewModel() as ArtistsViewModel }
+        registerModuleArtistsServices()
     }
 }

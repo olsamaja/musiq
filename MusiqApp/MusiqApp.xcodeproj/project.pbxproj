@@ -123,14 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D7733EE25BB80C700D28781 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		7D833F9A25916A930093B94C = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				7D833FA625916A930093B94C /* MusiqApp.swift */,
-				7D7733EE25BB80C700D28781 /* Services */,
 				7D833FAA25916A940093B94C /* Assets.xcassets */,
 				7D833FAF25916A940093B94C /* Info.plist */,
 				7D833FAC25916A940093B94C /* Preview Content */,
@@ -211,6 +202,7 @@
 		7DCA47422596744C006F8E01 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				7D7733EA25BB80C200D28781 /* AppServices+Injection.swift */,
 				7DCA473E2596743E006F8E01 /* Config.xcconfig */,
 			);
 			path = Configuration;
