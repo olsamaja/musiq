@@ -1,5 +1,5 @@
 //
-//  DataFetcher.swift
+//  DataRequester.swift
 //  MusiqShared
 //
 //  Created by Olivier Rigault on 22/12/2020.
@@ -11,7 +11,7 @@ import MusiqConfiguration
 import MusiqCore
 import Resolver
 
-public final class DataFetcher {
+public final class DataRequester {
     
     private let session: URLSession
     @OptionalInjected var configuration: Configuration?

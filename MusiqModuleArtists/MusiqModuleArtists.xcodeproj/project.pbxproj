@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D0970E32613D57300B2C126 /* MusiqCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */; };
 		7D0970E42613D57300B2C126 /* MusiqCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D3E52192613E9BF00BC649C /* DataFetcher+Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52182613E9BF00BC649C /* DataFetcher+Artist.swift */; };
+		7D3E52192613E9BF00BC649C /* DataRequester+Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */; };
 		7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522A2614585600BC649C /* ImageDTOTests.swift */; };
 		7D3E522D2614585700BC649C /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataFetcherTests.swift */; };
 		7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52282614585600BC649C /* ArtistDTOTests.swift */; };
@@ -69,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D3E52182613E9BF00BC649C /* DataFetcher+Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataFetcher+Artist.swift"; sourceTree = "<group>"; };
+		7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequester+Artist.swift"; sourceTree = "<group>"; };
 		7D3E52282614585600BC649C /* ArtistDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTOTests.swift; sourceTree = "<group>"; };
 		7D3E52292614585600BC649C /* MockSearchArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSearchArtistsSuccessful.json; sourceTree = "<group>"; };
 		7D3E522A2614585600BC649C /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		7D3E521B2613E9C900BC649C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				7D3E52182613E9BF00BC649C /* DataFetcher+Artist.swift */,
+				7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 				7DBC5F2D2613B1880016408C /* SearchArtistsDTO.swift in Sources */,
 				7DBC5F302613B1880016408C /* ImageDTO.swift in Sources */,
 				7DBC5F642613B2EF0016408C /* Artist.swift in Sources */,
-				7D3E52192613E9BF00BC649C /* DataFetcher+Artist.swift in Sources */,
+				7D3E52192613E9BF00BC649C /* DataRequester+Artist.swift in Sources */,
 				7DBC5F632613B2EF0016408C /* ArtistBio.swift in Sources */,
 				7DE136C82613B5FD00FFABE7 /* SearchContentView.swift in Sources */,
 				7DE136BC2613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  DataFetcherTests.swift
+//  DataRequesterTests.swift
 //  MusiqSharedTests
 //
 //  Created by Olivier Rigault on 22/12/2020.
@@ -12,13 +12,13 @@ import Combine
 @testable import MusiqConfiguration
 @testable import MusiqModuleArtists
 
-final class DataFetcherTests: XCTestCase {
+final class DataRequesterTests: XCTestCase {
     
-    var dataFetcher: DataFetcher!
+    var dataRequester: DataRequester!
     private var cancellable: AnyCancellable?
 
     override func setUp() {
-        dataFetcher = DataFetcher(session: URLSession.makeMockURLSession())
+        dataRequester = DataRequester(session: URLSession.makeMockURLSession())
     }
     
     override func tearDown() {
@@ -80,7 +80,7 @@ final class DataFetcherTests: XCTestCase {
 
         MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(with: jsonString)
         
-        cancellable = dataFetcher.searchArtists(term: "Elvis")
+        cancellable = dataRequester.searchArtists(term: "Elvis")
             .sink(receiveCompletion: { _ in }) { response in
             let artists = response.results.artistMatches.artist
             XCTAssertTrue(artists.count == 1, "Expected 1 artist, but got \(artists.count) instead.")
@@ -100,7 +100,7 @@ final class DataFetcherTests: XCTestCase {
         
         MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(in: bundle, with: "MockSearchArtistsSuccessful")
         
-        cancellable = dataFetcher.searchArtists(term: "Elvis").sink(receiveCompletion: { _ in }) { response in
+        cancellable = dataRequester.searchArtists(term: "Elvis").sink(receiveCompletion: { _ in }) { response in
             let artists = response.results.artistMatches.artist
             XCTAssertTrue(artists.count == 30, "Expected 30 artists, but got \(artists.count) instead.")
             XCTAssertTrue(artists[2].listeners == "529665", "Expected 529665, but got \(String(describing: artists[2].listeners)) instead.")

@@ -1,5 +1,5 @@
 //
-//  DataFetcher+Artist.swift
+//  DataRequester+Artist.swift
 //  MusiqModuleArtists
 //
 //  Created by Olivier Rigault on 31/03/2021.
@@ -8,7 +8,7 @@
 import Combine
 import MusiqShared
 
-extension DataFetcher {
+extension DataRequester {
     
     func searchArtists(term: String) -> AnyPublisher<SearchArtistsDTO, DataError> {
         

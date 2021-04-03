@@ -49,10 +49,10 @@ struct ArtistLocalRepository: ArtistRepositoryProtocol, CachedDataProtocol {
 struct ArtistRemoteRepository: ArtistRepositoryProtocol {
     
     typealias T = Artist
-    private var dataFetcher: DataFetcher
+    private var dataRequester: DataRequester
 
     public init() {
-        self.dataFetcher = DataFetcher()
+        self.dataRequester = DataRequester()
     }
 
     func getAll() -> AnyPublisher<[Artist], DataError> {
@@ -65,7 +65,7 @@ struct ArtistRemoteRepository: ArtistRepositoryProtocol {
     }
     
     func search(with term: String) -> AnyPublisher<[Artist], DataError> {
-        return dataFetcher.searchArtists(term: term)
+        return dataRequester.searchArtists(term: term)
             .mapError { $0 }
             .map { dto in
                 return SearchArtistsDTOMapper.map(dto)
