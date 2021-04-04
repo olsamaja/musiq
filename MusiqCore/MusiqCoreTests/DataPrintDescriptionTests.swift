@@ -8,7 +8,7 @@
 import XCTest
 @testable import MusiqCore
 
-class DataExtensionsTests: XCTestCase {
+class DataPrintDescriptionTests: XCTestCase {
 
     private func jsonString(from fileName: String, ofType fileExtension: String) -> String? {
         let bundle = Bundle(for: type(of: self))
@@ -23,6 +23,7 @@ class DataExtensionsTests: XCTestCase {
     func testPrettyJSONString() throws {
         
         guard let uglyJSON = jsonString(from: "sample", ofType: "json") else {
+            XCTFail("Unable to find sample.json file")
             return
         }
         
@@ -44,5 +45,4 @@ class DataExtensionsTests: XCTestCase {
         """
         XCTAssertEqual(string, pretty, "\(string)\n is not equal to \n")
     }
-
 }

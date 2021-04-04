@@ -35,6 +35,10 @@ class BundleExtensionsTests: XCTestCase {
         XCTAssertEqual(contents.trimmed(), jsonString)
     }
     
+    func testLoadFileFromBundleFailed() throws {
+        XCTAssertNil(bundle.loadContents(of: "inexistant", ofType: "file"))
+    }
+    
     func testInfoForValidKey() {
         
         let validKey = bundle.infoForKey("CFBundleInfoDictionaryVersion")
