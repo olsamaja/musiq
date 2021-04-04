@@ -25,6 +25,7 @@ struct ErrorView: View {
                     .multilineTextAlignment(.center)
             }
         }
+        .padding()
     }
 }
 
@@ -66,16 +67,16 @@ struct ErrorView_Previews: PreviewProvider {
             ErrorViewBuilder()
                 .withMessage(Constants.message)
                 .build()
-                .screenPreview(with: "Message only")
+                .previewDisplayName("Message only")
             ErrorViewBuilder()
                 .withSymbol(Constants.symbol)
                 .build()
-                .screenPreview(with: "Symbol only")
+                .previewDisplayName("Symbol only")
             ErrorViewBuilder()
                 .withSymbol(Constants.symbol)
                 .withMessage(Constants.message)
                 .build()
-                .screenPreview(with: "Full error view")
+                .previewDisplayName("MFull error view")
         }
     }
 }

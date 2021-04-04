@@ -17,9 +17,10 @@ public final class ArtistsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let action = PassthroughSubject<Event, Never>()
     
-    public init() {
+    public init(state: State = .idle) {
         setupFeedbacks()
         setupBindings()
+        self.state = state
     }
     
     deinit {

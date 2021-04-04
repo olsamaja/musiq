@@ -63,3 +63,46 @@ public class SearchContentViewBuilder: BuilderProtocol {
         }
     }
 }
+
+struct SearchContentView_Previews: PreviewProvider {
+    
+    enum TestError: Error {
+        case dummy
+    }
+    
+    static var previews: some View {
+        Group {
+            SearchContentViewBuilder()
+                .withViewModel(ArtistsViewModel(state: .loaded([
+                    ArtistCardItem(name: "Elvis"),
+                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
+                    ArtistCardItem(name: "Lisa Marie Preley"),
+                    ArtistCardItem(name: "Frank Sinatra", listeners: "123456"),
+                    ArtistCardItem(name: "Elvis"),
+                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
+                    ArtistCardItem(name: "Elvis"),
+                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456")
+                ])))
+                .build()
+                .previewDisplayName("state = .loaded")
+            SearchContentViewBuilder()
+                .withViewModel(ArtistsViewModel())
+                .build()
+                .previewDisplayName("state = .idle")
+            SearchContentViewBuilder()
+                .withViewModel(ArtistsViewModel(state: .searching("Elvis")))
+                .build()
+                .previewDisplayName("state = .searching")
+            SearchContentViewBuilder()
+                .withViewModel(ArtistsViewModel(state: .error(TestError.dummy)))
+                .build()
+                .previewDisplayName("state = .error")
+        }
+    }
+}
