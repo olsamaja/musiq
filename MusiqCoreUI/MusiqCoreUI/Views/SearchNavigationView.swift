@@ -143,3 +143,23 @@ public class SearchNavigationViewBuilder: BuilderProtocol {
         }
     }
 }
+
+public class SearchNavigationView_Previews: PreviewProvider {
+    
+    public static var previews: some View {
+        Group {
+            SearchNavigationViewBuilder()
+                .withTitle("Test")
+                .withContentView(
+                    AnyView(ErrorViewBuilder()
+                                .withMessage("This is some test content.")
+                                .build()
+                                .background(Color.blue)))
+                .build()
+                .previewDisplayName("Test content")
+            SearchNavigationViewBuilder()
+                .build()
+                .previewDisplayName("No content")
+        }
+    }
+}

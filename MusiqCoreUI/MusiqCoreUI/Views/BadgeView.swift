@@ -110,7 +110,6 @@ public class BadgeViewBuilder: BuilderProtocol {
     }
 }
 
-
 public class BadgeView_Previews: PreviewProvider {
     
     public static var previews: some View {
