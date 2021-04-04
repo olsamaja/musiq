@@ -9,7 +9,9 @@ import SwiftUI
 import MusiqCoreUI
 
 struct ArtistCardView: View {
+    
     var item: ArtistCardItem
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {

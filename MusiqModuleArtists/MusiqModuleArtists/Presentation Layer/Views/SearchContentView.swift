@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MusiqCoreUI
+import MusiqCore
 
 struct SearchContentView: View {
     
@@ -40,6 +41,25 @@ struct SearchContentView: View {
             }
         case .searching:
             Spinner(isAnimating: true, style: .large)
+        }
+    }
+}
+
+public class SearchContentViewBuilder: BuilderProtocol {
+    
+    private var viewModel: ArtistsViewModel?
+    
+    public func withViewModel(_ viewModel: ArtistsViewModel) -> SearchContentViewBuilder {
+        self.viewModel = viewModel
+        return self
+    }
+    
+    @ViewBuilder
+    public func build() -> some View {
+        if let viewModel = viewModel {
+            SearchContentView(viewModel: viewModel)
+        } else {
+            EmptyView()
         }
     }
 }

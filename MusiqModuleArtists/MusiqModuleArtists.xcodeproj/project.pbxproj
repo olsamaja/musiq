@@ -11,7 +11,7 @@
 		7D0970E42613D57300B2C126 /* MusiqCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D3E52192613E9BF00BC649C /* DataRequester+Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */; };
 		7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522A2614585600BC649C /* ImageDTOTests.swift */; };
-		7D3E522D2614585700BC649C /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataFetcherTests.swift */; };
+		7D3E522D2614585700BC649C /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataRequesterTests.swift */; };
 		7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52282614585600BC649C /* ArtistDTOTests.swift */; };
 		7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */; };
 		7DBC5EEA26130CF40016408C /* MusiqModuleArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */; };
@@ -73,7 +73,7 @@
 		7D3E52282614585600BC649C /* ArtistDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTOTests.swift; sourceTree = "<group>"; };
 		7D3E52292614585600BC649C /* MockSearchArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSearchArtistsSuccessful.json; sourceTree = "<group>"; };
 		7D3E522A2614585600BC649C /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
-		7D3E522B2614585600BC649C /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
+		7D3E522B2614585600BC649C /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
 		7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleArtistsServices+Injection.swift"; sourceTree = "<group>"; };
 		7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleArtists.h; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		7D3E52322614585D00BC649C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				7D3E522B2614585600BC649C /* DataFetcherTests.swift */,
+				7D3E522B2614585600BC649C /* DataRequesterTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -444,7 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */,
-				7D3E522D2614585700BC649C /* DataFetcherTests.swift in Sources */,
+				7D3E522D2614585700BC649C /* DataRequesterTests.swift in Sources */,
 				7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

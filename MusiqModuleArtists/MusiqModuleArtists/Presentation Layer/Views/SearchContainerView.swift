@@ -17,7 +17,7 @@ public struct SearchContainerView: View {
     
     public var body: some View {
         SearchNavigationViewBuilder()
-            .withContentView(AnyView(SearchContentView(viewModel: viewModel)))
+            .withContentView(AnyView(content))
             .withTitle("Search")
             .withPlaceholder("Search artists")
             .onSearch { (searchTerm) in
@@ -25,5 +25,11 @@ public struct SearchContainerView: View {
             }
             .build()
             .ignoresSafeArea()
+    }
+    
+    private var content: some View {
+        SearchContentViewBuilder()
+            .withViewModel(viewModel)
+            .build()
     }
 }
