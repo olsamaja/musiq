@@ -18,7 +18,6 @@ struct ArtistCardView: View {
                 Text(item.name)
                     .font(.title2)
                 Spacer(minLength: 10)
-                    .background(Color.yellow)
                 item.listeners.map { listeners in
                     BadgeViewBuilder()
                         .withText(listeners)
@@ -27,6 +26,7 @@ struct ArtistCardView: View {
                 }
             }
             Divider()
+                .background(Color.primarySeparator)
         }
     }
 }
