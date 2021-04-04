@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-extension Data {
+public extension Data {
     
     func decode<T: Decodable>() -> AnyPublisher<T, DataError> {
         

@@ -7,6 +7,7 @@
 
 import Combine
 import MusiqNetwork
+import MusiqCore
 
 extension DataRequester {
     

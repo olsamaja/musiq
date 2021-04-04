@@ -9,6 +9,7 @@ import XCTest
 import Combine
 @testable import MusiqNetwork
 @testable import MusiqModuleArtists
+@testable import MusiqCore
 
 class ArtistDTOTests: XCTestCase {
 
@@ -76,7 +77,7 @@ class ArtistDTOTests: XCTestCase {
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
-                    let expectedError = MusiqNetwork.DataError.parsing(description: "The data couldn’t be read because it isn’t in the correct format.")
+                    let expectedError = MusiqCore.DataError.parsing(description: "The data couldn’t be read because it isn’t in the correct format.")
                     XCTAssertEqual(error, expectedError)
                 default:
                     XCTAssert(false, "Was expected an error, got a success instead")

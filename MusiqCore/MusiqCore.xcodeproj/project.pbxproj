@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D552A3D261A46D90062E958 /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A3C261A46D90062E958 /* Data+Decode.swift */; };
+		7D552A43261A46EB0062E958 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A42261A46EB0062E958 /* DataError.swift */; };
+		7D552A4C261A47110062E958 /* String+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A4B261A47110062E958 /* String+Parse.swift */; };
+		7D552A63261A48520062E958 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A51261A47D70062E958 /* RepositoryProtocol.swift */; };
+		7D552A66261A48560062E958 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A52261A47D70062E958 /* CachedDataProtocol.swift */; };
 		7D7733DB25BB568200D28781 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7733DA25BB568200D28781 /* Resolver */; };
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D552A3C261A46D90062E958 /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
+		7D552A42261A46EB0062E958 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		7D552A4B261A47110062E958 /* String+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parse.swift"; sourceTree = "<group>"; };
+		7D552A51261A47D70062E958 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		7D552A52261A47D70062E958 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
 		7D833FDE25916B670093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D833FE125916B670093B94C /* MusiqCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqCore.h; sourceTree = "<group>"; };
 		7D833FE225916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +89,8 @@
 		7D1661CC25B4FFDE003B7AA1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7D552A3C261A46D90062E958 /* Data+Decode.swift */,
+				7D552A4B261A47110062E958 /* String+Parse.swift */,
 				7DE137032613B79C00FFABE7 /* Publisher+System.swift */,
 				7DAB179E26171B1C00BD134B /* BuilderProtocol.swift */,
 				7D83400A25916D140093B94C /* Bundle+Extensions.swift */,
@@ -95,6 +107,23 @@
 				7DE137092613B7A800FFABE7 /* Feedback.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7D552A47261A46FF0062E958 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				7D552A42261A46EB0062E958 /* DataError.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		7D552A53261A47D70062E958 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7D552A51261A47D70062E958 /* RepositoryProtocol.swift */,
+				7D552A52261A47D70062E958 /* CachedDataProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7D833FD425916B670093B94C = {
@@ -120,6 +149,8 @@
 			children = (
 				7D833FE125916B670093B94C /* MusiqCore.h */,
 				7D833FE225916B670093B94C /* Info.plist */,
+				7D552A53261A47D70062E958 /* Protocols */,
+				7D552A47261A46FF0062E958 /* Types */,
 				7D1661CF25B4FFE8003B7AA1 /* Helpers */,
 				7D1661CC25B4FFDE003B7AA1 /* Extensions */,
 			);
@@ -260,11 +291,16 @@
 			files = (
 				7D83400725916CE40093B94C /* OLLogger.swift in Sources */,
 				7D83401F25916EB90093B94C /* Data+Extensions.swift in Sources */,
+				7D552A4C261A47110062E958 /* String+Parse.swift in Sources */,
 				7DE1370A2613B7A800FFABE7 /* Feedback.swift in Sources */,
+				7D552A63261A48520062E958 /* RepositoryProtocol.swift in Sources */,
 				7D83401325916DAB0093B94C /* String+Extensions.swift in Sources */,
 				7D83400B25916D140093B94C /* Bundle+Extensions.swift in Sources */,
+				7D552A3D261A46D90062E958 /* Data+Decode.swift in Sources */,
+				7D552A43261A46EB0062E958 /* DataError.swift in Sources */,
 				7DE137042613B79C00FFABE7 /* Publisher+System.swift in Sources */,
 				7DAB179F26171B1C00BD134B /* BuilderProtocol.swift in Sources */,
+				7D552A66261A48560062E958 /* CachedDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

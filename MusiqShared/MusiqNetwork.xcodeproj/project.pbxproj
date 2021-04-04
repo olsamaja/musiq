@@ -9,18 +9,13 @@
 /* Begin PBXBuildFile section */
 		7D1661AA25B3907F003B7AA1 /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; };
 		7D1661AB25B3907F003B7AA1 /* MusiqConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */; };
-		7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */; };
-		7D3E523C261459AC00BC649C /* String+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E523B261459AC00BC649C /* String+Parse.swift */; };
 		7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */; };
 		7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F36259A90200058DDDA /* MockURLSession.swift */; };
 		7D83403E259171650093B94C /* MusiqNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834034259171650093B94C /* MusiqNetwork.framework */; };
 		7D834045259171650093B94C /* MusiqNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D834037259171650093B94C /* MusiqNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D834055259171980093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; };
 		7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83405B2591730F0093B94C /* Data+Decode.swift */; };
 		7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D834060259173670093B94C /* URLSession+Extensions.swift */; };
-		7D8340642591749E0093B94C /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8340632591749E0093B94C /* DataError.swift */; };
 		7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */; };
 		7DDE3A4925929369005750CC /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A4825929369005750CC /* DataRequester.swift */; };
 /* End PBXBuildFile section */
@@ -52,9 +47,6 @@
 
 /* Begin PBXFileReference section */
 		7D1661A925B3907F003B7AA1 /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
-		7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
-		7D3E523B261459AC00BC649C /* String+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parse.swift"; sourceTree = "<group>"; };
 		7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		7D5E7F36259A90200058DDDA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		7D834034259171650093B94C /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,9 +55,7 @@
 		7D83403D259171650093B94C /* MusiqNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D834044259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D834054259171980093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D83405B2591730F0093B94C /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
 		7D834060259173670093B94C /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
-		7D8340632591749E0093B94C /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilder.swift; sourceTree = "<group>"; };
 		7DDE3A4825929369005750CC /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D1661C725B4FDEF003B7AA1 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				7D1661B125B4B193003B7AA1 /* RepositoryProtocol.swift */,
-				7D1661C925B4FE04003B7AA1 /* CachedDataProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		7D83402A259171650093B94C = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +105,8 @@
 			children = (
 				7D834037259171650093B94C /* MusiqNetwork.h */,
 				7D834038259171650093B94C /* Info.plist */,
-				7D1661C725B4FDEF003B7AA1 /* Protocols */,
-				7D83405E2591731A0093B94C /* Network */,
+				7D834066259174AE0093B94C /* API */,
+				7D8340682591E0FC0093B94C /* Helpers */,
 			);
 			path = MusiqNetwork;
 			sourceTree = "<group>";
@@ -147,21 +128,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7D83405E2591731A0093B94C /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				7D834066259174AE0093B94C /* API */,
-				7D8340682591E0FC0093B94C /* Helpers */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		7D834066259174AE0093B94C /* API */ = {
 			isa = PBXGroup;
 			children = (
 				7DDE3A4825929369005750CC /* DataRequester.swift */,
 				7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */,
-				7D8340632591749E0093B94C /* DataError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -169,8 +140,6 @@
 		7D8340682591E0FC0093B94C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7D83405B2591730F0093B94C /* Data+Decode.swift */,
-				7D3E523B261459AC00BC649C /* String+Parse.swift */,
 				7D834060259173670093B94C /* URLSession+Extensions.swift */,
 				7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */,
 				7D5E7F36259A90200058DDDA /* MockURLSession.swift */,
@@ -290,14 +259,9 @@
 			files = (
 				7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */,
 				7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */,
-				7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */,
-				7D1661B225B4B193003B7AA1 /* RepositoryProtocol.swift in Sources */,
 				7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */,
-				7D8340642591749E0093B94C /* DataError.swift in Sources */,
-				7D3E523C261459AC00BC649C /* String+Parse.swift in Sources */,
 				7DDE3A4925929369005750CC /* DataRequester.swift in Sources */,
 				7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */,
-				7D1661CA25B4FE04003B7AA1 /* CachedDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
