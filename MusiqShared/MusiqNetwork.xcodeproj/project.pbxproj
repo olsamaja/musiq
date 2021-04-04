@@ -14,8 +14,8 @@
 		7D3E523C261459AC00BC649C /* String+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E523B261459AC00BC649C /* String+Parse.swift */; };
 		7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */; };
 		7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F36259A90200058DDDA /* MockURLSession.swift */; };
-		7D83403E259171650093B94C /* MusiqShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834034259171650093B94C /* MusiqShared.framework */; };
-		7D834045259171650093B94C /* MusiqShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D834037259171650093B94C /* MusiqShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D83403E259171650093B94C /* MusiqNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834034259171650093B94C /* MusiqNetwork.framework */; };
+		7D834045259171650093B94C /* MusiqNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D834037259171650093B94C /* MusiqNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D834055259171980093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; };
 		7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D83405C2591730F0093B94C /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83405B2591730F0093B94C /* Data+Decode.swift */; };
@@ -57,10 +57,10 @@
 		7D3E523B261459AC00BC649C /* String+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parse.swift"; sourceTree = "<group>"; };
 		7D5E7F33259A8FDE0058DDDA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		7D5E7F36259A90200058DDDA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		7D834034259171650093B94C /* MusiqShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D834037259171650093B94C /* MusiqShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqShared.h; sourceTree = "<group>"; };
+		7D834034259171650093B94C /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D834037259171650093B94C /* MusiqNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqNetwork.h; sourceTree = "<group>"; };
 		7D834038259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D83403D259171650093B94C /* MusiqSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D83403D259171650093B94C /* MusiqNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D834044259171650093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D834054259171980093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D83405B2591730F0093B94C /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D83403E259171650093B94C /* MusiqShared.framework in Frameworks */,
+				7D83403E259171650093B94C /* MusiqNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +103,8 @@
 		7D83402A259171650093B94C = {
 			isa = PBXGroup;
 			children = (
-				7D834036259171650093B94C /* MusiqShared */,
-				7D834041259171650093B94C /* MusiqSharedTests */,
+				7D834036259171650093B94C /* MusiqNetwork */,
+				7D834041259171650093B94C /* MusiqNetworkTests */,
 				7D834035259171650093B94C /* Products */,
 				7D834053259171980093B94C /* Frameworks */,
 			);
@@ -113,29 +113,29 @@
 		7D834035259171650093B94C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D834034259171650093B94C /* MusiqShared.framework */,
-				7D83403D259171650093B94C /* MusiqSharedTests.xctest */,
+				7D834034259171650093B94C /* MusiqNetwork.framework */,
+				7D83403D259171650093B94C /* MusiqNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D834036259171650093B94C /* MusiqShared */ = {
+		7D834036259171650093B94C /* MusiqNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				7D834037259171650093B94C /* MusiqShared.h */,
+				7D834037259171650093B94C /* MusiqNetwork.h */,
 				7D834038259171650093B94C /* Info.plist */,
 				7D1661C725B4FDEF003B7AA1 /* Protocols */,
 				7D83405E2591731A0093B94C /* Network */,
 			);
-			path = MusiqShared;
+			path = MusiqNetwork;
 			sourceTree = "<group>";
 		};
-		7D834041259171650093B94C /* MusiqSharedTests */ = {
+		7D834041259171650093B94C /* MusiqNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
 				7D834044259171650093B94C /* Info.plist */,
 			);
-			path = MusiqSharedTests;
+			path = MusiqNetworkTests;
 			sourceTree = "<group>";
 		};
 		7D834053259171980093B94C /* Frameworks */ = {
@@ -185,16 +185,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D834045259171650093B94C /* MusiqShared.h in Headers */,
+				7D834045259171650093B94C /* MusiqNetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7D834033259171650093B94C /* MusiqShared */ = {
+		7D834033259171650093B94C /* MusiqNetwork */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqShared" */;
+			buildConfigurationList = 7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqNetwork" */;
 			buildPhases = (
 				7D83402F259171650093B94C /* Headers */,
 				7D834030259171650093B94C /* Sources */,
@@ -206,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = MusiqShared;
+			name = MusiqNetwork;
 			productName = MusiqShared;
-			productReference = 7D834034259171650093B94C /* MusiqShared.framework */;
+			productReference = 7D834034259171650093B94C /* MusiqNetwork.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7D83403C259171650093B94C /* MusiqSharedTests */ = {
+		7D83403C259171650093B94C /* MusiqNetworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqSharedTests" */;
+			buildConfigurationList = 7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqNetworkTests" */;
 			buildPhases = (
 				7D834039259171650093B94C /* Sources */,
 				7D83403A259171650093B94C /* Frameworks */,
@@ -224,9 +224,9 @@
 			dependencies = (
 				7D834040259171650093B94C /* PBXTargetDependency */,
 			);
-			name = MusiqSharedTests;
+			name = MusiqNetworkTests;
 			productName = MusiqSharedTests;
-			productReference = 7D83403D259171650093B94C /* MusiqSharedTests.xctest */;
+			productReference = 7D83403D259171650093B94C /* MusiqNetworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqShared" */;
+			buildConfigurationList = 7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqNetwork" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -260,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D834033259171650093B94C /* MusiqShared */,
-				7D83403C259171650093B94C /* MusiqSharedTests */,
+				7D834033259171650093B94C /* MusiqNetwork */,
+				7D83403C259171650093B94C /* MusiqNetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		7D834040259171650093B94C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D834033259171650093B94C /* MusiqShared */;
+			target = 7D834033259171650093B94C /* MusiqNetwork */;
 			targetProxy = 7D83403F259171650093B94C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,14 +451,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqShared/Info.plist;
+				INFOPLIST_FILE = MusiqNetwork/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqShared;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -477,14 +477,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqShared/Info.plist;
+				INFOPLIST_FILE = MusiqNetwork/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqShared;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,13 +498,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqSharedTests/Info.plist;
+				INFOPLIST_FILE = MusiqNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqSharedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,13 +517,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqSharedTests/Info.plist;
+				INFOPLIST_FILE = MusiqNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqSharedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,7 +533,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqShared" */ = {
+		7D83402E259171650093B94C /* Build configuration list for PBXProject "MusiqNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D834046259171650093B94C /* Debug */,
@@ -542,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqShared" */ = {
+		7D834048259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D834049259171650093B94C /* Debug */,
@@ -551,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqSharedTests" */ = {
+		7D83404B259171650093B94C /* Build configuration list for PBXNativeTarget "MusiqNetworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D83404C259171650093B94C /* Debug */,

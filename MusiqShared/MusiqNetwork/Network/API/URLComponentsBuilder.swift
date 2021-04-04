@@ -1,6 +1,6 @@
 //
 //  URLComponentsBuilder.swift
-//  MusiqShared
+//  MusiqNetwork
 //
 //  Created by Olivier Rigault on 03/04/2021.
 //

@@ -14,12 +14,12 @@
 		7D3E522D2614585700BC649C /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataRequesterTests.swift */; };
 		7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52282614585600BC649C /* ArtistDTOTests.swift */; };
 		7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */; };
+		7DAB17FF261A3DCD00BD134B /* MusiqNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */; };
+		7DAB1800261A3DCD00BD134B /* MusiqNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DBC5EEA26130CF40016408C /* MusiqModuleArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */; };
 		7DBC5EF126130CF40016408C /* MusiqModuleArtists.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DBC5F0D26135BD80016408C /* ArtistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F0C26135BD80016408C /* ArtistDataManager.swift */; };
 		7DBC5F0E26135BD80016408C /* ArtistRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F0B26135BD70016408C /* ArtistRepositoryProtocol.swift */; };
-		7DBC5F1A26135C1C0016408C /* MusiqShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F1926135C1C0016408C /* MusiqShared.framework */; };
-		7DBC5F1B26135C1C0016408C /* MusiqShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F1926135C1C0016408C /* MusiqShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DBC5F1F26135C2B0016408C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F1E26135C2B0016408C /* MusiqCore.framework */; };
 		7DBC5F2026135C2B0016408C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F1E26135C2B0016408C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DBC5F2C2613B1880016408C /* ArtistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F2B2613B1880016408C /* ArtistDTO.swift */; };
@@ -58,8 +58,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7DAB1800261A3DCD00BD134B /* MusiqNetwork.framework in Embed Frameworks */,
 				7D0970E42613D57300B2C126 /* MusiqCoreUI.framework in Embed Frameworks */,
-				7DBC5F1B26135C1C0016408C /* MusiqShared.framework in Embed Frameworks */,
 				7DBC5F2026135C2B0016408C /* MusiqCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -75,6 +75,7 @@
 		7D3E522A2614585600BC649C /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
 		7D3E522B2614585600BC649C /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
 		7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleArtistsServices+Injection.swift"; sourceTree = "<group>"; };
+		7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5EE326130CF40016408C /* MusiqModuleArtists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleArtists.h; sourceTree = "<group>"; };
 		7DBC5EE426130CF40016408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAB17FF261A3DCD00BD134B /* MusiqNetwork.framework in Frameworks */,
 				7D0970E32613D57300B2C126 /* MusiqCoreUI.framework in Frameworks */,
-				7DBC5F1A26135C1C0016408C /* MusiqShared.framework in Frameworks */,
 				7DBC5F1F26135C2B0016408C /* MusiqCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +221,7 @@
 		7DBC5F1826135C1C0016408C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */,
 				7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */,
 				7DBC5F1E26135C2B0016408C /* MusiqCore.framework */,
 				7DBC5F1926135C1C0016408C /* MusiqShared.framework */,

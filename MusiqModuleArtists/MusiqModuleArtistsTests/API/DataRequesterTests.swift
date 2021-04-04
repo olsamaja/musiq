@@ -8,7 +8,7 @@
 
 import XCTest
 import Combine
-@testable import MusiqShared
+@testable import MusiqNetwork
 @testable import MusiqConfiguration
 @testable import MusiqModuleArtists
 

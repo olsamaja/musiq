@@ -1,6 +1,6 @@
 //
 //  MockURLProtocol.swift
-//  MusiqShared
+//  MusiqNetwork
 //
 //  Created by Olivier Rigault on 28/12/2020.
 //

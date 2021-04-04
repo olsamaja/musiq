@@ -1,6 +1,6 @@
 //
 //  Data+Decode.swift
-//  MusiqShared
+//  MusiqCore
 //
 //  Created by Olivier Rigault on 22/12/2020.
 //

@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import MusiqShared
+import MusiqNetwork
 import MusiqCore
 
 protocol ArtistRepositoryProtocol: RepositoryProtocol {

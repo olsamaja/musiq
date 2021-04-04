@@ -1,6 +1,6 @@
 //
 //  CachedDataProtocol.swift
-//  MusiqShared
+//  MusiqCore
 //
 //  Created by Olivier Rigault on 17/01/2021.
 //

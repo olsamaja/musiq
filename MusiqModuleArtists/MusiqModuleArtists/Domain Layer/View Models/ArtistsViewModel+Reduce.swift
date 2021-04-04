@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 import MusiqCore
-import MusiqShared
+import MusiqNetwork
 
 public extension ArtistsViewModel {
     

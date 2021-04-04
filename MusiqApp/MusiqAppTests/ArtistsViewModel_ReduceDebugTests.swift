@@ -7,7 +7,7 @@
 
 import XCTest
 @testable import MusiqApp
-@testable import MusiqShared
+@testable import MusiqNetwork
 @testable import MusiqModuleArtists
 
 class ArtistsViewModel_ReduceDebugTests: XCTestCase {

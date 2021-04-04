@@ -7,7 +7,7 @@
 
 import Combine
 import MusiqCore
-import MusiqShared
+import MusiqNetwork
 
 public final class ArtistsViewModel: ObservableObject {
     

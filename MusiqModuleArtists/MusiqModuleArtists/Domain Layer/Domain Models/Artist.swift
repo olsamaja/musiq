@@ -1,6 +1,6 @@
 //
 //  Artist.swift
-//  MusiqShared
+//  MusiqNetwork
 //
 //  Created by Olivier Rigault on 29/12/2020.
 //

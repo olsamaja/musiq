@@ -6,7 +6,7 @@
 //
 
 import Combine
-import MusiqShared
+import MusiqNetwork
 
 extension DataRequester {
     
