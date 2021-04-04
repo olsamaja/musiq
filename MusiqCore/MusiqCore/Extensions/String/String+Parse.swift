@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 public extension String {
-    
     func parse<T>() -> AnyPublisher<T, DataError> where T: Decodable {
         return Data(self.utf8).decode()
     }
-    
 }
