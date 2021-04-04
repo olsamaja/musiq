@@ -94,7 +94,7 @@ struct SearchContentView_Previews: PreviewProvider {
             SearchContentViewBuilder()
                 .withViewModel(ArtistsViewModel())
                 .build()
-                .previewDisplayName("state = .idle")
+                .previewDisplayName("default state = .idle")
             SearchContentViewBuilder()
                 .withViewModel(ArtistsViewModel(state: .searching("Elvis")))
                 .build()
@@ -103,6 +103,9 @@ struct SearchContentView_Previews: PreviewProvider {
                 .withViewModel(ArtistsViewModel(state: .error(TestError.dummy)))
                 .build()
                 .previewDisplayName("state = .error")
+            SearchContentViewBuilder()
+                .build()
+                .previewDisplayName("No view model, so should not appear")
         }
     }
 }
