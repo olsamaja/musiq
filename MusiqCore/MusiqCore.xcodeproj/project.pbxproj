@@ -13,6 +13,7 @@
 		7D552A63261A48520062E958 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A51261A47D70062E958 /* RepositoryProtocol.swift */; };
 		7D552A66261A48560062E958 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A52261A47D70062E958 /* CachedDataProtocol.swift */; };
 		7D552A84261A71130062E958 /* DataParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A83261A71130062E958 /* DataParseTests.swift */; };
+		7D552A88261A77320062E958 /* PublisherSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A87261A77320062E958 /* PublisherSystemTests.swift */; };
 		7D7733DB25BB568200D28781 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7733DA25BB568200D28781 /* Resolver */; };
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +49,7 @@
 		7D552A51261A47D70062E958 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		7D552A52261A47D70062E958 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
 		7D552A83261A71130062E958 /* DataParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParseTests.swift; sourceTree = "<group>"; };
+		7D552A87261A77320062E958 /* PublisherSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherSystemTests.swift; sourceTree = "<group>"; };
 		7D833FDE25916B670093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D833FE125916B670093B94C /* MusiqCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqCore.h; sourceTree = "<group>"; };
 		7D833FE225916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				7D83400E25916D4E0093B94C /* BundleExtensionsTests.swift */,
+				7D552A87261A77320062E958 /* PublisherSystemTests.swift */,
 				7D83401625916DDE0093B94C /* StringExtensionsTests.swift */,
 				7D83402225916EFC0093B94C /* DataPrintDescriptionTests.swift */,
 				7D552A83261A71130062E958 /* DataParseTests.swift */,
@@ -329,6 +332,7 @@
 			files = (
 				7D83401725916DDE0093B94C /* StringExtensionsTests.swift in Sources */,
 				7D83402325916EFC0093B94C /* DataPrintDescriptionTests.swift in Sources */,
+				7D552A88261A77320062E958 /* PublisherSystemTests.swift in Sources */,
 				7D83400F25916D4E0093B94C /* BundleExtensionsTests.swift in Sources */,
 				7D552A84261A71130062E958 /* DataParseTests.swift in Sources */,
 			);

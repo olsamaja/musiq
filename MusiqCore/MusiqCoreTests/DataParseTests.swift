@@ -6,8 +6,8 @@
 //
 
 import XCTest
-@testable import MusiqCore
 import Combine
+@testable import MusiqCore
 
 class DataParseTests: XCTestCase {
 
