@@ -14,6 +14,7 @@
 		7D552A66261A48560062E958 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A52261A47D70062E958 /* CachedDataProtocol.swift */; };
 		7D552A84261A71130062E958 /* DataParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A83261A71130062E958 /* DataParseTests.swift */; };
 		7D552A88261A77320062E958 /* PublisherSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A87261A77320062E958 /* PublisherSystemTests.swift */; };
+		7D552A9A261B7A390062E958 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D552A99261B7A390062E958 /* photo.jpg */; };
 		7D7733DB25BB568200D28781 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7733DA25BB568200D28781 /* Resolver */; };
 		7D833FE825916B670093B94C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D833FDE25916B670093B94C /* MusiqCore.framework */; };
 		7D833FEF25916B670093B94C /* MusiqCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D833FE125916B670093B94C /* MusiqCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +51,7 @@
 		7D552A52261A47D70062E958 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
 		7D552A83261A71130062E958 /* DataParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParseTests.swift; sourceTree = "<group>"; };
 		7D552A87261A77320062E958 /* PublisherSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherSystemTests.swift; sourceTree = "<group>"; };
+		7D552A99261B7A390062E958 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpg; sourceTree = "<group>"; };
 		7D833FDE25916B670093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D833FE125916B670093B94C /* MusiqCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqCore.h; sourceTree = "<group>"; };
 		7D833FE225916B670093B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				7D552A83261A71130062E958 /* DataParseTests.swift */,
 				7D83401A25916E410093B94C /* prettySample.json */,
 				7D83402625916F350093B94C /* sample.json */,
+				7D552A99261B7A390062E958 /* photo.jpg */,
 				7D833FEE25916B670093B94C /* Info.plist */,
 			);
 			path = MusiqCoreTests;
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D83401B25916E410093B94C /* prettySample.json in Resources */,
+				7D552A9A261B7A390062E958 /* photo.jpg in Resources */,
 				7D83402725916F350093B94C /* sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
