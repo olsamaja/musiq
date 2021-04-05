@@ -24,7 +24,8 @@ public struct ConfigurationDTOMapper {
 
     static func map(_ dto: ConfigurationDTO) throws -> Configuration {
         
-        guard let scheme = dto.scheme else { throw ValidationError.empty(.scheme) }
+        guard let schemeString = dto.scheme else { throw ValidationError.empty(.scheme) }
+        guard let scheme = Configuration.Scheme(string: schemeString) else { throw ValidationError.invalid(.scheme) }
         guard let host = dto.host else { throw ValidationError.empty(.host) }
         guard let path = dto.path else { throw ValidationError.empty(.path) }
         guard let key = dto.key else { throw ValidationError.empty(.key) }

@@ -32,7 +32,7 @@ public final class URLComponentsBuilder: BuilderProtocol {
             return components
         }
         
-        components.scheme = configuration.scheme
+        components.scheme = configuration.scheme.rawValue
         components.host = configuration.host
         components.path = configuration.path
         

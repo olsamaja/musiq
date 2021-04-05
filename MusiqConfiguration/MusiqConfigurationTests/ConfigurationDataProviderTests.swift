@@ -17,7 +17,7 @@ class ConfigurationDataManagerTests: XCTestCase {
         do {
             let configuration = try ConfigurationDataManager.load(with: bundle)
             
-            XCTAssertEqual(configuration.scheme, "https")
+            XCTAssertEqual(configuration.scheme, Configuration.Scheme.https)
             XCTAssertEqual(configuration.host, "www.thisisahost.com")
             XCTAssertEqual(configuration.path, "/thisisapath/")
             XCTAssertEqual(configuration.key, "thisisakey")

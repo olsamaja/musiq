@@ -10,14 +10,26 @@ import MusiqCore
 
 public struct Configuration {
     
-    enum Scheme {
+    public enum Scheme: String {
         case http
         case https
     }
     
-    public let scheme: String
+    public let scheme: Scheme
     public let host: String
     public let path: String
     public let key: String
     
+}
+
+extension Configuration.Scheme: CaseIterable {
+    
+    init?(string: String) {
+        for value in Configuration.Scheme.allCases where "\(value)" == string {
+            self = value
+            return
+        }
+        
+        return nil
+    }
 }

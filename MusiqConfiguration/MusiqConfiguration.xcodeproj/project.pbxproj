@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D40ABDD25BA2ADA003A768C /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; };
 		7D40ABDE25BA2ADA003A768C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D552AA6261BB16A0062E958 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552AA5261BB16A0062E958 /* ConfigurationTests.swift */; };
 		7D5E7EFC25973E8E0058DDDA /* ConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */; };
 		7D5E7F09259740770058DDDA /* ConfigurationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F08259740760058DDDA /* ConfigurationDataManager.swift */; };
 		7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		7D40ABDC25BA2ADA003A768C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D552AA5261BB16A0062E958 /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		7D5E7EFB25973E8E0058DDDA /* ConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTO.swift; sourceTree = "<group>"; };
 		7D5E7F08259740760058DDDA /* ConfigurationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataManager.swift; sourceTree = "<group>"; };
 		7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDTOTests.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */,
 				7D5E7F1A2597876F0058DDDA /* ConfigurationDTOMapperTests.swift */,
 				7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */,
+				7D552AA5261BB16A0062E958 /* ConfigurationTests.swift */,
 				7DDE3A69259298EC005750CC /* Info.plist */,
 				7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */,
 			);
@@ -300,6 +303,7 @@
 			files = (
 				7D5E7F2A2599314D0058DDDA /* ConfigurationDataProviderTests.swift in Sources */,
 				7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */,
+				7D552AA6261BB16A0062E958 /* ConfigurationTests.swift in Sources */,
 				7D5E7F1B2597876F0058DDDA /* ConfigurationDTOMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
