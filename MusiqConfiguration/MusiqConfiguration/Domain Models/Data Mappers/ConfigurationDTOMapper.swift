@@ -31,5 +31,4 @@ public struct ConfigurationDTOMapper {
         
         return Configuration(scheme: scheme, host: host, path: path, key: key)
     }
-    
 }

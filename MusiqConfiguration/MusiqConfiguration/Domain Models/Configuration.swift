@@ -10,6 +10,11 @@ import MusiqCore
 
 public struct Configuration {
     
+    enum Scheme {
+        case http
+        case https
+    }
+    
     public let scheme: String
     public let host: String
     public let path: String
