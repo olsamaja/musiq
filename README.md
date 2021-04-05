@@ -74,6 +74,11 @@ This section lists some of the few design patterns used in this project.
 * [Protocol oriented Dependency Injection with Swift](https://medium.com/@nfrugoni19/protocol-oriented-dependency-injection-with-swift-605b3d5b72ce)
 * [Resolver - An ultralight Dependency Injection / Service Locator framework](https://github.com/hmlongco/Resolver)
 
+### Reducer and Feedback
+
+* [CombineFeedback](https://github.com/sergdort/CombineFeedback)
+* [The Combine Framework and Effects](https://www.pointfree.co/episodes/ep80-the-combine-framework-and-effects-part-1)
+
 ## Common Libraries
 
 * [Resolver - An ultralight Dependency Injection / Service Locator framework](https://github.com/hmlongco/Resolver)
