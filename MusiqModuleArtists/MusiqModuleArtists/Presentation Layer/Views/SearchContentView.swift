@@ -29,16 +29,9 @@ struct SearchContentView: View {
                 .withMessage(error.localizedDescription)
                 .build()
         case .loaded(let artists):
-            VStack {
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack(spacing: 15) {
-                        ForEach(artists) { item in
-                            ArtistCardView(item: item)
-                        }
-                    }
-                    .padding()
-                }
-            }
+            ArtistsListViewBuilder()
+                .withItems(artists)
+                .build()
         case .searching:
             Spinner(isAnimating: true, style: .large)
         }

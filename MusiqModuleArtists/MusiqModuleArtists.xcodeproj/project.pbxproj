@@ -31,6 +31,7 @@
 		7DBC5F642613B2EF0016408C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F612613B2EF0016408C /* Artist.swift */; };
 		7DBC5F6B2613B3080016408C /* ArtistDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F6A2613B3080016408C /* ArtistDTOMapper.swift */; };
 		7DBC5F6C2613B3080016408C /* SearchArtistsDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC5F692613B3080016408C /* SearchArtistsDTOMapper.swift */; };
+		7DCCAF45261D950800957749 /* ArtistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCAF44261D950800957749 /* ArtistsListView.swift */; };
 		7DCFC8DF2615217000C09738 /* MockSearchArtistsSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D3E52292614585600BC649C /* MockSearchArtistsSuccessful.json */; };
 		7DE136BC2613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136B92613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift */; };
 		7DE136BD2613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136B82613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift */; };
@@ -94,6 +95,7 @@
 		7DBC5F622613B2EF0016408C /* ArtistBio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistBio.swift; sourceTree = "<group>"; };
 		7DBC5F692613B3080016408C /* SearchArtistsDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistsDTOMapper.swift; sourceTree = "<group>"; };
 		7DBC5F6A2613B3080016408C /* ArtistDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTOMapper.swift; sourceTree = "<group>"; };
+		7DCCAF44261D950800957749 /* ArtistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListView.swift; sourceTree = "<group>"; };
 		7DE136B82613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce.swift"; sourceTree = "<group>"; };
 		7DE136B92613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce+Debug.swift"; sourceTree = "<group>"; };
 		7DE136BA2613B5E400FFABE7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			children = (
 				7DE136C52613B5FD00FFABE7 /* SearchContainerView.swift */,
 				7DE136C62613B5FD00FFABE7 /* SearchContentView.swift */,
+				7DCCAF44261D950800957749 /* ArtistsListView.swift */,
 				7DE136C42613B5FD00FFABE7 /* ArtistCardView.swift */,
 			);
 			path = Views;
@@ -430,6 +433,7 @@
 				7DE136BF2613B5E400FFABE7 /* ArtistCardItem.swift in Sources */,
 				7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */,
 				7DBC5F6C2613B3080016408C /* SearchArtistsDTOMapper.swift in Sources */,
+				7DCCAF45261D950800957749 /* ArtistsListView.swift in Sources */,
 				7DBC5F6B2613B3080016408C /* ArtistDTOMapper.swift in Sources */,
 				7DE136C92613B5FD00FFABE7 /* ArtistCardView.swift in Sources */,
 				7DBC5F0E26135BD80016408C /* ArtistRepositoryProtocol.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MusiqCoreUI
+import MusiqCore
 
 struct ArtistCardView: View {
     
@@ -25,8 +26,25 @@ struct ArtistCardView: View {
                         .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .trailing)
                 }
             }
-            Divider()
-                .background(Color.primarySeparator)
+        }
+    }
+}
+
+public class ArtistCardViewBuilder: BuilderProtocol {
+    
+    private var item: ArtistCardItem?
+
+    public func withItem(_ item: ArtistCardItem) -> ArtistCardViewBuilder {
+        self.item = item
+        return self
+    }
+    
+    @ViewBuilder
+    public func build() -> some View {
+        if let item = item {
+            ArtistCardView(item: item)
+        } else {
+            EmptyView()
         }
     }
 }
@@ -41,16 +59,24 @@ struct ArtistCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ArtistCardView(item: Constants.item1)
+            ArtistCardViewBuilder()
+                .withItem(Constants.item1)
+                .build()
                 .sizeThatFitPreview(with: "Short artist name")
 
-            ArtistCardView(item: Constants.item2)
+            ArtistCardViewBuilder()
+                .withItem(Constants.item2)
+                .build()
                 .sizeThatFitPreview(with: "Long artist name")
 
-            ArtistCardView(item: Constants.item3)
+            ArtistCardViewBuilder()
+                .withItem(Constants.item3)
+                .build()
                 .sizeThatFitPreview(with: "Default")
 
-            ArtistCardView(item: Constants.item3)
+            ArtistCardViewBuilder()
+                .withItem(Constants.item3)
+                .build()
                 .background(Color(.systemBackground))
                 .environment(\.colorScheme, .dark)
                 .sizeThatFitPreview(with: "Long artist name")
