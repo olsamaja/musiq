@@ -31,7 +31,6 @@ public struct BadgeView: View {
         self.verticalInset = verticalInset
     }
 
-    @ViewBuilder
     public var body: some View {
         if let text = text {
             Text(text)
