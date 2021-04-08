@@ -11,7 +11,7 @@ import MusiqCore
 
 struct ArtistsListView: View {
 
-    var items: [ArtistCardItem]
+    var items: [ArtistRowItem]
     
     var body: some View {
         return List(items) { item in
@@ -31,9 +31,9 @@ struct ArtistsListView: View {
 
 public class ArtistsListViewBuilder: BuilderProtocol {
     
-    var items: [ArtistCardItem]?
+    var items: [ArtistRowItem]?
 
-    public func withItems(_ items: [ArtistCardItem]) -> ArtistsListViewBuilder {
+    public func withItems(_ items: [ArtistRowItem]) -> ArtistsListViewBuilder {
         self.items = items
         return self
     }
@@ -52,20 +52,20 @@ struct ArtistsListView_Previews: PreviewProvider {
     static var previews: some View {
         ArtistsListViewBuilder()
             .withItems([
-                ArtistCardItem(name: "Elvis"),
-                ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
-                ArtistCardItem(name: "Lisa Marie Preley"),
-                ArtistCardItem(name: "Frank Sinatra", listeners: "123456"),
-                ArtistCardItem(name: "Elvis"),
-                ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
-                ArtistCardItem(name: "Elvis"),
-                ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456")
+                ArtistRowItem(name: "Elvis"),
+                ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456"),
+                ArtistRowItem(name: "Lisa Marie Preley"),
+                ArtistRowItem(name: "Frank Sinatra", listeners: "123456"),
+                ArtistRowItem(name: "Elvis"),
+                ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456"),
+                ArtistRowItem(name: "Elvis"),
+                ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456")
             ])
             .build()
     }

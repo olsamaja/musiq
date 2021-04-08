@@ -1,5 +1,5 @@
 //
-//  ArtistCardItem.swift
+//  ArtistRowItem.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 20/03/2021.
@@ -8,11 +8,11 @@
 import Foundation
 import MusiqNetwork
 
-public struct ArtistCardItem: Identifiable {
+public struct ArtistRowItem: Identifiable {
     
-    public var id: String
-    var name: String
-    var listeners: String?
+    public let id: String
+    let name: String
+    let listeners: String?
     
     init(artist: Artist) {
         self.id = UUID().uuidString

@@ -37,7 +37,7 @@
 		7DE136BC2613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136B92613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift */; };
 		7DE136BD2613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136B82613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift */; };
 		7DE136BE2613B5E400FFABE7 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136BA2613B5E400FFABE7 /* ArtistsViewModel.swift */; };
-		7DE136BF2613B5E400FFABE7 /* ArtistCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136BB2613B5E400FFABE7 /* ArtistCardItem.swift */; };
+		7DE136BF2613B5E400FFABE7 /* ArtistRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136BB2613B5E400FFABE7 /* ArtistRowItem.swift */; };
 		7DE136C72613B5FD00FFABE7 /* SearchContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136C52613B5FD00FFABE7 /* SearchContainerView.swift */; };
 		7DE136C82613B5FD00FFABE7 /* SearchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136C62613B5FD00FFABE7 /* SearchContentView.swift */; };
 		7DE136C92613B5FD00FFABE7 /* ArtistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE136C42613B5FD00FFABE7 /* ArtistCardView.swift */; };
@@ -101,7 +101,7 @@
 		7DE136B82613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce.swift"; sourceTree = "<group>"; };
 		7DE136B92613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+Reduce+Debug.swift"; sourceTree = "<group>"; };
 		7DE136BA2613B5E400FFABE7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
-		7DE136BB2613B5E400FFABE7 /* ArtistCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCardItem.swift; sourceTree = "<group>"; };
+		7DE136BB2613B5E400FFABE7 /* ArtistRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRowItem.swift; sourceTree = "<group>"; };
 		7DE136C42613B5FD00FFABE7 /* ArtistCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCardView.swift; sourceTree = "<group>"; };
 		7DE136C52613B5FD00FFABE7 /* SearchContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContainerView.swift; sourceTree = "<group>"; };
 		7DE136C62613B5FD00FFABE7 /* SearchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentView.swift; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		7DE136C32613B5EC00FFABE7 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				7DE136BB2613B5E400FFABE7 /* ArtistCardItem.swift */,
+				7DE136BB2613B5E400FFABE7 /* ArtistRowItem.swift */,
 				7DE136BA2613B5E400FFABE7 /* ArtistsViewModel.swift */,
 				7DE136B82613B5E400FFABE7 /* ArtistsViewModel+Reduce.swift */,
 				7DE136B92613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift */,
@@ -441,7 +441,7 @@
 				7DBC5F632613B2EF0016408C /* ArtistBio.swift in Sources */,
 				7DE136C82613B5FD00FFABE7 /* SearchContentView.swift in Sources */,
 				7DE136BC2613B5E400FFABE7 /* ArtistsViewModel+Reduce+Debug.swift in Sources */,
-				7DE136BF2613B5E400FFABE7 /* ArtistCardItem.swift in Sources */,
+				7DE136BF2613B5E400FFABE7 /* ArtistRowItem.swift in Sources */,
 				7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */,
 				7DBC5F6C2613B3080016408C /* SearchArtistsDTOMapper.swift in Sources */,
 				7DCCAF45261D950800957749 /* ArtistsListView.swift in Sources */,

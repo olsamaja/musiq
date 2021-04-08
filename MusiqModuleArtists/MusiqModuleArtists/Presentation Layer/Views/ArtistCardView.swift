@@ -11,7 +11,7 @@ import MusiqCore
 
 struct ArtistCardView: View {
     
-    var item: ArtistCardItem
+    var item: ArtistRowItem
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -32,9 +32,9 @@ struct ArtistCardView: View {
 
 public class ArtistCardViewBuilder: BuilderProtocol {
     
-    private var item: ArtistCardItem?
+    private var item: ArtistRowItem?
 
-    public func withItem(_ item: ArtistCardItem) -> ArtistCardViewBuilder {
+    public func withItem(_ item: ArtistRowItem) -> ArtistCardViewBuilder {
         self.item = item
         return self
     }
@@ -52,9 +52,9 @@ public class ArtistCardViewBuilder: BuilderProtocol {
 struct ArtistCardView_Previews: PreviewProvider {
     
     enum Constants {
-        static let item1 = ArtistCardItem(name: "This is a name")
-        static let item2 = ArtistCardItem(name: "This is a very long name for an artist")
-        static let item3 = ArtistCardItem(name: "This is a very long name for an artist", listeners: "listeners")
+        static let item1 = ArtistRowItem(name: "This is a name")
+        static let item2 = ArtistRowItem(name: "This is a very long name for an artist")
+        static let item3 = ArtistRowItem(name: "This is a very long name for an artist", listeners: "listeners")
     }
     
     static var previews: some View {

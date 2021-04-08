@@ -15,13 +15,13 @@ public extension ArtistsViewModel {
     enum State {
         case idle
         case searching(String)
-        case loaded([ArtistCardItem])
+        case loaded([ArtistRowItem])
         case error(Error)
     }
     
     enum Event {
         case onAppear
-        case onDataLoaded([ArtistCardItem])
+        case onDataLoaded([ArtistRowItem])
         case onFailedToLoadData(Error)
         case onPerform(Action)
     }

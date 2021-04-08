@@ -29,7 +29,7 @@ class ArtistsViewModel_ReduceDebugTests: XCTestCase {
         XCTAssertEqual(ArtistsViewModel.Event.onDataLoaded([]).debugDescription, "Event.onDataLoaded(0)")
                 
         let artist = Artist(name: "", mbid: "")
-        let item = ArtistCardItem(artist: artist)
+        let item = ArtistRowItem(artist: artist)
         let items = [item, item]
         XCTAssertEqual(ArtistsViewModel.Event.onDataLoaded(items).debugDescription, "Event.onDataLoaded(2)")
         XCTAssertEqual(ArtistsViewModel.Event.onDataLoaded([]).debugDescription, "Event.onDataLoaded(0)")

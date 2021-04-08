@@ -67,20 +67,20 @@ struct SearchContentView_Previews: PreviewProvider {
         Group {
             SearchContentViewBuilder()
                 .withViewModel(ArtistsViewModel(state: .loaded([
-                    ArtistCardItem(name: "Elvis"),
-                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
-                    ArtistCardItem(name: "Lisa Marie Preley"),
-                    ArtistCardItem(name: "Frank Sinatra", listeners: "123456"),
-                    ArtistCardItem(name: "Elvis"),
-                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456"),
-                    ArtistCardItem(name: "Elvis"),
-                    ArtistCardItem(name: "Bob Dylan", listeners: "123456"),
-                    ArtistCardItem(name: "Bob Marley", listeners: "A huge number"),
-                    ArtistCardItem(name: "A super very long name for an artist group", listeners: "123456")
+                    ArtistRowItem(name: "Elvis"),
+                    ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456"),
+                    ArtistRowItem(name: "Lisa Marie Preley"),
+                    ArtistRowItem(name: "Frank Sinatra", listeners: "123456"),
+                    ArtistRowItem(name: "Elvis"),
+                    ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456"),
+                    ArtistRowItem(name: "Elvis"),
+                    ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+                    ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
+                    ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456")
                 ])))
                 .build()
                 .previewDisplayName("state = .loaded")
