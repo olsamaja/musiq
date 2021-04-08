@@ -14,7 +14,6 @@ public struct BadgeView: View {
     let font: Font
     let backgroundColor: Color
     let textColor: Color
-    let cornerRadius: CGFloat
     let horizontalInset: CGFloat
     let verticalInset: CGFloat
     
@@ -22,14 +21,12 @@ public struct BadgeView: View {
                 font: Font,
                 backgroundColor: Color,
                 textColor: Color,
-                cornerRadius: CGFloat,
                 horizontalInset: CGFloat,
                 verticalInset: CGFloat) {
         self.text = text
         self.font = font
         self.backgroundColor = backgroundColor
         self.textColor = textColor
-        self.cornerRadius = cornerRadius
         self.horizontalInset = horizontalInset
         self.verticalInset = verticalInset
     }
@@ -44,7 +41,7 @@ public struct BadgeView: View {
                                     bottom: verticalInset,
                                     trailing: horizontalInset))
                 .background(
-                    RoundedRectangle(cornerRadius: cornerRadius).fill(backgroundColor))
+                    Capsule().fill(backgroundColor))
                 .foregroundColor(textColor)
         } else {
             EmptyView()
@@ -58,7 +55,6 @@ public class BadgeViewBuilder: BuilderProtocol {
     private var font = Font.caption
     private var backgroundColor = Color.purple
     private var textColor = Color.white
-    private var cornerRadius: CGFloat = 20
     private var horizontalInset: CGFloat = 8
     private var verticalInset: CGFloat = 4
 
@@ -84,11 +80,6 @@ public class BadgeViewBuilder: BuilderProtocol {
         return self
     }
     
-    public func withCornerRadius(_ cornerRadius: CGFloat) -> BadgeViewBuilder {
-        self.cornerRadius = cornerRadius
-        return self
-    }
-    
     public func withHorizontalInset(_ horizontalInset: CGFloat) -> BadgeViewBuilder {
         self.horizontalInset = horizontalInset
         return self
@@ -104,7 +95,6 @@ public class BadgeViewBuilder: BuilderProtocol {
                   font: font,
                   backgroundColor: backgroundColor,
                   textColor: textColor,
-                  cornerRadius: cornerRadius,
                   horizontalInset: horizontalInset,
                   verticalInset: verticalInset)
     }
@@ -126,7 +116,6 @@ public class BadgeView_Previews: PreviewProvider {
                 .withFont(.title)
                 .withBackgroundColor(.gray)
                 .withTextColor(.purple)
-                .withCornerRadius(8)
                 .withHorizontalInset(30)
                 .withVerticalInset(20)
                 .build()
