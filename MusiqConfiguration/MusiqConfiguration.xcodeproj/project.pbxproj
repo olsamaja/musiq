@@ -17,6 +17,7 @@
 		7D5E7F2125991ECD0058DDDA /* ConfigurationDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F2025991ECD0058DDDA /* ConfigurationDTOMapper.swift */; };
 		7D5E7F2A2599314D0058DDDA /* ConfigurationDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */; };
 		7D7733E625BB7F7B00D28781 /* ConfigurationServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7733E525BB7F7B00D28781 /* ConfigurationServices+Injection.swift */; };
+		7DCCAF4B261EE29B00957749 /* ConfigurationServicesInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCAF4A261EE29B00957749 /* ConfigurationServicesInjectionTests.swift */; };
 		7DDE3A63259298EC005750CC /* MusiqConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */; };
 		7DDE3A6A259298EC005750CC /* MusiqConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDE3A762592992C005750CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A752592992C005750CC /* Configuration.swift */; };
@@ -57,6 +58,7 @@
 		7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProviderTests.swift; sourceTree = "<group>"; };
 		7D7733E525BB7F7B00D28781 /* ConfigurationServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurationServices+Injection.swift"; sourceTree = "<group>"; };
 		7DCA4745259675F6006F8E01 /* ConfigTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTest.xcconfig; sourceTree = "<group>"; };
+		7DCCAF4A261EE29B00957749 /* ConfigurationServicesInjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationServicesInjectionTests.swift; sourceTree = "<group>"; };
 		7DDE3A59259298EC005750CC /* MusiqConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqConfiguration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDE3A5C259298EC005750CC /* MusiqConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqConfiguration.h; sourceTree = "<group>"; };
 		7DDE3A5D259298EC005750CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5E7F292599314D0058DDDA /* ConfigurationDataProviderTests.swift */,
+				7DCCAF4A261EE29B00957749 /* ConfigurationServicesInjectionTests.swift */,
 				7D5E7F1A2597876F0058DDDA /* ConfigurationDTOMapperTests.swift */,
 				7D5E7F14259786330058DDDA /* ConfigurationDTOTests.swift */,
 				7D552AA5261BB16A0062E958 /* ConfigurationTests.swift */,
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5E7F2A2599314D0058DDDA /* ConfigurationDataProviderTests.swift in Sources */,
+				7DCCAF4B261EE29B00957749 /* ConfigurationServicesInjectionTests.swift in Sources */,
 				7D5E7F15259786330058DDDA /* ConfigurationDTOTests.swift in Sources */,
 				7D552AA6261BB16A0062E958 /* ConfigurationTests.swift in Sources */,
 				7D5E7F1B2597876F0058DDDA /* ConfigurationDTOMapperTests.swift in Sources */,
