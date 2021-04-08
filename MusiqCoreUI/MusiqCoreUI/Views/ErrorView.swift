@@ -10,14 +10,18 @@ import MusiqCore
 
 struct ErrorView: View {
 
-    let message: String?
+    enum Constants {
+        static let symbolSize: CGFloat = 56
+    }
+    
     let symbol: String?
+    let message: String?
 
     var body: some View {
         VStack {
             if let symbol = symbol {
                 Image(systemName: symbol)
-                    .font(.system(size: 56.0))
+                    .font(.system(size: Constants.symbolSize))
                     .padding()
             }
             if let message = message {
@@ -31,8 +35,8 @@ struct ErrorView: View {
 
 public class ErrorViewBuilder: BuilderProtocol {
     
-    private var message: String?
     private var symbol: String?
+    private var message: String?
     
     public init() {}
     
@@ -47,7 +51,7 @@ public class ErrorViewBuilder: BuilderProtocol {
     }
 
     public func build() -> some View {
-        ErrorView(message: message, symbol: symbol)
+        ErrorView(symbol: symbol, message: message)
     }
 }
 

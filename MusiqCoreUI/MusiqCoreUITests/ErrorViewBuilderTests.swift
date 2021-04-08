@@ -13,7 +13,7 @@ extension ErrorView: Inspectable {}
 
 class ErrorViewBuilderTests: XCTestCase {
 
-    func testErrorViewBuilder() throws {
+    func testBuilderReferences() throws {
         
         let builderReference1 = ErrorViewBuilder()
         let builderReference2 = builderReference1
@@ -23,7 +23,7 @@ class ErrorViewBuilderTests: XCTestCase {
         XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
     }
 
-    func testErrorView() throws {
+    func testView() throws {
         
         let sut = ErrorViewBuilder()
             .withSymbol("symbol")
@@ -37,6 +37,18 @@ class ErrorViewBuilderTests: XCTestCase {
 
             let message = try vStack.text(1).string()
             XCTAssertEqual(message, "message")
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testPreviews() {
+        
+        let sut = ErrorView_Previews.previews
+                
+        do {
+            let group = try sut.inspect().group()
+            XCTAssertEqual(group.count, 3)
         } catch {
             XCTFail(error.localizedDescription)
         }
