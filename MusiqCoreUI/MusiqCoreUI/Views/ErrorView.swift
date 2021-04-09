@@ -9,24 +9,25 @@ import SwiftUI
 import MusiqCore
 
 struct ErrorView: View {
-
-    enum Constants {
-        static let symbolSize: CGFloat = 56
-    }
     
     let symbol: String?
+    let symbolSize: CGFloat?
     let message: String?
+    let font: Font?
 
     var body: some View {
         VStack {
-            if let symbol = symbol {
+            if let symbol = symbol,
+               let symbolSize = symbolSize {
                 Image(systemName: symbol)
-                    .font(.system(size: Constants.symbolSize))
+                    .font(.system(size: symbolSize))
                     .padding()
             }
-            if let message = message {
+            if let message = message,
+               let font = font {
                 Text(message)
                     .multilineTextAlignment(.center)
+                    .font(font)
             }
         }
         .padding()
@@ -36,22 +37,34 @@ struct ErrorView: View {
 public class ErrorViewBuilder: BuilderProtocol {
     
     private var symbol: String?
+    private var symbolSize: CGFloat = 56
     private var message: String?
+    private var font = Font.body
     
     public init() {}
-    
-    public func withMessage(_ message: String) -> ErrorViewBuilder {
-        self.message = message
-        return self
-    }
     
     public func withSymbol(_ symbol: String) -> ErrorViewBuilder {
         self.symbol = symbol
         return self
     }
+    
+    public func withSymbolSize(_ symbolSize: CGFloat) -> ErrorViewBuilder {
+        self.symbolSize = symbolSize
+        return self
+    }
 
+    public func withMessage(_ message: String) -> ErrorViewBuilder {
+        self.message = message
+        return self
+    }
+    
+    public func withFont(_ font: Font) -> ErrorViewBuilder {
+        self.font = font
+        return self
+    }
+    
     public func build() -> some View {
-        ErrorView(symbol: symbol, message: message)
+        ErrorView(symbol: symbol, symbolSize: symbolSize, message: message, font: font)
     }
 }
 
@@ -78,9 +91,11 @@ struct ErrorView_Previews: PreviewProvider {
                 .previewDisplayName("Symbol only")
             ErrorViewBuilder()
                 .withSymbol(Constants.symbol)
+                .withSymbolSize(80)
                 .withMessage(Constants.message)
+                .withFont(.headline)
                 .build()
-                .previewDisplayName("MFull error view")
+                .previewDisplayName("Full error view")
         }
     }
 }

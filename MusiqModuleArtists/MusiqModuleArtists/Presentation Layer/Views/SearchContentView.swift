@@ -33,7 +33,10 @@ struct SearchContentView: View {
                 .withItems(artists)
                 .build()
         case .searching:
-            Spinner(isAnimating: true, style: .large)
+            SpinnerBuilder()
+                .withStyle(.large)
+                .isAnimating(true)
+                .build()
         }
     }
 }
