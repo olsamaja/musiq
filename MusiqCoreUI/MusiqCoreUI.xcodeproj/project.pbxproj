@@ -127,9 +127,9 @@
 		7D01564425A5304A001BDAB6 /* MusiqCoreUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7D01564725A5304A001BDAB6 /* Info.plist */,
 				7DCCAF652620370000957749 /* Controls */,
 				7DCCAF682620370800957749 /* Views */,
-				7D01564725A5304A001BDAB6 /* Info.plist */,
 				7DCCAF6D2620393400957749 /* View Modifiers */,
 			);
 			path = MusiqCoreUITests;

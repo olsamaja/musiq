@@ -20,7 +20,7 @@ struct ArtistsListView: View {
                     .withMessage("Test")
                     .build(),
                 label: {
-                    ArtistCardViewBuilder()
+                    ArtistRowViewBuilder()
                         .withItem(item)
                         .build()
                 }

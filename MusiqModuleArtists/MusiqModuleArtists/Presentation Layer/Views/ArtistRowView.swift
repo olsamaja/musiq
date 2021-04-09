@@ -1,5 +1,5 @@
 //
-//  ArtistCardView.swift
+//  ArtistRowView.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 20/03/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 import MusiqCoreUI
 import MusiqCore
 
-struct ArtistCardView: View {
+struct ArtistRowView: View {
     
     var item: ArtistRowItem
     
@@ -30,11 +30,11 @@ struct ArtistCardView: View {
     }
 }
 
-public class ArtistCardViewBuilder: BuilderProtocol {
+public class ArtistRowViewBuilder: BuilderProtocol {
     
     private var item: ArtistRowItem?
 
-    public func withItem(_ item: ArtistRowItem) -> ArtistCardViewBuilder {
+    public func withItem(_ item: ArtistRowItem) -> ArtistRowViewBuilder {
         self.item = item
         return self
     }
@@ -42,14 +42,14 @@ public class ArtistCardViewBuilder: BuilderProtocol {
     @ViewBuilder
     public func build() -> some View {
         if let item = item {
-            ArtistCardView(item: item)
+            ArtistRowView(item: item)
         } else {
             EmptyView()
         }
     }
 }
 
-struct ArtistCardView_Previews: PreviewProvider {
+struct ArtistRowViewBuilder_Previews: PreviewProvider {
     
     enum Constants {
         static let item1 = ArtistRowItem(name: "This is a name")
@@ -59,22 +59,22 @@ struct ArtistCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ArtistCardViewBuilder()
+            ArtistRowViewBuilder()
                 .withItem(Constants.item1)
                 .build()
                 .sizeThatFitPreview(with: "Short artist name")
 
-            ArtistCardViewBuilder()
+            ArtistRowViewBuilder()
                 .withItem(Constants.item2)
                 .build()
                 .sizeThatFitPreview(with: "Long artist name")
 
-            ArtistCardViewBuilder()
+            ArtistRowViewBuilder()
                 .withItem(Constants.item3)
                 .build()
                 .sizeThatFitPreview(with: "Default")
 
-            ArtistCardViewBuilder()
+            ArtistRowViewBuilder()
                 .withItem(Constants.item3)
                 .build()
                 .background(Color(.systemBackground))
