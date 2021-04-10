@@ -60,7 +60,7 @@ public class SearchContentViewBuilder: BuilderProtocol {
     }
 }
 
-struct SearchContentView_Previews: PreviewProvider {
+struct SearchContentViewBuilder_Previews: PreviewProvider {
     
     enum TestError: Error {
         case dummy

@@ -245,6 +245,8 @@
 				7D833FEA25916B670093B94C /* PBXTargetDependency */,
 			);
 			name = MusiqCoreTests;
+			packageProductDependencies = (
+			);
 			productName = MusiqCoreTests;
 			productReference = 7D833FE725916B670093B94C /* MusiqCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
