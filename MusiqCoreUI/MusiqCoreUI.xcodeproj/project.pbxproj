@@ -15,7 +15,7 @@
 		7D5A15EA260E4B5F0064E34E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15E9260E4B5F0064E34E /* ErrorView.swift */; };
 		7D5A15F6260E93610064E34E /* ErrorViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F5260E93610064E34E /* ErrorViewBuilderTests.swift */; };
 		7D5A15F9260F48430064E34E /* SearchNavigationViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F8260F48430064E34E /* SearchNavigationViewBuilderTests.swift */; };
-		7D5A15FD260F907D0064E34E /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5A15FC260F907D0064E34E /* ViewInspector */; };
+		7D6FADF72621F1AB00109CB7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6FADF62621F1AB00109CB7 /* ViewInspector */; };
 		7D90A168260B2BE7002F31D1 /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90A167260B2BE7002F31D1 /* SearchNavigationView.swift */; };
 		7DAB17A62617CD1900BD134B /* SizeThatFitPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17A52617CD1900BD134B /* SizeThatFitPreview.swift */; };
 		7DAB17DC261A1DAB00BD134B /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17DB261A1DAB00BD134B /* Color+Extensions.swift */; };
@@ -85,7 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D01564125A5304A001BDAB6 /* MusiqCoreUI.framework in Frameworks */,
-				7D5A15FD260F907D0064E34E /* ViewInspector in Frameworks */,
+				7D6FADF72621F1AB00109CB7 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +252,7 @@
 			);
 			name = MusiqCoreUITests;
 			packageProductDependencies = (
-				7D5A15FC260F907D0064E34E /* ViewInspector */,
+				7D6FADF62621F1AB00109CB7 /* ViewInspector */,
 			);
 			productName = MusiqCoreUITests;
 			productReference = 7D01564025A5304A001BDAB6 /* MusiqCoreUITests.xctest */;
@@ -286,7 +286,7 @@
 			);
 			mainGroup = 7D01562D25A5304A001BDAB6;
 			packageReferences = (
-				7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				7D6FADF52621F1AB00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 7D01563825A5304A001BDAB6 /* Products */;
 			projectDirPath = "";
@@ -597,20 +597,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+		7D6FADF52621F1AB00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.1;
+				minimumVersion = 0.7.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7D5A15FC260F907D0064E34E /* ViewInspector */ = {
+		7D6FADF62621F1AB00109CB7 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7D5A15FB260F907D0064E34E /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			package = 7D6FADF52621F1AB00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */

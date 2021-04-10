@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522A2614585600BC649C /* ImageDTOTests.swift */; };
 		7D3E522D2614585700BC649C /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E522B2614585600BC649C /* DataRequesterTests.swift */; };
 		7D3E522E2614585700BC649C /* ArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52282614585600BC649C /* ArtistDTOTests.swift */; };
+		7D6FADFB2621F1CD00109CB7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6FADFA2621F1CD00109CB7 /* ViewInspector */; };
+		7D6FAE002622176B00109CB7 /* ArtistsListViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6FADFF2622176B00109CB7 /* ArtistsListViewBuilderTests.swift */; };
+		7D6FAE0326221AFC00109CB7 /* SearchContentViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6FAE0226221AFC00109CB7 /* SearchContentViewBuilderTests.swift */; };
 		7DAB17A92617DA3800BD134B /* ModuleArtistsServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */; };
 		7DAB17FF261A3DCD00BD134B /* MusiqNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */; };
 		7DAB1800261A3DCD00BD134B /* MusiqNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -78,6 +81,8 @@
 		7D3E52292614585600BC649C /* MockSearchArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSearchArtistsSuccessful.json; sourceTree = "<group>"; };
 		7D3E522A2614585600BC649C /* ImageDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTOTests.swift; sourceTree = "<group>"; };
 		7D3E522B2614585600BC649C /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
+		7D6FADFF2622176B00109CB7 /* ArtistsListViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListViewBuilderTests.swift; sourceTree = "<group>"; };
+		7D6FAE0226221AFC00109CB7 /* SearchContentViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentViewBuilderTests.swift; sourceTree = "<group>"; };
 		7DAB17A82617DA3800BD134B /* ModuleArtistsServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleArtistsServices+Injection.swift"; sourceTree = "<group>"; };
 		7DAB17FE261A3DCD00BD134B /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5EE026130CF40016408C /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBC5EEA26130CF40016408C /* MusiqModuleArtists.framework in Frameworks */,
+				7D6FADFB2621F1CD00109CB7 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +345,9 @@
 		7DFFEE532621195600E887D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D6FAE0226221AFC00109CB7 /* SearchContentViewBuilderTests.swift */,
 				7DFFEE502621195100E887D4 /* ArtistCardViewBuilderTests.swift */,
+				7D6FADFF2622176B00109CB7 /* ArtistsListViewBuilderTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +399,9 @@
 				7DBC5EEC26130CF40016408C /* PBXTargetDependency */,
 			);
 			name = MusiqModuleArtistsTests;
+			packageProductDependencies = (
+				7D6FADFA2621F1CD00109CB7 /* ViewInspector */,
+			);
 			productName = MusiqModuleArtistsTests;
 			productReference = 7DBC5EE926130CF40016408C /* MusiqModuleArtistsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -421,6 +432,9 @@
 				Base,
 			);
 			mainGroup = 7DBC5ED626130CF40016408C;
+			packageReferences = (
+				7D6FADF92621F1CD00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 7DBC5EE126130CF40016408C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -486,8 +500,10 @@
 				7D3E522D2614585700BC649C /* DataRequesterTests.swift in Sources */,
 				7DCCAF50261F3F0F00957749 /* ArtistsServicesTests.swift in Sources */,
 				7DCCAF57261F41B600957749 /* ArtistRowItemTests.swift in Sources */,
+				7D6FAE0326221AFC00109CB7 /* SearchContentViewBuilderTests.swift in Sources */,
 				7DFFEE512621195100E887D4 /* ArtistCardViewBuilderTests.swift in Sources */,
 				7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */,
+				7D6FAE002622176B00109CB7 /* ArtistsListViewBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +757,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D6FADF92621F1CD00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D6FADFA2621F1CD00109CB7 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D6FADF92621F1CD00109CB7 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7DBC5ED726130CF40016408C /* Project object */;
 }

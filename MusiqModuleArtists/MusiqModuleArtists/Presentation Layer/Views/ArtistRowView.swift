@@ -14,17 +14,15 @@ struct ArtistRowView: View {
     var item: ArtistRowItem
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            HStack {
-                Text(item.name)
-                    .font(.title2)
-                Spacer(minLength: 10)
-                item.listeners.map { listeners in
-                    BadgeViewBuilder()
-                        .withText(listeners)
-                        .build()
-                        .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .trailing)
-                }
+        HStack {
+            Text(item.name)
+                .font(.title2)
+            Spacer(minLength: 10)
+            item.listeners.map { listeners in
+                BadgeViewBuilder()
+                    .withText(listeners)
+                    .build()
+                    .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .trailing)
             }
         }
     }
