@@ -1,5 +1,5 @@
 //
-//  ErrorView.swift
+//  MessageView.swift
 //  MusiqCoreUI
 //
 //  Created by Olivier Rigault on 26/03/2021.
@@ -8,15 +8,19 @@
 import SwiftUI
 import MusiqCore
 
-struct ErrorView: View {
+struct MessageView: View {
     
     let symbol: String?
     let symbolSize: CGFloat?
     let message: String?
     let font: Font?
-
+    let alignment: VerticalAlignment
+    
     var body: some View {
         VStack {
+            if case .bottom = alignment {
+                Spacer()
+            }
             if let symbol = symbol,
                let symbolSize = symbolSize {
                 Image(systemName: symbol)
@@ -29,46 +33,55 @@ struct ErrorView: View {
                     .multilineTextAlignment(.center)
                     .font(font)
             }
+            if case .top = alignment {
+                Spacer()
+            }
         }
         .padding()
     }
 }
 
-public class ErrorViewBuilder: BuilderProtocol {
+public class MessageViewBuilder: BuilderProtocol {
     
     private var symbol: String?
     private var symbolSize: CGFloat = 56
     private var message: String?
     private var font = Font.body
+    private var alignment = VerticalAlignment.center
     
     public init() {}
     
-    public func withSymbol(_ symbol: String) -> ErrorViewBuilder {
+    public func withSymbol(_ symbol: String) -> MessageViewBuilder {
         self.symbol = symbol
         return self
     }
     
-    public func withSymbolSize(_ symbolSize: CGFloat) -> ErrorViewBuilder {
+    public func withSymbolSize(_ symbolSize: CGFloat) -> MessageViewBuilder {
         self.symbolSize = symbolSize
         return self
     }
 
-    public func withMessage(_ message: String) -> ErrorViewBuilder {
+    public func withMessage(_ message: String) -> MessageViewBuilder {
         self.message = message
         return self
     }
     
-    public func withFont(_ font: Font) -> ErrorViewBuilder {
+    public func withFont(_ font: Font) -> MessageViewBuilder {
         self.font = font
         return self
     }
     
+    public func withAlignment(_ alignment: VerticalAlignment) -> MessageViewBuilder {
+        self.alignment = alignment
+        return self
+    }
+    
     public func build() -> some View {
-        ErrorView(symbol: symbol, symbolSize: symbolSize, message: message, font: font)
+        MessageView(symbol: symbol, symbolSize: symbolSize, message: message, font: font, alignment: alignment)
     }
 }
 
-struct ErrorView_Previews: PreviewProvider {
+struct MessageViewBuilder_Previews: PreviewProvider {
     
     enum Constants {
         static let symbol = "xmark.octagon"
@@ -81,21 +94,27 @@ struct ErrorView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ErrorViewBuilder()
-                .withMessage(Constants.message)
-                .build()
-                .previewDisplayName("Message only")
-            ErrorViewBuilder()
-                .withSymbol(Constants.symbol)
-                .build()
-                .previewDisplayName("Symbol only")
-            ErrorViewBuilder()
+            MessageViewBuilder()
                 .withSymbol(Constants.symbol)
                 .withSymbolSize(80)
                 .withMessage(Constants.message)
                 .withFont(.headline)
                 .build()
                 .previewDisplayName("Full error view")
+            MessageViewBuilder()
+                .withMessage(Constants.message)
+                .withAlignment(.bottom)
+                .build()
+                .previewDisplayName("Message only")
+            MessageViewBuilder()
+                .withSymbol(Constants.symbol)
+                .build()
+                .previewDisplayName("Symbol only")
+            MessageViewBuilder()
+                .withMessage(Constants.message)
+                .withAlignment(.top)
+                .build()
+                .previewDisplayName("Message only")
         }
     }
 }

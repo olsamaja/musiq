@@ -16,15 +16,12 @@ struct SearchContentView: View {
     var body: some View {
         switch viewModel.state {
         case .idle:
-            VStack {
-                Text("Search artists, for example, Elvis")
-                    .padding()
-                    .multilineTextAlignment(.center)
-                    .font(.body)
-                Spacer()
-            }
+            MessageViewBuilder()
+                .withMessage("Search artists, for example, Elvis")
+                .withAlignment(.top)
+                .build()
         case .error(let error):
-            ErrorViewBuilder()
+            MessageViewBuilder()
                 .withSymbol("xmark.octagon")
                 .withMessage(error.localizedDescription)
                 .build()

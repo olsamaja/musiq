@@ -12,6 +12,7 @@ import ViewInspector
 
 extension SearchContentView: Inspectable {}
 extension Spinner: Inspectable {}
+extension MessageView: Inspectable {}
 
 class SearchContentViewBuilderTests: XCTestCase {
 
@@ -36,6 +37,42 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
     }
 
+    func testViewWithViewModelStateIdle() throws {
+        
+        let viewModel = ArtistsViewModel()
+        let sut = SearchContentViewBuilder()
+            .withViewModel(viewModel)
+            .build()
+        
+        do {
+            let view = try sut.inspect().find(SearchContentView.self)
+            _ = try view.find(MessageView.self)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func testViewWithViewModelStateError() throws {
+        
+        enum TestError: Error {
+            case dummy
+        }
+        
+        let viewModel = ArtistsViewModel()
+        let sut = SearchContentViewBuilder()
+            .withViewModel(viewModel)
+            .build()
+        
+        viewModel.state = .error(TestError.dummy)
+        
+        do {
+            let view = try sut.inspect().find(SearchContentView.self)
+            _ = try view.find(MessageView.self)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     func testViewWithViewModelStateSearching() throws {
         
         let viewModel = ArtistsViewModel()
@@ -48,6 +85,23 @@ class SearchContentViewBuilderTests: XCTestCase {
         do {
             let view = try sut.inspect().find(SearchContentView.self)
             _ = try view.find(Spinner.self)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func testViewWithViewModelStateLoaded() throws {
+        
+        let viewModel = ArtistsViewModel()
+        let sut = SearchContentViewBuilder()
+            .withViewModel(viewModel)
+            .build()
+        
+        viewModel.state = .loaded([])
+        
+        do {
+            let view = try sut.inspect().find(SearchContentView.self)
+            _ = try view.find(ArtistsListView.self)
         } catch {
             XCTFail(error.localizedDescription)
         }

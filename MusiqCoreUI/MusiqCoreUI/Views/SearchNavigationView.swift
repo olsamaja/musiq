@@ -136,7 +136,7 @@ public class SearchNavigationViewBuilder: BuilderProtocol {
                 onSearch: onSearch,
                 onCancel: onCancel)
         } else {
-            ErrorViewBuilder()
+            MessageViewBuilder()
                 .withSymbol("xmark.octagon.fill")
                 .withMessage("Sorry, there is no content.")
                 .build()
@@ -151,7 +151,7 @@ public class SearchNavigationView_Previews: PreviewProvider {
             SearchNavigationViewBuilder()
                 .withTitle("Test")
                 .withContentView(
-                    AnyView(ErrorViewBuilder()
+                    AnyView(MessageViewBuilder()
                                 .withMessage("This is some test content.")
                                 .build()
                                 .background(Color.blue)))

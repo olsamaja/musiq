@@ -16,7 +16,7 @@ struct ArtistsListView: View {
     var body: some View {
         return List(items) { item in
             NavigationLink(
-                destination: ErrorViewBuilder()
+                destination: MessageViewBuilder()
                     .withMessage("Test")
                     .build(),
                 label: {

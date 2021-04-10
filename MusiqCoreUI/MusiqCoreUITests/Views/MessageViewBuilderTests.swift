@@ -1,5 +1,5 @@
 //
-//  ErrorViewBuilderTests.swift
+//  MessageViewBuilderTests.swift
 //  MusiqCoreUITests
 //
 //  Created by Olivier Rigault on 26/03/2021.
@@ -9,13 +9,13 @@ import XCTest
 import ViewInspector
 @testable import MusiqCoreUI
 
-extension ErrorView: Inspectable {}
+extension MessageView: Inspectable {}
 
-class ErrorViewBuilderTests: XCTestCase {
+class MessageViewBuilderTests: XCTestCase {
 
     func testBuilderReferences() throws {
         
-        let builderReference1 = ErrorViewBuilder()
+        let builderReference1 = MessageViewBuilder()
         let builderReference2 = builderReference1
             .withSymbol("symbol")
             .withMessage("message")
@@ -25,18 +25,34 @@ class ErrorViewBuilderTests: XCTestCase {
 
     func testView() throws {
         
-        let sut = ErrorViewBuilder()
+        let sut = MessageViewBuilder()
             .withSymbol("symbol")
             .withMessage("message")
-            .build() as! ErrorView
+            .withAlignment(.top)
+            .build() as! MessageView
         
         do {
             let vStack = try sut.inspect().vStack()
-            let imageFontSize = try vStack.image(0).font()?.size()
+            let imageFontSize = try vStack.image(1).font()?.size()
             XCTAssertEqual(imageFontSize, 56.0)
 
-            let message = try vStack.text(1).string()
+            let message = try vStack.text(2).string()
             XCTAssertEqual(message, "message")
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testBottomView() throws {
+        
+        let sut = MessageViewBuilder()
+            .withMessage("message")
+            .withAlignment(.bottom)
+            .build() as! MessageView
+        
+        do {
+            let vStack = try sut.inspect().vStack()
+            _ = try vStack.spacer(0)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -44,11 +60,11 @@ class ErrorViewBuilderTests: XCTestCase {
     
     func testPreviews() {
         
-        let sut = ErrorView_Previews.previews
+        let sut = MessageViewBuilder_Previews.previews
                 
         do {
             let group = try sut.inspect().group()
-            XCTAssertEqual(group.count, 3)
+            XCTAssertEqual(group.count, 4)
         } catch {
             XCTFail(error.localizedDescription)
         }

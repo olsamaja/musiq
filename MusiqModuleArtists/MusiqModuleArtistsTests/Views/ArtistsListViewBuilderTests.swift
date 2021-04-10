@@ -35,12 +35,28 @@ class ArtistsListViewBuilderTests: XCTestCase {
         }
     }
 
-    func testFullView() throws {
+    func testLoadedView() throws {
         
         let sut = ArtistsListViewBuilder()
-            .withItems([])
+            .withItems([
+                ArtistRowItem(name: "Elvis"),
+                ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
+            ])
             .build()
         
+        do {
+            let view = try sut.inspect().find(ArtistsListView.self)
+            let list = try view.list()
+            _ = try list.forEach(0).find(ArtistRowView.self)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func testPreviews() {
+        
+        let sut = ArtistsListView_Previews.previews
+                
         do {
             _ = try sut.inspect().find(ArtistsListView.self)
         } catch {
