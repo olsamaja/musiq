@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D095438262328020051D875 /* ArtistsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D095437262328020051D875 /* ArtistsViewModelTests.swift */; };
 		7D0970E32613D57300B2C126 /* MusiqCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */; };
 		7D0970E42613D57300B2C126 /* MusiqCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D3E52192613E9BF00BC649C /* DataRequester+Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D095437262328020051D875 /* ArtistsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModelTests.swift; sourceTree = "<group>"; };
 		7D0970E22613D57300B2C126 /* MusiqCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3E52182613E9BF00BC649C /* DataRequester+Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequester+Artist.swift"; sourceTree = "<group>"; };
 		7D3E52282614585600BC649C /* ArtistDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTOTests.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		7DCCAF59261F41BA00957749 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D095437262328020051D875 /* ArtistsViewModelTests.swift */,
 				7DCCAF56261F41B600957749 /* ArtistRowItemTests.swift */,
 			);
 			path = "View Models";
@@ -503,6 +506,7 @@
 				7D6FAE0326221AFC00109CB7 /* SearchContentViewBuilderTests.swift in Sources */,
 				7DFFEE512621195100E887D4 /* ArtistCardViewBuilderTests.swift in Sources */,
 				7D3E522C2614585700BC649C /* ImageDTOTests.swift in Sources */,
+				7D095438262328020051D875 /* ArtistsViewModelTests.swift in Sources */,
 				7D6FAE002622176B00109CB7 /* ArtistsListViewBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

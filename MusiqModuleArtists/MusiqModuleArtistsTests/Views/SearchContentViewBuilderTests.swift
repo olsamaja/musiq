@@ -37,7 +37,7 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
     }
 
-    func testViewWithViewModelStateIdle() throws {
+    func testViewModelStateIdle() throws {
         
         let viewModel = ArtistsViewModel()
         let sut = SearchContentViewBuilder()
@@ -52,18 +52,16 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
     }
 
-    func testViewWithViewModelStateError() throws {
+    func testViewModelStateError() throws {
         
         enum TestError: Error {
             case dummy
         }
         
-        let viewModel = ArtistsViewModel()
+        let viewModel = ArtistsViewModel(state: .error(TestError.dummy))
         let sut = SearchContentViewBuilder()
             .withViewModel(viewModel)
             .build()
-        
-        viewModel.state = .error(TestError.dummy)
         
         do {
             let view = try sut.inspect().find(SearchContentView.self)
@@ -73,14 +71,12 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
     }
 
-    func testViewWithViewModelStateSearching() throws {
+    func testViewModelStateSearching() throws {
         
-        let viewModel = ArtistsViewModel()
+        let viewModel = ArtistsViewModel(state: .searching("Elvis"))
         let sut = SearchContentViewBuilder()
             .withViewModel(viewModel)
             .build()
-        
-        viewModel.state = .searching("Elvis")
         
         do {
             let view = try sut.inspect().find(SearchContentView.self)
@@ -90,14 +86,12 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
     }
 
-    func testViewWithViewModelStateLoaded() throws {
+    func testViewModelStateLoaded() throws {
         
-        let viewModel = ArtistsViewModel()
+        let viewModel = ArtistsViewModel(state: .loaded([]))
         let sut = SearchContentViewBuilder()
             .withViewModel(viewModel)
             .build()
-        
-        viewModel.state = .loaded([])
         
         do {
             let view = try sut.inspect().find(SearchContentView.self)
