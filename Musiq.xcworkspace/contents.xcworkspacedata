@@ -11,7 +11,7 @@
       location = "group:MusiqConfiguration/MusiqConfiguration.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/origault/Documents/Development/musiq/MusiqShared/MusiqNetwork.xcodeproj">
+      location = "group:MusiqNetwork/MusiqNetwork.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MusiqCoreUI/MusiqCoreUI.xcodeproj">
