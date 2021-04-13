@@ -51,6 +51,7 @@ class MessageViewBuilderTests: XCTestCase {
             let imageFontSize = try vStack.image(1).font()?.size()
             XCTAssertEqual(imageFontSize, 80)
             
+            XCTAssertNil(try? vStack.text(2), "Should not expect a text there")
             XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer there")
         } catch {
             XCTFail(error.localizedDescription)

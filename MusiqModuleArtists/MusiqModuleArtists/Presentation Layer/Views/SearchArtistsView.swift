@@ -1,5 +1,5 @@
 //
-//  SearchContainerView.swift
+//  SearchArtistsView.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 21/03/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 import MusiqCoreUI
 import Resolver
 
-public struct SearchContainerView: View {
+public struct SearchArtistsView: View {
     
     @Injected var viewModel: ArtistsViewModel
     
@@ -34,7 +34,7 @@ public struct SearchContainerView: View {
     }
 }
 
-struct SearchContainerView_Previews: PreviewProvider {
+struct SearchArtistsView_Previews: PreviewProvider {
     
     static var registerDependency = { () -> Bool in
         Resolver.register { ArtistsViewModel() as ArtistsViewModel }
@@ -44,7 +44,7 @@ struct SearchContainerView_Previews: PreviewProvider {
     static var previews: some View {
         if registerDependency() {
             Group {
-                SearchContainerView()
+                SearchArtistsView()
             }
         }
     }

@@ -1,5 +1,5 @@
 //
-//  SearchContainerViewTests.swift
+//  SearchArtistsViewTests.swift
 //  MusiqModuleArtistsTests
 //
 //  Created by Olivier Rigault on 12/04/2021.
@@ -11,10 +11,10 @@ import Resolver
 @testable import MusiqModuleArtists
 @testable import MusiqCoreUI
 
-extension SearchContainerView: Inspectable {}
+extension SearchArtistsView: Inspectable {}
 extension SearchNavigationView: Inspectable {}
 
-class SearchContainerViewTests: XCTestCase {
+class SearchArtistsViewTests: XCTestCase {
 
     override func setUpWithError() throws {
         Resolver.register { ArtistsViewModel() as ArtistsViewModel }
@@ -22,10 +22,10 @@ class SearchContainerViewTests: XCTestCase {
 
     func testView() throws {
         
-        let sut = SearchContainerView()
+        let sut = SearchArtistsView()
         
         do {
-            let view = try sut.inspect().find(SearchContainerView.self)
+            let view = try sut.inspect().find(SearchArtistsView.self)
             _ = try view.find(SearchNavigationView.self)
         } catch {
             XCTFail(error.localizedDescription)
@@ -34,7 +34,7 @@ class SearchContainerViewTests: XCTestCase {
 
     func testPreviews() {
         
-        let sut = SearchContainerView_Previews.previews
+        let sut = SearchArtistsView_Previews.previews
                 
         do {
             let group = try sut.inspect().group()
