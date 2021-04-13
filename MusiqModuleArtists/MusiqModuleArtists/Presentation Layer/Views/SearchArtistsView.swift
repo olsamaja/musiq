@@ -11,7 +11,7 @@ import Resolver
 
 public struct SearchArtistsView: View {
     
-    @Injected var viewModel: ArtistsViewModel
+    @Injected var viewModel: SearchArtistsViewModel
     
     public init() {}
     
@@ -37,7 +37,7 @@ public struct SearchArtistsView: View {
 struct SearchArtistsView_Previews: PreviewProvider {
     
     static var registerDependency = { () -> Bool in
-        Resolver.register { ArtistsViewModel() as ArtistsViewModel }
+        Resolver.register { SearchArtistsViewModel() as SearchArtistsViewModel }
         return true
     }
     

@@ -1,5 +1,5 @@
 //
-//  ArtistsViewModel+Reduce+Debug.swift
+//  SearchArtistsViewModel+Reduce+Debug.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 25/03/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public extension ArtistsViewModel.State {
+public extension SearchArtistsViewModel.State {
     
     var debugDescription: String {
         switch self {
@@ -23,7 +23,7 @@ public extension ArtistsViewModel.State {
     }
 }
 
-public extension ArtistsViewModel.Event {
+public extension SearchArtistsViewModel.Event {
     
     var debugDescription: String {
         switch self {
@@ -39,7 +39,7 @@ public extension ArtistsViewModel.Event {
     }
 }
 
-public extension ArtistsViewModel.Action {
+public extension SearchArtistsViewModel.Action {
     
     var debugDescription: String {
         switch self {

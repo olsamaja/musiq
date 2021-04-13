@@ -17,7 +17,7 @@ extension SearchNavigationView: Inspectable {}
 class SearchArtistsViewTests: XCTestCase {
 
     override func setUpWithError() throws {
-        Resolver.register { ArtistsViewModel() as ArtistsViewModel }
+        Resolver.register { SearchArtistsViewModel() as SearchArtistsViewModel }
     }
 
     func testView() throws {

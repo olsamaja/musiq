@@ -1,5 +1,5 @@
 //
-//  ArtistsViewModel.swift
+//  SearchArtistsViewModel.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 05/01/2021.
@@ -9,7 +9,7 @@ import Combine
 import MusiqCore
 import MusiqNetwork
 
-public final class ArtistsViewModel: ObservableObject {
+public final class SearchArtistsViewModel: ObservableObject {
     
     @Published var state = State.idle
     @Published var searchTerm = ""

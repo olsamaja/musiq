@@ -1,5 +1,5 @@
 //
-//  ArtistsViewModel+ReduceTests.swift
+//  SearchArtistsViewModel+ReduceTests.swift
 //  MusiqAppTests
 //
 //  Created by Olivier Rigault on 06/02/2021.
@@ -10,7 +10,7 @@ import XCTest
 @testable import MusiqNetwork
 @testable import MusiqModuleArtists
 
-class ArtistsViewModel_ReduceTests: XCTestCase {
+class SearchArtistsViewModel_ReduceTests: XCTestCase {
 
     enum TestError: Error {
         case dummy
@@ -21,8 +21,8 @@ class ArtistsViewModel_ReduceTests: XCTestCase {
     
     func testReduceIdle() throws {
         
-        let state = ArtistsViewModel.State.idle
-        let events: [ArtistsViewModel.Event] = [
+        let state = SearchArtistsViewModel.State.idle
+        let events: [SearchArtistsViewModel.Event] = [
             .onAppear,
             .onDataLoaded([]),
             .onFailedToLoadData(error),
@@ -31,16 +31,16 @@ class ArtistsViewModel_ReduceTests: XCTestCase {
         ]
         
         events.forEach { event in
-            XCTAssertEqual(ArtistsViewModel.reduce(state, event), state)
+            XCTAssertEqual(SearchArtistsViewModel.reduce(state, event), state)
          }
         
-        XCTAssertEqual(ArtistsViewModel.reduce(state, .onPerform(.search("name"))), ArtistsViewModel.State.searching("name"))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(state, .onPerform(.search("name"))), SearchArtistsViewModel.State.searching("name"))
     }
 
     func testReduceSearching() throws {
         
-        let state = ArtistsViewModel.State.searching("name")
-        let events: [ArtistsViewModel.Event] = [
+        let state = SearchArtistsViewModel.State.searching("name")
+        let events: [SearchArtistsViewModel.Event] = [
             .onAppear,
             .onPerform(.clear),
             .onPerform(.search("name")),
@@ -48,17 +48,17 @@ class ArtistsViewModel_ReduceTests: XCTestCase {
         ]
         
         events.forEach { event in
-            XCTAssertEqual(ArtistsViewModel.reduce(state, event), state)
+            XCTAssertEqual(SearchArtistsViewModel.reduce(state, event), state)
          }
         
-        XCTAssertEqual(ArtistsViewModel.reduce(state, .onDataLoaded([])), ArtistsViewModel.State.loaded([]))
-        XCTAssertEqual(ArtistsViewModel.reduce(state, .onFailedToLoadData(error)), ArtistsViewModel.State.error(error))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(state, .onDataLoaded([])), SearchArtistsViewModel.State.loaded([]))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(state, .onFailedToLoadData(error)), SearchArtistsViewModel.State.error(error))
     }
     
     func testReduceLoaded() throws {
         
-        let state = ArtistsViewModel.State.loaded([])
-        let events: [ArtistsViewModel.Event] = [
+        let state = SearchArtistsViewModel.State.loaded([])
+        let events: [SearchArtistsViewModel.Event] = [
             .onAppear,
             .onDataLoaded([]),
             .onFailedToLoadData(error),
@@ -66,17 +66,17 @@ class ArtistsViewModel_ReduceTests: XCTestCase {
         ]
         
         events.forEach { event in
-            XCTAssertEqual(ArtistsViewModel.reduce(state, event), state)
+            XCTAssertEqual(SearchArtistsViewModel.reduce(state, event), state)
          }
         
-        XCTAssertEqual(ArtistsViewModel.reduce(state, .onPerform(.search("name"))), ArtistsViewModel.State.searching("name"))
-        XCTAssertEqual(ArtistsViewModel.reduce(state, .onPerform(.clear)), ArtistsViewModel.State.idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(state, .onPerform(.search("name"))), SearchArtistsViewModel.State.searching("name"))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(state, .onPerform(.clear)), SearchArtistsViewModel.State.idle)
     }
 
     func testReduceError() throws {
         
-        let state = ArtistsViewModel.State.error(error)
-        let events: [ArtistsViewModel.Event] = [
+        let state = SearchArtistsViewModel.State.error(error)
+        let events: [SearchArtistsViewModel.Event] = [
             .onAppear,
             .onDataLoaded([]),
             .onFailedToLoadData(error),
@@ -86,7 +86,7 @@ class ArtistsViewModel_ReduceTests: XCTestCase {
         ]
         
         events.forEach { event in
-            XCTAssertEqual(ArtistsViewModel.reduce(state, event), state)
+            XCTAssertEqual(SearchArtistsViewModel.reduce(state, event), state)
          }
     }
 }

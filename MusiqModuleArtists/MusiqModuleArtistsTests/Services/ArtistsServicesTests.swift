@@ -15,7 +15,7 @@ class ArtistsServicesTests: XCTestCase {
     func testSuccessfulInjection() throws {
         
         Resolver.registerModuleArtistsServices()
-        let viewModel: ArtistsViewModel = Resolver.resolve()
+        let viewModel: SearchArtistsViewModel = Resolver.resolve()
         
         XCTAssertNotNil(viewModel)
     }

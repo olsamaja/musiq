@@ -16,36 +16,36 @@ class ArtistsViewModelTests: XCTestCase {
     }
     
     func testReduceIdle() throws {
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle, .onAppear), .idle)
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle, .onDataLoaded([])), .idle)
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle, .onFailedToLoadData(TestError.dummy)), .idle)
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle, .onPerform(.clear)), .idle)
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle,
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle, .onAppear), .idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle, .onDataLoaded([])), .idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle, .onFailedToLoadData(TestError.dummy)), .idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle, .onPerform(.clear)), .idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle,
                                                .onPerform(.select(Artist(name: "name", mbid: "mbid")))),
                        .idle)
 
-        XCTAssertEqual(ArtistsViewModel.reduce(.idle, .onPerform(.search("term"))), .searching("term"))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.idle, .onPerform(.search("term"))), .searching("term"))
     }
     
     func testReduceSearching() throws {
-        XCTAssertEqual(ArtistsViewModel.reduce(.searching("term"), .onAppear), .searching("term"))
-        XCTAssertEqual(ArtistsViewModel.reduce(.searching("term"),
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.searching("term"), .onAppear), .searching("term"))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.searching("term"),
                                                .onFailedToLoadData(TestError.dummy)),
-                       ArtistsViewModel.State.error(TestError.dummy))
-        XCTAssertEqual(ArtistsViewModel.reduce(.searching("term"),
+                       SearchArtistsViewModel.State.error(TestError.dummy))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.searching("term"),
                                                .onDataLoaded([])),
                        .loaded([]))
     }
 
     func testReduceError() throws {
-        let errorState = ArtistsViewModel.State.error(TestError.dummy)
-        XCTAssertEqual(ArtistsViewModel.reduce(errorState, .onAppear), errorState)
+        let errorState = SearchArtistsViewModel.State.error(TestError.dummy)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(errorState, .onAppear), errorState)
     }
 
     func testReduceLoaded() throws {
-        XCTAssertEqual(ArtistsViewModel.reduce(.loaded([]), .onPerform(.clear)), .idle)
-        XCTAssertEqual(ArtistsViewModel.reduce(.loaded([]), .onPerform(.search("term"))), .searching("term"))
-        XCTAssertEqual(ArtistsViewModel.reduce(.loaded([]), .onAppear), .loaded([]))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.loaded([]), .onPerform(.clear)), .idle)
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.loaded([]), .onPerform(.search("term"))), .searching("term"))
+        XCTAssertEqual(SearchArtistsViewModel.reduce(.loaded([]), .onAppear), .loaded([]))
     }
 
 }

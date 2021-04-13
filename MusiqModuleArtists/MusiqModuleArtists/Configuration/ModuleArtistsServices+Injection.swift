@@ -11,6 +11,6 @@ import Resolver
 public extension Resolver {
     
     static func registerModuleArtistsServices() {
-        register { ArtistsViewModel() as ArtistsViewModel }
+        register { SearchArtistsViewModel() as SearchArtistsViewModel }
     }
 }

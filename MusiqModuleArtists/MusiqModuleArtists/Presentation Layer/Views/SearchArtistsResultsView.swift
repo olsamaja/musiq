@@ -11,7 +11,7 @@ import MusiqCore
 
 struct SearchArtistsResultsView: View {
     
-    @ObservedObject var viewModel: ArtistsViewModel
+    @ObservedObject var viewModel: SearchArtistsViewModel
     
     var body: some View {
         switch viewModel.state {
@@ -40,9 +40,9 @@ struct SearchArtistsResultsView: View {
 
 public class SearchArtistsResultsViewBuilder: BuilderProtocol {
     
-    private var viewModel: ArtistsViewModel?
+    private var viewModel: SearchArtistsViewModel?
     
-    public func withViewModel(_ viewModel: ArtistsViewModel) -> SearchArtistsResultsViewBuilder {
+    public func withViewModel(_ viewModel: SearchArtistsViewModel) -> SearchArtistsResultsViewBuilder {
         self.viewModel = viewModel
         return self
     }
@@ -66,7 +66,7 @@ struct SearchArtistsResultsViewBuilder_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SearchArtistsResultsViewBuilder()
-                .withViewModel(ArtistsViewModel(state: .loaded([
+                .withViewModel(SearchArtistsViewModel(state: .loaded([
                     ArtistRowItem(name: "Elvis"),
                     ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
                     ArtistRowItem(name: "Bob Marley", listeners: "A huge number"),
@@ -85,15 +85,15 @@ struct SearchArtistsResultsViewBuilder_Previews: PreviewProvider {
                 .build()
                 .previewDisplayName("state = .loaded")
             SearchArtistsResultsViewBuilder()
-                .withViewModel(ArtistsViewModel())
+                .withViewModel(SearchArtistsViewModel())
                 .build()
                 .previewDisplayName("default state = .idle")
             SearchArtistsResultsViewBuilder()
-                .withViewModel(ArtistsViewModel(state: .searching("Elvis")))
+                .withViewModel(SearchArtistsViewModel(state: .searching("Elvis")))
                 .build()
                 .previewDisplayName("state = .searching")
             SearchArtistsResultsViewBuilder()
-                .withViewModel(ArtistsViewModel(state: .error(TestError.dummy)))
+                .withViewModel(SearchArtistsViewModel(state: .error(TestError.dummy)))
                 .build()
                 .previewDisplayName("state = .error")
             SearchArtistsResultsViewBuilder()

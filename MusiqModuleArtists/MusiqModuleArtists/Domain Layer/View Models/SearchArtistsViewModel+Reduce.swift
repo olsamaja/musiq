@@ -1,5 +1,5 @@
 //
-//  ArtistsViewModel+Reduce.swift
+//  SearchArtistsViewModel+Reduce.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 06/02/2021.
@@ -10,7 +10,7 @@ import Combine
 import MusiqCore
 import MusiqNetwork
 
-public extension ArtistsViewModel {
+public extension SearchArtistsViewModel {
     
     enum State {
         case idle
@@ -33,8 +33,8 @@ public extension ArtistsViewModel {
     }
 }
 
-extension ArtistsViewModel.State: Equatable {
-    public static func == (lhs: ArtistsViewModel.State, rhs: ArtistsViewModel.State) -> Bool {
+extension SearchArtistsViewModel.State: Equatable {
+    public static func == (lhs: SearchArtistsViewModel.State, rhs: SearchArtistsViewModel.State) -> Bool {
         switch (lhs, rhs) {
         case (.idle, .idle),
              (.loaded, .loaded),
@@ -48,7 +48,7 @@ extension ArtistsViewModel.State: Equatable {
     }
 }
 
-extension ArtistsViewModel {
+extension SearchArtistsViewModel {
     
     public static func reduce(_ state: State, _ event: Event) -> State {
         OLLogger.info("\(state.debugDescription)")
@@ -100,7 +100,7 @@ extension ArtistsViewModel {
     }
 }
 
-extension ArtistsViewModel {
+extension SearchArtistsViewModel {
     static func userAction(action: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
         Feedback { _ in action }
     }
