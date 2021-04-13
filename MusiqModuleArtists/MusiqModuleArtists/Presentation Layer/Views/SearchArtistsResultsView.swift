@@ -66,6 +66,14 @@ struct SearchArtistsResultsViewBuilder_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SearchArtistsResultsViewBuilder()
+                .withViewModel(SearchArtistsViewModel())
+                .build()
+                .previewDisplayName("default state = .idle")
+            SearchArtistsResultsViewBuilder()
+                .withViewModel(SearchArtistsViewModel(state: .error(TestError.dummy)))
+                .build()
+                .previewDisplayName("state = .error")
+            SearchArtistsResultsViewBuilder()
                 .withViewModel(SearchArtistsViewModel(state: .loaded([
                     ArtistRowItem(name: "Elvis"),
                     ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
@@ -85,17 +93,9 @@ struct SearchArtistsResultsViewBuilder_Previews: PreviewProvider {
                 .build()
                 .previewDisplayName("state = .loaded")
             SearchArtistsResultsViewBuilder()
-                .withViewModel(SearchArtistsViewModel())
-                .build()
-                .previewDisplayName("default state = .idle")
-            SearchArtistsResultsViewBuilder()
                 .withViewModel(SearchArtistsViewModel(state: .searching("Elvis")))
                 .build()
                 .previewDisplayName("state = .searching")
-            SearchArtistsResultsViewBuilder()
-                .withViewModel(SearchArtistsViewModel(state: .error(TestError.dummy)))
-                .build()
-                .previewDisplayName("state = .error")
             SearchArtistsResultsViewBuilder()
                 .build()
                 .previewDisplayName("No view model, so should not appear")

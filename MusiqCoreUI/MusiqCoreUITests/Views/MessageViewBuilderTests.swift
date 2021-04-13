@@ -23,7 +23,7 @@ class MessageViewBuilderTests: XCTestCase {
         
         do {
             let vStack = try sut.inspect().vStack()
-            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer there")
+            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer at the top")
             
             let imageFontSize = try vStack.image(1).font()?.size()
             XCTAssertEqual(imageFontSize, 56)
@@ -31,7 +31,7 @@ class MessageViewBuilderTests: XCTestCase {
             let message = try vStack.text(2).string()
             XCTAssertEqual(message, "message")
             
-            XCTAssertNotNil(try? vStack.spacer(3), "Should expect a spacer there")
+            XCTAssertNotNil(try? vStack.spacer(3), "Should expect a spacer at the bottom")
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -46,13 +46,13 @@ class MessageViewBuilderTests: XCTestCase {
         
         do {
             let vStack = try sut.inspect().vStack()
-            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer there")
+            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer at the top")
             
             let imageFontSize = try vStack.image(1).font()?.size()
             XCTAssertEqual(imageFontSize, 80)
             
             XCTAssertNil(try? vStack.text(2), "Should not expect a text there")
-            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer there")
+            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer at the bottom")
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -68,14 +68,14 @@ class MessageViewBuilderTests: XCTestCase {
         
         do {
             let vStack = try sut.inspect().vStack()
-            XCTAssertNotNil(try? vStack.spacer(0), "Should expect a spacer there")
+            XCTAssertNotNil(try? vStack.spacer(0), "Should expect a spacer at the top")
             XCTAssertNil(try? vStack.image(1), "Should not expect an image there")
             
             let text = try vStack.text(2)
             XCTAssertEqual(try text.attributes().font(), .headline)
             XCTAssertEqual(try text.string(), "Hello, world!")
             
-            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer there")
+            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer at the bottom")
         } catch {
             XCTFail(error.localizedDescription)
         }
