@@ -13,17 +13,7 @@ extension MessageView: Inspectable {}
 
 class MessageViewBuilderTests: XCTestCase {
 
-    func testBuilderReferences() throws {
-        
-        let builderReference1 = MessageViewBuilder()
-        let builderReference2 = builderReference1
-            .withSymbol("symbol")
-            .withMessage("message")
-        
-        XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
-    }
-
-    func testView() throws {
+    func testTopView() throws {
         
         let sut = MessageViewBuilder()
             .withSymbol("symbol")
@@ -33,26 +23,58 @@ class MessageViewBuilderTests: XCTestCase {
         
         do {
             let vStack = try sut.inspect().vStack()
+            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer there")
+            
             let imageFontSize = try vStack.image(1).font()?.size()
-            XCTAssertEqual(imageFontSize, 56.0)
+            XCTAssertEqual(imageFontSize, 56)
 
             let message = try vStack.text(2).string()
             XCTAssertEqual(message, "message")
+            
+            XCTAssertNotNil(try? vStack.spacer(3), "Should expect a spacer there")
         } catch {
             XCTFail(error.localizedDescription)
         }
     }
-    
+
+    func testCenteredView() throws {
+        
+        let sut = MessageViewBuilder()
+            .withSymbol("pencil")
+            .withSymbolSize(80)
+            .build() as! MessageView
+        
+        do {
+            let vStack = try sut.inspect().vStack()
+            XCTAssertNil(try? vStack.spacer(0), "Should not expect a spacer there")
+            
+            let imageFontSize = try vStack.image(1).font()?.size()
+            XCTAssertEqual(imageFontSize, 80)
+            
+            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer there")
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     func testBottomView() throws {
         
         let sut = MessageViewBuilder()
-            .withMessage("message")
+            .withMessage("Hello, world!")
+            .withFont(.headline)
             .withAlignment(.bottom)
             .build() as! MessageView
         
         do {
             let vStack = try sut.inspect().vStack()
-            _ = try vStack.spacer(0)
+            XCTAssertNotNil(try? vStack.spacer(0), "Should expect a spacer there")
+            XCTAssertNil(try? vStack.image(1), "Should not expect an image there")
+            
+            let text = try vStack.text(2)
+            XCTAssertEqual(try text.attributes().font(), .headline)
+            XCTAssertEqual(try text.string(), "Hello, world!")
+            
+            XCTAssertNil(try? vStack.spacer(3), "Should not expect a spacer there")
         } catch {
             XCTFail(error.localizedDescription)
         }
