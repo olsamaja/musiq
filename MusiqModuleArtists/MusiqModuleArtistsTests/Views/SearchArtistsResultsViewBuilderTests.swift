@@ -1,5 +1,5 @@
 //
-//  SearchContentViewBuilderTests.swift
+//  SearchArtistsResultsViewBuilderTests.swift
 //  MusiqModuleArtistsTests
 //
 //  Created by Olivier Rigault on 10/04/2021.
@@ -10,15 +10,15 @@ import ViewInspector
 @testable import MusiqModuleArtists
 @testable import MusiqCoreUI
 
-extension SearchContentView: Inspectable {}
+extension SearchArtistsResultsView: Inspectable {}
 extension Spinner: Inspectable {}
 extension MessageView: Inspectable {}
 
-class SearchContentViewBuilderTests: XCTestCase {
+class SearchArtistsResultsViewBuilderTests: XCTestCase {
 
     func testBuilderReferences() throws {
         
-        let builderReference1 = SearchContentViewBuilder()
+        let builderReference1 = SearchArtistsResultsViewBuilder()
         let builderReference2 = builderReference1
             .withViewModel(ArtistsViewModel())
 
@@ -28,7 +28,7 @@ class SearchContentViewBuilderTests: XCTestCase {
 
     func testEmptyView() throws {
         
-        let sut = SearchContentViewBuilder().build()
+        let sut = SearchArtistsResultsViewBuilder().build()
         
         do {
             _ = try sut.inspect().emptyView()
@@ -40,12 +40,12 @@ class SearchContentViewBuilderTests: XCTestCase {
     func testViewModelStateIdle() throws {
         
         let viewModel = ArtistsViewModel()
-        let sut = SearchContentViewBuilder()
+        let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
         
         do {
-            let view = try sut.inspect().find(SearchContentView.self)
+            let view = try sut.inspect().find(SearchArtistsResultsView.self)
             _ = try view.find(MessageView.self)
         } catch {
             XCTFail(error.localizedDescription)
@@ -59,12 +59,12 @@ class SearchContentViewBuilderTests: XCTestCase {
         }
         
         let viewModel = ArtistsViewModel(state: .error(TestError.dummy))
-        let sut = SearchContentViewBuilder()
+        let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
         
         do {
-            let view = try sut.inspect().find(SearchContentView.self)
+            let view = try sut.inspect().find(SearchArtistsResultsView.self)
             _ = try view.find(MessageView.self)
         } catch {
             XCTFail(error.localizedDescription)
@@ -74,12 +74,12 @@ class SearchContentViewBuilderTests: XCTestCase {
     func testViewModelStateSearching() throws {
         
         let viewModel = ArtistsViewModel(state: .searching("Elvis"))
-        let sut = SearchContentViewBuilder()
+        let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
         
         do {
-            let view = try sut.inspect().find(SearchContentView.self)
+            let view = try sut.inspect().find(SearchArtistsResultsView.self)
             _ = try view.find(Spinner.self)
         } catch {
             XCTFail(error.localizedDescription)
@@ -89,12 +89,12 @@ class SearchContentViewBuilderTests: XCTestCase {
     func testViewModelStateLoaded() throws {
         
         let viewModel = ArtistsViewModel(state: .loaded([]))
-        let sut = SearchContentViewBuilder()
+        let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
         
         do {
-            let view = try sut.inspect().find(SearchContentView.self)
+            let view = try sut.inspect().find(SearchArtistsResultsView.self)
             _ = try view.find(ArtistsListView.self)
         } catch {
             XCTFail(error.localizedDescription)
@@ -103,7 +103,7 @@ class SearchContentViewBuilderTests: XCTestCase {
 
     func testPreviews() {
         
-        let sut = SearchContentViewBuilder_Previews.previews
+        let sut = SearchArtistsResultsViewBuilder_Previews.previews
                 
         do {
             let group = try sut.inspect().group()

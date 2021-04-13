@@ -28,7 +28,7 @@ public struct SearchArtistsView: View {
     }
     
     private var content: some View {
-        SearchContentViewBuilder()
+        SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
     }

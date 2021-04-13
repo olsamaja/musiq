@@ -1,5 +1,5 @@
 //
-//  SearchContentView.swift
+//  SearchArtistsResultsView.swift
 //  MusiqApp
 //
 //  Created by Olivier Rigault on 21/03/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 import MusiqCoreUI
 import MusiqCore
 
-struct SearchContentView: View {
+struct SearchArtistsResultsView: View {
     
     @ObservedObject var viewModel: ArtistsViewModel
     
@@ -38,11 +38,11 @@ struct SearchContentView: View {
     }
 }
 
-public class SearchContentViewBuilder: BuilderProtocol {
+public class SearchArtistsResultsViewBuilder: BuilderProtocol {
     
     private var viewModel: ArtistsViewModel?
     
-    public func withViewModel(_ viewModel: ArtistsViewModel) -> SearchContentViewBuilder {
+    public func withViewModel(_ viewModel: ArtistsViewModel) -> SearchArtistsResultsViewBuilder {
         self.viewModel = viewModel
         return self
     }
@@ -50,14 +50,14 @@ public class SearchContentViewBuilder: BuilderProtocol {
     @ViewBuilder
     public func build() -> some View {
         if let viewModel = viewModel {
-            SearchContentView(viewModel: viewModel)
+            SearchArtistsResultsView(viewModel: viewModel)
         } else {
             EmptyView()
         }
     }
 }
 
-struct SearchContentViewBuilder_Previews: PreviewProvider {
+struct SearchArtistsResultsViewBuilder_Previews: PreviewProvider {
     
     enum TestError: Error {
         case dummy
@@ -65,7 +65,7 @@ struct SearchContentViewBuilder_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            SearchContentViewBuilder()
+            SearchArtistsResultsViewBuilder()
                 .withViewModel(ArtistsViewModel(state: .loaded([
                     ArtistRowItem(name: "Elvis"),
                     ArtistRowItem(name: "Bob Dylan", listeners: "123456"),
@@ -84,19 +84,19 @@ struct SearchContentViewBuilder_Previews: PreviewProvider {
                 ])))
                 .build()
                 .previewDisplayName("state = .loaded")
-            SearchContentViewBuilder()
+            SearchArtistsResultsViewBuilder()
                 .withViewModel(ArtistsViewModel())
                 .build()
                 .previewDisplayName("default state = .idle")
-            SearchContentViewBuilder()
+            SearchArtistsResultsViewBuilder()
                 .withViewModel(ArtistsViewModel(state: .searching("Elvis")))
                 .build()
                 .previewDisplayName("state = .searching")
-            SearchContentViewBuilder()
+            SearchArtistsResultsViewBuilder()
                 .withViewModel(ArtistsViewModel(state: .error(TestError.dummy)))
                 .build()
                 .previewDisplayName("state = .error")
-            SearchContentViewBuilder()
+            SearchArtistsResultsViewBuilder()
                 .build()
                 .previewDisplayName("No view model, so should not appear")
         }
