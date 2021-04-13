@@ -13,15 +13,6 @@ extension BadgeView: Inspectable {}
 
 class BadgeViewBuilderTests: XCTestCase {
 
-    func testBuilderReferences() throws {
-        
-        let builderReference1 = BadgeViewBuilder()
-        let builderReference2 = builderReference1
-            .withText("message")
-        
-        XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
-    }
-
     func testEmptyView() throws {
         
         let sut = BadgeViewBuilder()

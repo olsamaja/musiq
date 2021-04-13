@@ -11,17 +11,17 @@ import ViewInspector
 @testable import MusiqCoreUI
 
 class SpinnerBuilderTests: XCTestCase {
-
-    func testBuilderReferences() throws {
-        
-        let builderReference1 = SpinnerBuilder()
-        let builderReference2 = builderReference1
-            .withColor(.red)
-            .isAnimating(true)
-
-        XCTAssertNotNil(builderReference2)
-        XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
-    }
+//
+//    func testBuilderReferences() throws {
+//        
+//        let builderReference1 = SpinnerBuilder()
+//        let builderReference2 = builderReference1
+//            .withColor(.red)
+//            .isAnimating(true)
+//
+//        XCTAssertNotNil(builderReference2)
+//        XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
+//    }
 
     func testPreviews() throws {
         
