@@ -39,7 +39,7 @@ public extension SearchArtistsViewModel.Event {
     }
 }
 
-public extension SearchArtistsViewModel.Action {
+public extension SearchArtistsViewModel.UserAction {
     
     var debugDescription: String {
         switch self {

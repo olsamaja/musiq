@@ -34,14 +34,14 @@ class ArtistsViewModel_ReduceDebugTests: XCTestCase {
         XCTAssertEqual(SearchArtistsViewModel.Event.onDataLoaded(items).debugDescription, "Event.onDataLoaded(2)")
         XCTAssertEqual(SearchArtistsViewModel.Event.onDataLoaded([]).debugDescription, "Event.onDataLoaded(0)")
         
-        XCTAssertEqual(SearchArtistsViewModel.Event.onPerform(SearchArtistsViewModel.Action.clear).debugDescription, "Event.onPerform(Action.clear)")
+        XCTAssertEqual(SearchArtistsViewModel.Event.onPerform(SearchArtistsViewModel.UserAction.clear).debugDescription, "Event.onPerform(Action.clear)")
     }
     
     func testDebugReduceActions() throws {
-        XCTAssertEqual(SearchArtistsViewModel.Action.clear.debugDescription, "Action.clear")
-        XCTAssertEqual(SearchArtistsViewModel.Action.search("term").debugDescription, "Action.search(term)")
+        XCTAssertEqual(SearchArtistsViewModel.UserAction.clear.debugDescription, "Action.clear")
+        XCTAssertEqual(SearchArtistsViewModel.UserAction.search("term").debugDescription, "Action.search(term)")
         
         let artist = Artist(name: "name", mbid: "")
-        XCTAssertEqual(SearchArtistsViewModel.Action.select(artist).debugDescription, "Action.select(name)")
+        XCTAssertEqual(SearchArtistsViewModel.UserAction.select(artist).debugDescription, "Action.select(name)")
     }
 }

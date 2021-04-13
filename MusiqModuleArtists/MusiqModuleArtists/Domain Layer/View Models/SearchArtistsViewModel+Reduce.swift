@@ -23,10 +23,10 @@ public extension SearchArtistsViewModel {
         case onAppear
         case onDataLoaded([ArtistRowItem])
         case onFailedToLoadData(Error)
-        case onPerform(Action)
+        case onPerform(UserAction)
     }
     
-    enum Action {
+    enum UserAction {
         case search(String)
         case select(Artist)
         case clear

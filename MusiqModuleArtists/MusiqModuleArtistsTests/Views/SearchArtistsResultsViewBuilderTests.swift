@@ -20,7 +20,7 @@ class SearchArtistsResultsViewBuilderTests: XCTestCase {
         
         let builderReference1 = SearchArtistsResultsViewBuilder()
         let builderReference2 = builderReference1
-            .withViewModel(ArtistsViewModel())
+            .withViewModel(SearchArtistsViewModel())
 
         XCTAssertNotNil(builderReference2)
         XCTAssertTrue(builderReference1 === builderReference2, "Expected references to be identical")
@@ -39,7 +39,7 @@ class SearchArtistsResultsViewBuilderTests: XCTestCase {
 
     func testViewModelStateIdle() throws {
         
-        let viewModel = ArtistsViewModel()
+        let viewModel = SearchArtistsViewModel()
         let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
@@ -58,7 +58,7 @@ class SearchArtistsResultsViewBuilderTests: XCTestCase {
             case dummy
         }
         
-        let viewModel = ArtistsViewModel(state: .error(TestError.dummy))
+        let viewModel = SearchArtistsViewModel(state: .error(TestError.dummy))
         let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
@@ -73,7 +73,7 @@ class SearchArtistsResultsViewBuilderTests: XCTestCase {
 
     func testViewModelStateSearching() throws {
         
-        let viewModel = ArtistsViewModel(state: .searching("Elvis"))
+        let viewModel = SearchArtistsViewModel(state: .searching("Elvis"))
         let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
@@ -88,7 +88,7 @@ class SearchArtistsResultsViewBuilderTests: XCTestCase {
 
     func testViewModelStateLoaded() throws {
         
-        let viewModel = ArtistsViewModel(state: .loaded([]))
+        let viewModel = SearchArtistsViewModel(state: .loaded([]))
         let sut = SearchArtistsResultsViewBuilder()
             .withViewModel(viewModel)
             .build()
