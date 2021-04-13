@@ -68,5 +68,14 @@ struct ArtistsListView_Previews: PreviewProvider {
                 ArtistRowItem(name: "A super very long name for an artist group", listeners: "123456")
             ])
             .build()
+            .previewDisplayName("Long list")
+        ArtistsListViewBuilder()
+            .withItems([
+                ArtistRowItem(name: "Elvis", listeners: "123"),
+                ArtistRowItem(name: "A super very long name for an artist group"),
+                ArtistRowItem(name: "Bob Dylan", listeners: "A super very long number of fans for an artist")
+            ])
+            .build()
+            .previewDisplayName("Small list")
     }
 }
