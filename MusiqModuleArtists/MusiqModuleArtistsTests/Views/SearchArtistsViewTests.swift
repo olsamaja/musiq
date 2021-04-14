@@ -38,7 +38,7 @@ class SearchArtistsViewTests: XCTestCase {
                 
         do {
             let group = try sut.inspect().group()
-            XCTAssertEqual(group.count, 1)
+            XCTAssertEqual(group.count, 2)
         } catch {
             XCTFail(error.localizedDescription)
         }

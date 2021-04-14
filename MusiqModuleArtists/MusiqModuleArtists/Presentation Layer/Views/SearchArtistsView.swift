@@ -36,15 +36,29 @@ public struct SearchArtistsView: View {
 
 struct SearchArtistsView_Previews: PreviewProvider {
     
-    static var registerDependency = { () -> Bool in
-        Resolver.register { SearchArtistsViewModel() as SearchArtistsViewModel }
-        return true
+    enum TestError: Error {
+        case dummy
+    }
+    enum Dependencies {
+        static var registerIdleState = { () -> Bool in
+            Resolver.register { SearchArtistsViewModel() as SearchArtistsViewModel }
+            return true
+        }
+        static var registerErrorState = { () -> Bool in
+            Resolver.register { SearchArtistsViewModel(state: .error(TestError.dummy)) as SearchArtistsViewModel }
+            return true
+        }
     }
     
     static var previews: some View {
-        if registerDependency() {
-            Group {
+        Group {
+            if Dependencies.registerIdleState() {
                 SearchArtistsView()
+                    .previewDisplayName("default state = .idle")
+            }
+            if Dependencies.registerErrorState() {
+                SearchArtistsView()
+                    .previewDisplayName("state = .error")
             }
         }
     }
