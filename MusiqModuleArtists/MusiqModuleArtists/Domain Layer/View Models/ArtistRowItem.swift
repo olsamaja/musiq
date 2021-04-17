@@ -26,3 +26,5 @@ public struct ArtistRowItem: Identifiable {
         self.listeners = listeners
     }
 }
+
+extension ArtistRowItem: Equatable {}

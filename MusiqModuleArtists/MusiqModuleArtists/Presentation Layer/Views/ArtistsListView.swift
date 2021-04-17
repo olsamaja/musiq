@@ -23,6 +23,11 @@ struct ArtistsListView: View {
                     ArtistRowViewBuilder()
                         .withItem(item)
                         .build()
+                        .onAppear() {
+                            if items.last == item {
+                                OLLogger.info("Last Row: \(item.name)")
+                            }
+                        }
                 }
             )
         }
