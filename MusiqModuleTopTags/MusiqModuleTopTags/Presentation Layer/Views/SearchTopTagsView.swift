@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct SearchTopTagsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+public struct SearchTopTagsView: View {
+    
+    public init() {}
+    
+    public var body: some View {
+        Text("Hello, World!")
     }
 }
 
