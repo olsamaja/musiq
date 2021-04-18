@@ -11,6 +11,7 @@
 		7D819BCC262B992200311598 /* MusiqModuleTopTagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D819BCB262B992200311598 /* MusiqModuleTopTagsTests.swift */; };
 		7D819BCE262B992200311598 /* MusiqModuleTopTags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D819BC0262B992200311598 /* MusiqModuleTopTags.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D819BDA262B997400311598 /* SearchTopTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D819BD9262B997400311598 /* SearchTopTagsView.swift */; };
+		7DB1B97A262B9D18000E02D4 /* SearchTopTagsResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		7D819BCB262B992200311598 /* MusiqModuleTopTagsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqModuleTopTagsTests.swift; sourceTree = "<group>"; };
 		7D819BCD262B992200311598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D819BD9262B997400311598 /* SearchTopTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTagsView.swift; sourceTree = "<group>"; };
+		7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTagsResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				7D819BD9262B997400311598 /* SearchTopTagsView.swift */,
+				7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB1B97A262B9D18000E02D4 /* SearchTopTagsResultsView.swift in Sources */,
 				7D819BDA262B997400311598 /* SearchTopTagsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

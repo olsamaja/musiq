@@ -8,6 +8,7 @@
 import SwiftUI
 import MusiqModuleArtists
 import MusiqModuleTopTags
+import MusiqModuleTopTracks
 
 @main
 struct MusiqApp: App {
@@ -19,6 +20,11 @@ struct MusiqApp: App {
                     .tabItem {
                         Image(systemName: "music.note.list")
                         Text("Artists")
+                    }
+                ChartsView()
+                    .tabItem {
+                        Image(systemName: "music.note")
+                        Text("Charts")
                     }
                 SearchTopTagsView()
                     .tabItem {

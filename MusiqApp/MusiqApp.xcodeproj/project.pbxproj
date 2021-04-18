@@ -25,6 +25,8 @@
 		7DAB17EC261A3D7000BD134B /* MusiqNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAB17EA261A3D7000BD134B /* MusiqNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DB1B961262B9B0C000E02D4 /* MusiqModuleTopTags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB1B960262B9B0C000E02D4 /* MusiqModuleTopTags.framework */; };
 		7DB1B962262B9B0C000E02D4 /* MusiqModuleTopTags.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB1B960262B9B0C000E02D4 /* MusiqModuleTopTags.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DB1B9AC262C1C63000E02D4 /* MusiqModuleTopTracks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB1B9AB262C1C63000E02D4 /* MusiqModuleTopTracks.framework */; };
+		7DB1B9AD262C1C63000E02D4 /* MusiqModuleTopTracks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB1B9AB262C1C63000E02D4 /* MusiqModuleTopTracks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DBC5F2326135C4B0016408C /* MusiqModuleArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F2226135C4A0016408C /* MusiqModuleArtists.framework */; };
 		7DBC5F2426135C4B0016408C /* MusiqModuleArtists.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBC5F2226135C4A0016408C /* MusiqModuleArtists.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DE136F72613B72100FFABE7 /* MusiqModuleArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE136F62613B72100FFABE7 /* MusiqModuleArtists.framework */; };
@@ -57,6 +59,7 @@
 			files = (
 				7D01565A25A53072001BDAB6 /* MusiqCoreUI.framework in Embed Frameworks */,
 				7DE136F82613B72100FFABE7 /* MusiqModuleArtists.framework in Embed Frameworks */,
+				7DB1B9AD262C1C63000E02D4 /* MusiqModuleTopTracks.framework in Embed Frameworks */,
 				7DBC5F2426135C4B0016408C /* MusiqModuleArtists.framework in Embed Frameworks */,
 				7DAB17EC261A3D7000BD134B /* MusiqNetwork.framework in Embed Frameworks */,
 				7D833FFD25916C200093B94C /* MusiqCore.framework in Embed Frameworks */,
@@ -89,6 +92,7 @@
 		7D8B905425CF472C00306758 /* ArtistsViewModel+ReduceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsViewModel+ReduceTests.swift"; sourceTree = "<group>"; };
 		7DAB17EA261A3D7000BD134B /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB1B960262B9B0C000E02D4 /* MusiqModuleTopTags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqModuleTopTags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB1B9AB262C1C63000E02D4 /* MusiqModuleTopTracks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqModuleTopTracks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC5F2226135C4A0016408C /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCA473E2596743E006F8E01 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7DE136E92613B70100FFABE7 /* MusiqModuleArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqModuleArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,7 @@
 			files = (
 				7D01565925A53072001BDAB6 /* MusiqCoreUI.framework in Frameworks */,
 				7DE136F72613B72100FFABE7 /* MusiqModuleArtists.framework in Frameworks */,
+				7DB1B9AC262C1C63000E02D4 /* MusiqModuleTopTracks.framework in Frameworks */,
 				7DBC5F2326135C4B0016408C /* MusiqModuleArtists.framework in Frameworks */,
 				7DAB17EB261A3D7000BD134B /* MusiqNetwork.framework in Frameworks */,
 				7D833FFC25916C200093B94C /* MusiqCore.framework in Frameworks */,
@@ -191,6 +196,7 @@
 		7D833FFA25916C200093B94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DB1B9AB262C1C63000E02D4 /* MusiqModuleTopTracks.framework */,
 				7DB1B960262B9B0C000E02D4 /* MusiqModuleTopTags.framework */,
 				7DAB17EA261A3D7000BD134B /* MusiqNetwork.framework */,
 				7DE136F62613B72100FFABE7 /* MusiqModuleArtists.framework */,
