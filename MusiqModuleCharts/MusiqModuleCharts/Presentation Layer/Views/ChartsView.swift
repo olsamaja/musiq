@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import MusiqCoreUI
+import MusiqCore
 
 public struct ChartsView: View {
     
     public init() {}
     
     public var body: some View {
-        Text("Charts")
+        ChartTopTracksResultsView()
     }
 }
 

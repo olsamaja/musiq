@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - Used in method=search.gettoptracks
 
-struct ChartTrackDTO: Decodable {
+struct ChartTopTrackDTO: Decodable {
     let name: String
 }
 
 struct ChartTopTracksDTO: Decodable {
-    let tracks: [ChartTrackDTO]
+    let tracks: [ChartTopTrackDTO]
 }

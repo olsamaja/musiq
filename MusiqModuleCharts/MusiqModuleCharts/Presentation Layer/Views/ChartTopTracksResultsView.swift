@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartTopTracksResultsView: View {
     var body: some View {
-        Text("Top Tracks Results")
+        Text("Top Tracks")
     }
 }
 
