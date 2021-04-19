@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct ChartTopTrack: Decodable {
+public struct ChartTopTrack {
+    
     let name: String
+    
+    
 }

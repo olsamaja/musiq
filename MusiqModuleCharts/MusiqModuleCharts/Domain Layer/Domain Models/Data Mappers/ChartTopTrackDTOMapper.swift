@@ -10,6 +10,6 @@ import Foundation
 public struct ChartTopTrackDTOMapper {
     
     static func map(_ dto: ChartTopTrackDTO) -> ChartTopTrack {
-        return ChartTopTrack(name: dto.name)
+        ChartTopTrack(name: dto.name)
     }
 }

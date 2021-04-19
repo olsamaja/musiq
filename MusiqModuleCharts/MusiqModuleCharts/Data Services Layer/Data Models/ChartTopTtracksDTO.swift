@@ -13,6 +13,10 @@ struct ChartTopTrackDTO: Decodable {
     let name: String
 }
 
+struct ChartTopTracksResultsDTO: Decodable {
+    let track: [ChartTopTrackDTO]
+}
+
 struct ChartTopTracksDTO: Decodable {
-    let tracks: [ChartTopTrackDTO]
+    let tracks: ChartTopTracksResultsDTO
 }

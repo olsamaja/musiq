@@ -11,7 +11,7 @@ import MusiqCore
 
 extension DataRequester {
     
-    func getTopTracks(term: String) -> AnyPublisher<ChartTopTracksDTO, DataError> {
+    func getTopTracks() -> AnyPublisher<ChartTopTracksDTO, DataError> {
         
         let urlComponents = URLComponentsBuilder()
             .with(key: "method", value: "chart.gettoptracks")

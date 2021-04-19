@@ -14,7 +14,7 @@ public struct ChartsView: View {
     public init() {}
     
     public var body: some View {
-        ChartTopTracksResultsView()
+        ChartTopTracksResultsView(viewModel: ChartTopTracksViewModel())
     }
 }
 

@@ -21,6 +21,13 @@
 		7DCAEBFE262E21150052A4B9 /* MusiqNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCAEBFD262E21150052A4B9 /* MusiqNetwork.framework */; };
 		7DCAEBFF262E21150052A4B9 /* MusiqNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCAEBFD262E21150052A4B9 /* MusiqNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCAEC03262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC02262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift */; };
+		7DCAEC09262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC08262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift */; };
+		7DCAEC0C262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC0B262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift */; };
+		7DCAEC0F262E30000052A4B9 /* ChartsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC0E262E30000052A4B9 /* ChartsDataManager.swift */; };
+		7DCAEC14262E309A0052A4B9 /* ChartsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC13262E309A0052A4B9 /* ChartsRepository.swift */; };
+		7DCAEC19262E35180052A4B9 /* ChartTopTracksDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC18262E35180052A4B9 /* ChartTopTracksDTOMapper.swift */; };
+		7DCAEC1D262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */; };
+		7DCAEC21262E49870052A4B9 /* ChartTopTracksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */; };
 		7DFF42A9262DBF76009A743D /* MusiqModuleCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */; };
 		7DFF42AE262DBF76009A743D /* MusiqModuleChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */; };
 		7DFF42B0262DBF76009A743D /* MusiqModuleCharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +69,13 @@
 		7DCAEBFA262E20BD0052A4B9 /* ChartTopTrackRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrackRowItem.swift; sourceTree = "<group>"; };
 		7DCAEBFD262E21150052A4B9 /* MusiqNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCAEC02262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrackDTOMapper.swift; sourceTree = "<group>"; };
+		7DCAEC08262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartTopTracksViewModel+Reduce.swift"; sourceTree = "<group>"; };
+		7DCAEC0B262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartTopTracksViewModel+Reduce+Debug.swift"; sourceTree = "<group>"; };
+		7DCAEC0E262E30000052A4B9 /* ChartsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDataManager.swift; sourceTree = "<group>"; };
+		7DCAEC13262E309A0052A4B9 /* ChartsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRepository.swift; sourceTree = "<group>"; };
+		7DCAEC18262E35180052A4B9 /* ChartTopTracksDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksDTOMapper.swift; sourceTree = "<group>"; };
+		7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChartGetTopTracksSuccessful.json; sourceTree = "<group>"; };
+		7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksListView.swift; sourceTree = "<group>"; };
 		7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleCharts.h; sourceTree = "<group>"; };
 		7DFF42A3262DBF76009A743D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */,
-				7DCAEC02262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 		7DB08643262DBFD10076B0EF /* Data Services Layer */ = {
 			isa = PBXGroup;
 			children = (
+				7DCAEC11262E300C0052A4B9 /* Data Manager */,
 				7DB08640262DBFD10076B0EF /* Data Models */,
 				7DB08642262DBFD10076B0EF /* API */,
 			);
@@ -125,6 +139,7 @@
 			children = (
 				7D1837FC262DC23C0017058C /* ChartTopTrack.swift */,
 				7DCAEBFA262E20BD0052A4B9 /* ChartTopTrackRowItem.swift */,
+				7DCAEC16262E34F90052A4B9 /* Data Mappers */,
 			);
 			path = "Domain Models";
 			sourceTree = "<group>";
@@ -142,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				7DCAEBEA262E114F0052A4B9 /* ChartTopTracksViewModel.swift */,
+				7DCAEC08262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift */,
+				7DCAEC0B262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -154,6 +171,32 @@
 				7DCAEBF3262E1F960052A4B9 /* MusiqCoreUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DCAEC11262E300C0052A4B9 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7DCAEC0E262E30000052A4B9 /* ChartsDataManager.swift */,
+				7DCAEC13262E309A0052A4B9 /* ChartsRepository.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		7DCAEC16262E34F90052A4B9 /* Data Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				7DCAEC18262E35180052A4B9 /* ChartTopTracksDTOMapper.swift */,
+				7DCAEC02262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift */,
+			);
+			path = "Data Mappers";
+			sourceTree = "<group>";
+		};
+		7DCAEC1F262E48810052A4B9 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 		7DFF4295262DBF76009A743D = {
@@ -192,6 +235,7 @@
 			children = (
 				7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */,
 				7DFF42AF262DBF76009A743D /* Info.plist */,
+				7DCAEC1F262E48810052A4B9 /* Ressources */,
 			);
 			path = MusiqModuleChartsTests;
 			sourceTree = "<group>";
@@ -201,6 +245,7 @@
 			children = (
 				7DFF42BD262DBF9C009A743D /* ChartsView.swift */,
 				7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */,
+				7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCAEC1D262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +371,15 @@
 				7D1837F3262DC13F0017058C /* ChartTopTtracksDTO.swift in Sources */,
 				7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */,
 				7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */,
+				7DCAEC21262E49870052A4B9 /* ChartTopTracksListView.swift in Sources */,
 				7DCAEBFB262E20BD0052A4B9 /* ChartTopTrackRowItem.swift in Sources */,
+				7DCAEC09262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift in Sources */,
 				7DCAEBEB262E114F0052A4B9 /* ChartTopTracksViewModel.swift in Sources */,
+				7DCAEC14262E309A0052A4B9 /* ChartsRepository.swift in Sources */,
+				7DCAEC19262E35180052A4B9 /* ChartTopTracksDTOMapper.swift in Sources */,
+				7DCAEC0F262E30000052A4B9 /* ChartsDataManager.swift in Sources */,
 				7D1837ED262DC1350017058C /* ChartsView.swift in Sources */,
+				7DCAEC0C262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift in Sources */,
 				7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */,
 				7DCAEC03262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift in Sources */,
 			);
