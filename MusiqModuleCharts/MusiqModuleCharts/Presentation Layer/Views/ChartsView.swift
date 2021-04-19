@@ -1,5 +1,5 @@
 //
-//  SearchTopTracks.swift
+//  ChartsView.swift
 //  MusiqModuleTopTracks
 //
 //  Created by Olivier Rigault on 18/04/2021.
@@ -12,11 +12,11 @@ public struct ChartsView: View {
     public init() {}
     
     public var body: some View {
-        Text("Search Top Tracks")
+        Text("Charts")
     }
 }
 
-struct SearchTopTracksView_Previews: PreviewProvider {
+struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
         ChartsView()
     }

@@ -1,14 +1,14 @@
 //
-//  MusiqModuleTopTagsTests.swift
-//  MusiqModuleTopTagsTests
+//  MusiqModuleChartsTests.swift
+//  MusiqModuleChartsTests
 //
-//  Created by Olivier Rigault on 17/04/2021.
+//  Created by Olivier Rigault on 19/04/2021.
 //
 
 import XCTest
-@testable import MusiqModuleTopTags
+@testable import MusiqModuleCharts
 
-class MusiqModuleTopTagsTests: XCTestCase {
+class MusiqModuleChartsTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

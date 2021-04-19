@@ -7,103 +7,133 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D819BC7262B992200311598 /* MusiqModuleTopTags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D819BBD262B992200311598 /* MusiqModuleTopTags.framework */; };
-		7D819BCC262B992200311598 /* MusiqModuleTopTagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D819BCB262B992200311598 /* MusiqModuleTopTagsTests.swift */; };
-		7D819BCE262B992200311598 /* MusiqModuleTopTags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D819BC0262B992200311598 /* MusiqModuleTopTags.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D819BDA262B997400311598 /* SearchTopTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D819BD9262B997400311598 /* SearchTopTagsView.swift */; };
-		7DB1B97A262B9D18000E02D4 /* SearchTopTagsResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */; };
+		7D1837ED262DC1350017058C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BD262DBF9C009A743D /* ChartsView.swift */; };
+		7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */; };
+		7D1837F3262DC13F0017058C /* ChartTopTtracksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */; };
+		7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */; };
+		7DFF42A9262DBF76009A743D /* MusiqModuleCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */; };
+		7DFF42AE262DBF76009A743D /* MusiqModuleChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */; };
+		7DFF42B0262DBF76009A743D /* MusiqModuleCharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D819BC8262B992200311598 /* PBXContainerItemProxy */ = {
+		7DFF42AA262DBF76009A743D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7D819BB4262B992100311598 /* Project object */;
+			containerPortal = 7DFF4296262DBF76009A743D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D819BBC262B992200311598;
-			remoteInfo = MusiqModuleTopTags;
+			remoteGlobalIDString = 7DFF429E262DBF76009A743D;
+			remoteInfo = MusiqModuleCharts;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7D819BBD262B992200311598 /* MusiqModuleTopTags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleTopTags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D819BC0262B992200311598 /* MusiqModuleTopTags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleTopTags.h; sourceTree = "<group>"; };
-		7D819BC1262B992200311598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D819BC6262B992200311598 /* MusiqModuleTopTagsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqModuleTopTagsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D819BCB262B992200311598 /* MusiqModuleTopTagsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqModuleTopTagsTests.swift; sourceTree = "<group>"; };
-		7D819BCD262B992200311598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D819BD9262B997400311598 /* SearchTopTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTagsView.swift; sourceTree = "<group>"; };
-		7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTagsResultsView.swift; sourceTree = "<group>"; };
+		7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTtracksDTO.swift; sourceTree = "<group>"; };
+		7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequester+Tracks.swift"; sourceTree = "<group>"; };
+		7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleCharts.h; sourceTree = "<group>"; };
+		7DFF42A3262DBF76009A743D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFF42A8262DBF76009A743D /* MusiqModuleChartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqModuleChartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqModuleChartsTests.swift; sourceTree = "<group>"; };
+		7DFF42AF262DBF76009A743D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFF42BD262DBF9C009A743D /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D819BBA262B992200311598 /* Frameworks */ = {
+		7DFF429C262DBF76009A743D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D819BC3262B992200311598 /* Frameworks */ = {
+		7DFF42A5262DBF76009A743D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D819BC7262B992200311598 /* MusiqModuleTopTags.framework in Frameworks */,
+				7DFF42A9262DBF76009A743D /* MusiqModuleCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D819BB3262B992100311598 = {
+		7DB08640262DBFD10076B0EF /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BBF262B992200311598 /* MusiqModuleTopTags */,
-				7D819BCA262B992200311598 /* MusiqModuleTopTagsTests */,
-				7D819BBE262B992200311598 /* Products */,
+				7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		7DB08642262DBFD10076B0EF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7DB08643262DBFD10076B0EF /* Data Services Layer */ = {
+			isa = PBXGroup;
+			children = (
+				7DB08640262DBFD10076B0EF /* Data Models */,
+				7DB08642262DBFD10076B0EF /* API */,
+			);
+			path = "Data Services Layer";
+			sourceTree = "<group>";
+		};
+		7DFF4295262DBF76009A743D = {
+			isa = PBXGroup;
+			children = (
+				7DFF42A1262DBF76009A743D /* MusiqModuleCharts */,
+				7DFF42AC262DBF76009A743D /* MusiqModuleChartsTests */,
+				7DFF42A0262DBF76009A743D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7D819BBE262B992200311598 /* Products */ = {
+		7DFF42A0262DBF76009A743D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BBD262B992200311598 /* MusiqModuleTopTags.framework */,
-				7D819BC6262B992200311598 /* MusiqModuleTopTagsTests.xctest */,
+				7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */,
+				7DFF42A8262DBF76009A743D /* MusiqModuleChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D819BBF262B992200311598 /* MusiqModuleTopTags */ = {
+		7DFF42A1262DBF76009A743D /* MusiqModuleCharts */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BC0262B992200311598 /* MusiqModuleTopTags.h */,
-				7D819BC1262B992200311598 /* Info.plist */,
-				7D819BE2262B998E00311598 /* Presentation Layer */,
+				7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */,
+				7DFF42A3262DBF76009A743D /* Info.plist */,
+				7DFF42C0262DBF9C009A743D /* Presentation Layer */,
+				7DB08643262DBFD10076B0EF /* Data Services Layer */,
 			);
-			path = MusiqModuleTopTags;
+			path = MusiqModuleCharts;
 			sourceTree = "<group>";
 		};
-		7D819BCA262B992200311598 /* MusiqModuleTopTagsTests */ = {
+		7DFF42AC262DBF76009A743D /* MusiqModuleChartsTests */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BCB262B992200311598 /* MusiqModuleTopTagsTests.swift */,
-				7D819BCD262B992200311598 /* Info.plist */,
+				7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */,
+				7DFF42AF262DBF76009A743D /* Info.plist */,
 			);
-			path = MusiqModuleTopTagsTests;
+			path = MusiqModuleChartsTests;
 			sourceTree = "<group>";
 		};
-		7D819BDD262B998200311598 /* Views */ = {
+		7DFF42BF262DBF9C009A743D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BD9262B997400311598 /* SearchTopTagsView.swift */,
-				7DB1B979262B9D18000E02D4 /* SearchTopTagsResultsView.swift */,
+				7DFF42BD262DBF9C009A743D /* ChartsView.swift */,
+				7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7D819BE2262B998E00311598 /* Presentation Layer */ = {
+		7DFF42C0262DBF9C009A743D /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				7D819BDD262B998200311598 /* Views */,
+				7DFF42BF262DBF9C009A743D /* Views */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -111,72 +141,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7D819BB8262B992200311598 /* Headers */ = {
+		7DFF429A262DBF76009A743D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D819BCE262B992200311598 /* MusiqModuleTopTags.h in Headers */,
+				7DFF42B0262DBF76009A743D /* MusiqModuleCharts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7D819BBC262B992200311598 /* MusiqModuleTopTags */ = {
+		7DFF429E262DBF76009A743D /* MusiqModuleCharts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D819BD1262B992200311598 /* Build configuration list for PBXNativeTarget "MusiqModuleTopTags" */;
+			buildConfigurationList = 7DFF42B3262DBF76009A743D /* Build configuration list for PBXNativeTarget "MusiqModuleCharts" */;
 			buildPhases = (
-				7D819BB8262B992200311598 /* Headers */,
-				7D819BB9262B992200311598 /* Sources */,
-				7D819BBA262B992200311598 /* Frameworks */,
-				7D819BBB262B992200311598 /* Resources */,
+				7DFF429A262DBF76009A743D /* Headers */,
+				7DFF429B262DBF76009A743D /* Sources */,
+				7DFF429C262DBF76009A743D /* Frameworks */,
+				7DFF429D262DBF76009A743D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MusiqModuleTopTags;
-			productName = MusiqModuleTopTags;
-			productReference = 7D819BBD262B992200311598 /* MusiqModuleTopTags.framework */;
+			name = MusiqModuleCharts;
+			productName = MusiqModuleCharts;
+			productReference = 7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7D819BC5262B992200311598 /* MusiqModuleTopTagsTests */ = {
+		7DFF42A7262DBF76009A743D /* MusiqModuleChartsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D819BD4262B992200311598 /* Build configuration list for PBXNativeTarget "MusiqModuleTopTagsTests" */;
+			buildConfigurationList = 7DFF42B6262DBF76009A743D /* Build configuration list for PBXNativeTarget "MusiqModuleChartsTests" */;
 			buildPhases = (
-				7D819BC2262B992200311598 /* Sources */,
-				7D819BC3262B992200311598 /* Frameworks */,
-				7D819BC4262B992200311598 /* Resources */,
+				7DFF42A4262DBF76009A743D /* Sources */,
+				7DFF42A5262DBF76009A743D /* Frameworks */,
+				7DFF42A6262DBF76009A743D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D819BC9262B992200311598 /* PBXTargetDependency */,
+				7DFF42AB262DBF76009A743D /* PBXTargetDependency */,
 			);
-			name = MusiqModuleTopTagsTests;
-			productName = MusiqModuleTopTagsTests;
-			productReference = 7D819BC6262B992200311598 /* MusiqModuleTopTagsTests.xctest */;
+			name = MusiqModuleChartsTests;
+			productName = MusiqModuleChartsTests;
+			productReference = 7DFF42A8262DBF76009A743D /* MusiqModuleChartsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D819BB4262B992100311598 /* Project object */ = {
+		7DFF4296262DBF76009A743D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					7D819BBC262B992200311598 = {
+					7DFF429E262DBF76009A743D = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1240;
 					};
-					7D819BC5262B992200311598 = {
+					7DFF42A7262DBF76009A743D = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 7D819BB7262B992100311598 /* Build configuration list for PBXProject "MusiqModuleTopTags" */;
+			buildConfigurationList = 7DFF4299262DBF76009A743D /* Build configuration list for PBXProject "MusiqModuleCharts" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -184,26 +213,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D819BB3262B992100311598;
-			productRefGroup = 7D819BBE262B992200311598 /* Products */;
+			mainGroup = 7DFF4295262DBF76009A743D;
+			productRefGroup = 7DFF42A0262DBF76009A743D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D819BBC262B992200311598 /* MusiqModuleTopTags */,
-				7D819BC5262B992200311598 /* MusiqModuleTopTagsTests */,
+				7DFF429E262DBF76009A743D /* MusiqModuleCharts */,
+				7DFF42A7262DBF76009A743D /* MusiqModuleChartsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D819BBB262B992200311598 /* Resources */ = {
+		7DFF429D262DBF76009A743D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D819BC4262B992200311598 /* Resources */ = {
+		7DFF42A6262DBF76009A743D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,35 +242,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D819BB9262B992200311598 /* Sources */ = {
+		7DFF429B262DBF76009A743D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DB1B97A262B9D18000E02D4 /* SearchTopTagsResultsView.swift in Sources */,
-				7D819BDA262B997400311598 /* SearchTopTagsView.swift in Sources */,
+				7D1837F3262DC13F0017058C /* ChartTopTtracksDTO.swift in Sources */,
+				7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */,
+				7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */,
+				7D1837ED262DC1350017058C /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D819BC2262B992200311598 /* Sources */ = {
+		7DFF42A4262DBF76009A743D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D819BCC262B992200311598 /* MusiqModuleTopTagsTests.swift in Sources */,
+				7DFF42AE262DBF76009A743D /* MusiqModuleChartsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D819BC9262B992200311598 /* PBXTargetDependency */ = {
+		7DFF42AB262DBF76009A743D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D819BBC262B992200311598 /* MusiqModuleTopTags */;
-			targetProxy = 7D819BC8262B992200311598 /* PBXContainerItemProxy */;
+			target = 7DFF429E262DBF76009A743D /* MusiqModuleCharts */;
+			targetProxy = 7DFF42AA262DBF76009A743D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7D819BCF262B992200311598 /* Debug */ = {
+		7DFF42B1262DBF76009A743D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -305,7 +336,7 @@
 			};
 			name = Debug;
 		};
-		7D819BD0262B992200311598 /* Release */ = {
+		7DFF42B2262DBF76009A743D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,50 +394,47 @@
 			};
 			name = Release;
 		};
-		7D819BD2262B992200311598 /* Debug */ = {
+		7DFF42B4262DBF76009A743D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqModuleTopTags/Info.plist;
+				INFOPLIST_FILE = MusiqModuleCharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleTopTags;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleCharts;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D819BD3262B992200311598 /* Release */ = {
+		7DFF42B5262DBF76009A743D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MusiqModuleTopTags/Info.plist;
+				INFOPLIST_FILE = MusiqModuleCharts/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleTopTags;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleCharts;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -414,38 +442,38 @@
 			};
 			name = Release;
 		};
-		7D819BD5262B992200311598 /* Debug */ = {
+		7DFF42B7262DBF76009A743D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqModuleTopTagsTests/Info.plist;
+				INFOPLIST_FILE = MusiqModuleChartsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleTopTagsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleChartsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D819BD6262B992200311598 /* Release */ = {
+		7DFF42B8262DBF76009A743D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZCLCNB53G;
-				INFOPLIST_FILE = MusiqModuleTopTagsTests/Info.plist;
+				INFOPLIST_FILE = MusiqModuleChartsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleTopTagsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olsamaja.MusiqModuleChartsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,34 +483,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D819BB7262B992100311598 /* Build configuration list for PBXProject "MusiqModuleTopTags" */ = {
+		7DFF4299262DBF76009A743D /* Build configuration list for PBXProject "MusiqModuleCharts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D819BCF262B992200311598 /* Debug */,
-				7D819BD0262B992200311598 /* Release */,
+				7DFF42B1262DBF76009A743D /* Debug */,
+				7DFF42B2262DBF76009A743D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D819BD1262B992200311598 /* Build configuration list for PBXNativeTarget "MusiqModuleTopTags" */ = {
+		7DFF42B3262DBF76009A743D /* Build configuration list for PBXNativeTarget "MusiqModuleCharts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D819BD2262B992200311598 /* Debug */,
-				7D819BD3262B992200311598 /* Release */,
+				7DFF42B4262DBF76009A743D /* Debug */,
+				7DFF42B5262DBF76009A743D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D819BD4262B992200311598 /* Build configuration list for PBXNativeTarget "MusiqModuleTopTagsTests" */ = {
+		7DFF42B6262DBF76009A743D /* Build configuration list for PBXNativeTarget "MusiqModuleChartsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D819BD5262B992200311598 /* Debug */,
-				7D819BD6262B992200311598 /* Release */,
+				7DFF42B7262DBF76009A743D /* Debug */,
+				7DFF42B8262DBF76009A743D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7D819BB4262B992100311598 /* Project object */;
+	rootObject = 7DFF4296262DBF76009A743D /* Project object */;
 }
