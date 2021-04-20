@@ -82,9 +82,18 @@ struct ChartTopTracksResultsView_Previews: PreviewProvider {
                 .previewDisplayName("state = .error")
             ChartTopTracksResultsViewBuilder()
                 .withViewModel(ChartTopTracksViewModel(state: .loaded([
-                    ChartTopTrackRowItem(name: "Best track", artistName: "Best artist"),
-                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text", artistName: "Best artist"),
-                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text", artistName: "Super popular artist with a very long name that should appearon several lines of text")
+                    ChartTopTrackRowItem(name: "Best track",
+                                         artistName: "Best artist",
+                                         listeners: "12345678",
+                                         playcount: "908223"),
+                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text",
+                                         artistName: "Best artist",
+                                         listeners: "12345678",
+                                         playcount: "908223"),
+                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text",
+                                         artistName: "Super popular artist with a very long name that should appearon several lines of text",
+                                         listeners: "12345678",
+                                         playcount: "908223"),
                 ])))
                 .build()
                 .previewDisplayName("state = .loaded")

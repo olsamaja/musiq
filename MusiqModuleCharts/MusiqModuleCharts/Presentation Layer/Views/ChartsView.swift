@@ -14,9 +14,12 @@ public struct ChartsView: View {
     public init() {}
     
     public var body: some View {
-        ChartTopTracksResultsViewBuilder()
-            .withViewModel(ChartTopTracksViewModel())
-            .build()
+        NavigationView {
+                ChartTopTracksResultsViewBuilder()
+                    .withViewModel(ChartTopTracksViewModel())
+                    .build()
+                    .navigationTitle("Charts")
+        }
     }
 }
 

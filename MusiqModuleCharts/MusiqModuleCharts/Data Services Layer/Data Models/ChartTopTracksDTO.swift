@@ -12,6 +12,8 @@ import Foundation
 struct ChartTopTrackDTO: Decodable {
     let name: String
     let artist: ChartArtistDTO
+    let listeners: String
+    let playcount: String
 }
 
 struct ChartArtistDTO: Decodable {

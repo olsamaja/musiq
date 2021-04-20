@@ -14,9 +14,24 @@ struct ChartTopTrackRowView: View {
     var item: ChartTopTrackRowItem
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(item.name)
-            Text(item.artistName)
+        VStack {
+            HStack {
+                Text(item.name)
+                    .font(.headline)
+                Spacer()
+                BadgeViewBuilder()
+                    .withText(item.playcount)
+                    .withBackgroundColor(.gray)
+                    .build()
+            }
+            Spacer(minLength: 4)
+            HStack() {
+                Text(item.artistName)
+                Spacer()
+                BadgeViewBuilder()
+                    .withText(item.listeners)
+                    .build()
+            }
         }
     }
 }
@@ -42,6 +57,10 @@ public class ChartTopTrackRowViewBuilder: BuilderProtocol {
 
 struct ChartTopTrackRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartTopTrackRowView(item: ChartTopTrackRowItem(name: "Track", artistName: "Artist"))
+        ChartTopTrackRowView(item: ChartTopTrackRowItem(name: "Track",
+                                                        artistName: "Artist",
+                                                        listeners: "1234",
+                                                        playcount: "123456"))
+            .sizeThatFitPreview(with: "Default")
     }
 }

@@ -14,17 +14,15 @@ struct ChartTopTracksListView: View {
     var items: [ChartTopTrackRowItem]
     
     var body: some View {
-        return List(items) { item in
-            NavigationLink(
-                destination: MessageViewBuilder()
-                    .withMessage("Test")
-                    .build(),
-                label: {
+        List {
+            Section(header: Text("Header")) {
+                ForEach(items) { item in
                     ChartTopTrackRowViewBuilder()
                         .withItem(item)
                         .build()
+
                 }
-            )
+            }
         }
     }
 }
@@ -52,9 +50,18 @@ struct ChartTopTracksListView_Previews: PreviewProvider {
     static var previews: some View {
         ChartTopTracksListViewBuilder()
             .withItems([
-                ChartTopTrackRowItem(name: "Always Remember Us This Way", artistName: "Elvis Presley"),
-                ChartTopTrackRowItem(name: "What a wondeful world!", artistName: "Louis Armstrong"),
-                ChartTopTrackRowItem(name: "Mr. Tambourine Man", artistName: "Bob Dylan")
+                ChartTopTrackRowItem(name: "Always Remember Us This Way",
+                                     artistName: "Elvis Presley",
+                                     listeners: "12345678",
+                                     playcount: "908223"),
+                ChartTopTrackRowItem(name: "What a wondeful world!",
+                                     artistName: "Louis Armstrong",
+                                     listeners: "12345678",
+                                     playcount: "908223"),
+                ChartTopTrackRowItem(name: "Mr. Tambourine Man",
+                                     artistName: "Bob Dylan",
+                                     listeners: "12345678",
+                                     playcount: "908223")
             ])
             .build()
     }
