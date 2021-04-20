@@ -41,8 +41,56 @@ struct ChartTopTracksResultsView: View {
     }
 }
 
+public class ChartTopTracksResultsViewBuilder: BuilderProtocol {
+    
+    private var viewModel: ChartTopTracksViewModel?
+    
+    public func withViewModel(_ viewModel: ChartTopTracksViewModel) -> ChartTopTracksResultsViewBuilder {
+        self.viewModel = viewModel
+        return self
+    }
+    
+    @ViewBuilder
+    public func build() -> some View {
+        if let viewModel = viewModel {
+            ChartTopTracksResultsView(viewModel: viewModel)
+        } else {
+            EmptyView()
+        }
+    }
+}
+
 struct ChartTopTracksResultsView_Previews: PreviewProvider {
+
+    enum TestError: Error {
+        case dummy
+    }
+    
     static var previews: some View {
-        ChartTopTracksResultsView(viewModel: ChartTopTracksViewModel())
+        Group {
+            ChartTopTracksResultsViewBuilder()
+                .withViewModel(ChartTopTracksViewModel())
+                .build()
+                .previewDisplayName("default state = .idle")
+            ChartTopTracksResultsViewBuilder()
+                .withViewModel(ChartTopTracksViewModel(state: .loading))
+                .build()
+                .previewDisplayName("state = .loading")
+            ChartTopTracksResultsViewBuilder()
+                .withViewModel(ChartTopTracksViewModel(state: .error(TestError.dummy)))
+                .build()
+                .previewDisplayName("state = .error")
+            ChartTopTracksResultsViewBuilder()
+                .withViewModel(ChartTopTracksViewModel(state: .loaded([
+                    ChartTopTrackRowItem(name: "Best track", artistName: "Best artist"),
+                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text", artistName: "Best artist"),
+                    ChartTopTrackRowItem(name: "Super good track with a very long name that should appearon several lines of text", artistName: "Super popular artist with a very long name that should appearon several lines of text")
+                ])))
+                .build()
+                .previewDisplayName("state = .loaded")
+            ChartTopTracksResultsViewBuilder()
+                .build()
+                .previewDisplayName("No view model, so should not appear")
+        }
     }
 }

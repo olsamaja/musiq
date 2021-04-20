@@ -8,8 +8,6 @@
 import Foundation
 
 public struct ChartTopTrack {
-    
     let name: String
-    
-    
+    let artistName: String
 }

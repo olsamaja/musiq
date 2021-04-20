@@ -20,7 +20,9 @@ struct ChartTopTracksListView: View {
                     .withMessage("Test")
                     .build(),
                 label: {
-                    Text(item.name)
+                    ChartTopTrackRowViewBuilder()
+                        .withItem(item)
+                        .build()
                 }
             )
         }
@@ -50,9 +52,9 @@ struct ChartTopTracksListView_Previews: PreviewProvider {
     static var previews: some View {
         ChartTopTracksListViewBuilder()
             .withItems([
-                ChartTopTrackRowItem(name: "Elvis"),
-                ChartTopTrackRowItem(name: "Lisa"),
-                ChartTopTrackRowItem(name: "Bod Dylan")
+                ChartTopTrackRowItem(name: "Always Remember Us This Way", artistName: "Elvis Presley"),
+                ChartTopTrackRowItem(name: "What a wondeful world!", artistName: "Louis Armstrong"),
+                ChartTopTrackRowItem(name: "Mr. Tambourine Man", artistName: "Bob Dylan")
             ])
             .build()
     }

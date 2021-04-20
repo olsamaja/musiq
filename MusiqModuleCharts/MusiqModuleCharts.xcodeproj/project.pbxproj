@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D1837ED262DC1350017058C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BD262DBF9C009A743D /* ChartsView.swift */; };
 		7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */; };
-		7D1837F3262DC13F0017058C /* ChartTopTtracksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */; };
+		7D1837F3262DC13F0017058C /* ChartTopTracksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0863F262DBFD10076B0EF /* ChartTopTracksDTO.swift */; };
 		7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */; };
 		7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1837FC262DC23C0017058C /* ChartTopTrack.swift */; };
 		7DCAEBEB262E114F0052A4B9 /* ChartTopTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEBEA262E114F0052A4B9 /* ChartTopTracksViewModel.swift */; };
@@ -28,6 +28,7 @@
 		7DCAEC19262E35180052A4B9 /* ChartTopTracksDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC18262E35180052A4B9 /* ChartTopTracksDTOMapper.swift */; };
 		7DCAEC1D262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */; };
 		7DCAEC21262E49870052A4B9 /* ChartTopTracksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */; };
+		7DCAEC28262EB6660052A4B9 /* ChartTopTrackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCAEC27262EB6660052A4B9 /* ChartTopTrackRowView.swift */; };
 		7DFF42A9262DBF76009A743D /* MusiqModuleCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */; };
 		7DFF42AE262DBF76009A743D /* MusiqModuleChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42AD262DBF76009A743D /* MusiqModuleChartsTests.swift */; };
 		7DFF42B0262DBF76009A743D /* MusiqModuleCharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,7 +62,7 @@
 
 /* Begin PBXFileReference section */
 		7D1837FC262DC23C0017058C /* ChartTopTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrack.swift; sourceTree = "<group>"; };
-		7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTtracksDTO.swift; sourceTree = "<group>"; };
+		7DB0863F262DBFD10076B0EF /* ChartTopTracksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksDTO.swift; sourceTree = "<group>"; };
 		7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequester+Tracks.swift"; sourceTree = "<group>"; };
 		7DCAEBEA262E114F0052A4B9 /* ChartTopTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksViewModel.swift; sourceTree = "<group>"; };
 		7DCAEBF2262E1F960052A4B9 /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +77,7 @@
 		7DCAEC18262E35180052A4B9 /* ChartTopTracksDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksDTOMapper.swift; sourceTree = "<group>"; };
 		7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChartGetTopTracksSuccessful.json; sourceTree = "<group>"; };
 		7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksListView.swift; sourceTree = "<group>"; };
+		7DCAEC27262EB6660052A4B9 /* ChartTopTrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrackRowView.swift; sourceTree = "<group>"; };
 		7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleCharts.h; sourceTree = "<group>"; };
 		7DFF42A3262DBF76009A743D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		7DB08640262DBFD10076B0EF /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				7DB0863F262DBFD10076B0EF /* ChartTopTtracksDTO.swift */,
+				7DB0863F262DBFD10076B0EF /* ChartTopTracksDTO.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -246,6 +248,7 @@
 				7DFF42BD262DBF9C009A743D /* ChartsView.swift */,
 				7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */,
 				7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */,
+				7DCAEC27262EB6660052A4B9 /* ChartTopTrackRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,7 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1837F3262DC13F0017058C /* ChartTopTtracksDTO.swift in Sources */,
+				7D1837F3262DC13F0017058C /* ChartTopTracksDTO.swift in Sources */,
 				7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */,
 				7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */,
 				7DCAEC21262E49870052A4B9 /* ChartTopTracksListView.swift in Sources */,
@@ -381,6 +384,7 @@
 				7D1837ED262DC1350017058C /* ChartsView.swift in Sources */,
 				7DCAEC0C262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift in Sources */,
 				7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */,
+				7DCAEC28262EB6660052A4B9 /* ChartTopTrackRowView.swift in Sources */,
 				7DCAEC03262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

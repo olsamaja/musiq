@@ -12,15 +12,18 @@ public struct ChartTopTrackRowItem: Identifiable {
     
     public let id: String
     let name: String
-    
+    let artistName: String
+
     init(track: ChartTopTrack) {
         self.id = UUID().uuidString
         self.name = track.name
+        self.artistName = track.artistName
     }
     
-    init(name: String) {
+    init(name: String, artistName: String) {
         self.id = UUID().uuidString
         self.name = name
+        self.artistName = artistName
     }
 }
 
