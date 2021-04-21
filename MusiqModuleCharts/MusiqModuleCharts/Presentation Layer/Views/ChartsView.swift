@@ -9,20 +9,26 @@ import SwiftUI
 import MusiqCoreUI
 import MusiqCore
 
+enum ChartType: String, CaseIterable {
+    case topTracks = "Top Tracks"
+    case topArtists = "Top Artists"
+}
+
 public struct ChartsView: View {
     
-    @State private var chart: Int = 0
+    @State private var selectedChartType: ChartType = .topTracks
 
     public init() {}
     
     public var body: some View {
         NavigationView {
-            ChartsContainerView()
+            ChartsResultsView(chartType: $selectedChartType)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                        Picker("Chart", selection: $chart) {
-                            Text("Top Tracks").tag(0)
-                            Text("Top Albums").tag(1)
+                        Picker("Chart", selection: $selectedChartType) {
+                            ForEach(ChartType.allCases, id: \.self) {
+                                Text($0.rawValue)
+                            }
                         }
                         .pickerStyle(SegmentedPickerStyle())
                     }
@@ -36,16 +42,3 @@ struct ChartsView_Previews: PreviewProvider {
         ChartsView()
     }
 }
-
-public struct ChartsContainerView: View {
-    
-    public init() {}
-    
-    public var body: some View {
-        ChartTopTracksResultsViewBuilder()
-            .withViewModel(ChartTopTracksViewModel())
-            .build()
-            .navigationTitle("Charts")
-    }
-}
-
