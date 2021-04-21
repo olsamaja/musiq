@@ -15,13 +15,10 @@ struct ChartTopTracksListView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Header")) {
-                ForEach(items) { item in
-                    ChartTopTrackRowViewBuilder()
-                        .withItem(item)
-                        .build()
-
-                }
+            ForEach(items) { item in
+                ChartTopTrackRowViewBuilder()
+                    .withItem(item)
+                    .build()
             }
         }
     }

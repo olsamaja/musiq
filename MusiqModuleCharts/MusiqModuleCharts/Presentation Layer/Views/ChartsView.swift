@@ -11,14 +11,22 @@ import MusiqCore
 
 public struct ChartsView: View {
     
+    @State private var chart: Int = 0
+
     public init() {}
     
     public var body: some View {
         NavigationView {
-                ChartTopTracksResultsViewBuilder()
-                    .withViewModel(ChartTopTracksViewModel())
-                    .build()
-                    .navigationTitle("Charts")
+            ChartsContainerView()
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Picker("Chart", selection: $chart) {
+                            Text("Top Tracks").tag(0)
+                            Text("Top Albums").tag(1)
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                    }
+                }
         }
     }
 }
@@ -28,3 +36,16 @@ struct ChartsView_Previews: PreviewProvider {
         ChartsView()
     }
 }
+
+public struct ChartsContainerView: View {
+    
+    public init() {}
+    
+    public var body: some View {
+        ChartTopTracksResultsViewBuilder()
+            .withViewModel(ChartTopTracksViewModel())
+            .build()
+            .navigationTitle("Charts")
+    }
+}
+
