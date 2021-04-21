@@ -134,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				7DCAEC11262E300C0052A4B9 /* Data Manager */,
-				7DB08640262DBFD10076B0EF /* Data Models */,
 				7DB08642262DBFD10076B0EF /* API */,
 			);
 			path = "Data Services Layer";
@@ -143,24 +142,19 @@
 		7DCAEBE6262DC2EF0052A4B9 /* Domain Models */ = {
 			isa = PBXGroup;
 			children = (
-				7DCAEC382630D5F00052A4B9 /* Top Tracks */,
+				7D1837FC262DC23C0017058C /* ChartTopTrack.swift */,
+				7DCAEBFA262E20BD0052A4B9 /* ChartTopTrackRowItem.swift */,
+				7DCAEC16262E34F90052A4B9 /* Data Mappers */,
 			);
 			path = "Domain Models";
-			sourceTree = "<group>";
-		};
-		7DCAEBE7262DC3060052A4B9 /* Domain Layer */ = {
-			isa = PBXGroup;
-			children = (
-				7DCAEBEE262E11750052A4B9 /* View Models */,
-				7DCAEBE6262DC2EF0052A4B9 /* Domain Models */,
-			);
-			path = "Domain Layer";
 			sourceTree = "<group>";
 		};
 		7DCAEBEE262E11750052A4B9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				7DCAEC362630D5DA0052A4B9 /* Top Tracks */,
+				7DCAEBEA262E114F0052A4B9 /* ChartTopTracksViewModel.swift */,
+				7DCAEC08262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift */,
+				7DCAEC0B262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -204,9 +198,10 @@
 		7DCAEC2C2630BE7C0052A4B9 /* Top Tracks */ = {
 			isa = PBXGroup;
 			children = (
-				7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */,
-				7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */,
-				7DCAEC27262EB6660052A4B9 /* ChartTopTrackRowView.swift */,
+				7DCAEC3A2630D66F0052A4B9 /* Views */,
+				7DCAEBEE262E11750052A4B9 /* View Models */,
+				7DCAEBE6262DC2EF0052A4B9 /* Domain Models */,
+				7DB08640262DBFD10076B0EF /* Data Models */,
 			);
 			path = "Top Tracks";
 			sourceTree = "<group>";
@@ -214,29 +209,27 @@
 		7DCAEC342630C2170052A4B9 /* Top Artists */ = {
 			isa = PBXGroup;
 			children = (
-				7DCAEC312630C2110052A4B9 /* ChartTopArtistsResultsView.swift */,
+				7DCAEC3B2630D67A0052A4B9 /* Views */,
 			);
 			path = "Top Artists";
 			sourceTree = "<group>";
 		};
-		7DCAEC362630D5DA0052A4B9 /* Top Tracks */ = {
+		7DCAEC3A2630D66F0052A4B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7DCAEBEA262E114F0052A4B9 /* ChartTopTracksViewModel.swift */,
-				7DCAEC08262E2C6A0052A4B9 /* ChartTopTracksViewModel+Reduce.swift */,
-				7DCAEC0B262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift */,
+				7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */,
+				7DCAEC20262E49870052A4B9 /* ChartTopTracksListView.swift */,
+				7DCAEC27262EB6660052A4B9 /* ChartTopTrackRowView.swift */,
 			);
-			path = "Top Tracks";
+			path = Views;
 			sourceTree = "<group>";
 		};
-		7DCAEC382630D5F00052A4B9 /* Top Tracks */ = {
+		7DCAEC3B2630D67A0052A4B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D1837FC262DC23C0017058C /* ChartTopTrack.swift */,
-				7DCAEBFA262E20BD0052A4B9 /* ChartTopTrackRowItem.swift */,
-				7DCAEC16262E34F90052A4B9 /* Data Mappers */,
+				7DCAEC312630C2110052A4B9 /* ChartTopArtistsResultsView.swift */,
 			);
-			path = "Top Tracks";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		7DFF4295262DBF76009A743D = {
@@ -264,7 +257,8 @@
 				7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */,
 				7DFF42A3262DBF76009A743D /* Info.plist */,
 				7DFF42C0262DBF9C009A743D /* Presentation Layer */,
-				7DCAEBE7262DC3060052A4B9 /* Domain Layer */,
+				7DCAEC342630C2170052A4B9 /* Top Artists */,
+				7DCAEC2C2630BE7C0052A4B9 /* Top Tracks */,
 				7DB08643262DBFD10076B0EF /* Data Services Layer */,
 			);
 			path = MusiqModuleCharts;
@@ -285,8 +279,6 @@
 			children = (
 				7DFF42BD262DBF9C009A743D /* ChartsView.swift */,
 				7DCAEC2E2630BF1D0052A4B9 /* ChartsResultsView.swift */,
-				7DCAEC342630C2170052A4B9 /* Top Artists */,
-				7DCAEC2C2630BE7C0052A4B9 /* Top Tracks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
