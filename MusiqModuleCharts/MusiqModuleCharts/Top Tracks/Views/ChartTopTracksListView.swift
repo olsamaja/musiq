@@ -14,11 +14,13 @@ struct ChartTopTracksListView: View {
     var items: [ChartTopTrackRowItem]
     
     var body: some View {
-        List {
-            ForEach(items) { item in
-                ChartTopTrackRowViewBuilder()
-                    .withItem(item)
-                    .build()
+        ScrollView {
+            LazyVStack(spacing: 0) {
+                ForEach(items) { item in
+                    ChartTopTrackRowViewBuilder()
+                        .withItem(item)
+                        .build()
+                }
             }
         }
     }

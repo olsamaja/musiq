@@ -32,7 +32,9 @@ struct ChartTopTrackRowView: View {
                     .withText(item.listeners)
                     .build()
             }
+            Divider()
         }
+        .padding([.top, .leading, .trailing])
     }
 }
 

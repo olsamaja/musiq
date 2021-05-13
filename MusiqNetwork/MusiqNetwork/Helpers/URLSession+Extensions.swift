@@ -11,7 +11,8 @@ import MusiqCore
 
 extension URLSession {
     
-    func execute<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, DataError> {
+    func execute<T: Decodable>(_ request: URLRequest,
+                               resultQueue: DispatchQueue = .main) -> AnyPublisher<T, DataError> {
         
         OLLogger.info("URLSession: \(request)")
         
@@ -22,7 +23,7 @@ extension URLSession {
             .flatMap() { pair in
                 pair.data.decode()
             }
-            .receive(on: DispatchQueue.main)
+            .receive(on: resultQueue)
             .eraseToAnyPublisher()
     }
 }
