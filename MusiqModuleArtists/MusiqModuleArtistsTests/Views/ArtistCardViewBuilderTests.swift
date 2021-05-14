@@ -44,7 +44,8 @@ class ArtistRowViewBuilderTests: XCTestCase {
         
         do {
             let view = try sut.inspect().find(ArtistRowView.self)
-            let hStack = try view.hStack()
+            let vStack = try view.vStack()
+            let hStack = try vStack.hStack(0)
             
             let name = try hStack.text(0).string()
             XCTAssertEqual(name, "Elvis")
@@ -53,6 +54,8 @@ class ArtistRowViewBuilderTests: XCTestCase {
             XCTAssertEqual(spacer, 10)
             
             _ = try hStack.find(BadgeView.self)
+            
+            _ = try vStack.divider(1)
         } catch {
             XCTFail(error.localizedDescription)
         }

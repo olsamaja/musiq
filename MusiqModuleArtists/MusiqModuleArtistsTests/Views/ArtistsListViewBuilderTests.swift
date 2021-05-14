@@ -46,8 +46,9 @@ class ArtistsListViewBuilderTests: XCTestCase {
         
         do {
             let view = try sut.inspect().find(ArtistsListView.self)
-            let list = try view.list()
-            _ = try list.forEach(0).find(ArtistRowView.self)
+            let scrollView = try view.scrollView()
+            let vStack = try scrollView.lazyVStack()
+            _ = try vStack.forEach(0).find(ArtistRowView.self)
         } catch {
             XCTFail(error.localizedDescription)
         }
