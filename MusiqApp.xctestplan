@@ -1,0 +1,77 @@
+{
+  "configurations" : [
+    {
+      "id" : "DEE44F90-170F-4A04-8248-E1892A009057",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MusiqApp.xcodeproj",
+      "identifier" : "7D833FA225916A930093B94C",
+      "name" : "MusiqApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MusiqApp.xcodeproj",
+        "identifier" : "7D833FB325916A940093B94C",
+        "name" : "MusiqAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MusiqApp.xcodeproj",
+        "identifier" : "7D833FBE25916A940093B94C",
+        "name" : "MusiqAppUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqConfiguration\/MusiqConfiguration.xcodeproj",
+        "identifier" : "7DDE3A61259298EC005750CC",
+        "name" : "MusiqConfigurationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqCore\/MusiqCore.xcodeproj",
+        "identifier" : "7D833FE625916B670093B94C",
+        "name" : "MusiqCoreTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqCoreUI\/MusiqCoreUI.xcodeproj",
+        "identifier" : "7D01563F25A5304A001BDAB6",
+        "name" : "MusiqCoreUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqModuleArtists\/MusiqModuleArtists.xcodeproj",
+        "identifier" : "7DBC5EE826130CF40016408C",
+        "name" : "MusiqModuleArtistsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqModuleCharts\/MusiqModuleCharts.xcodeproj",
+        "identifier" : "7DFF42A7262DBF76009A743D",
+        "name" : "MusiqModuleChartsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MusiqNetwork\/MusiqNetwork.xcodeproj",
+        "identifier" : "7D83403C259171650093B94C",
+        "name" : "MusiqNetworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

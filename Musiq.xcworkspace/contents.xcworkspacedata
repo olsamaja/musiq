@@ -22,4 +22,11 @@
    <FileRef
       location = "group:MusiqCore/MusiqCore.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Test Plans">
+      <FileRef
+         location = "group:MusiqApp.xctestplan">
+      </FileRef>
+   </Group>
 </Workspace>
