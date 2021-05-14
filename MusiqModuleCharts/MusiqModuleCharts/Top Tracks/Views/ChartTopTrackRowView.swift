@@ -14,7 +14,7 @@ struct ChartTopTrackRowView: View {
     var item: ChartTopTrackRowItem
     
     var body: some View {
-        VStack {
+        VStack(spacing: 5) {
             HStack {
                 Text(item.name)
                     .font(.headline)

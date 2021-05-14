@@ -14,22 +14,26 @@ struct ArtistsListView: View {
     var items: [ArtistRowItem]
     
     var body: some View {
-        return List(items) { item in
-            NavigationLink(
-                destination: MessageViewBuilder()
-                    .withMessage("Test")
-                    .build(),
-                label: {
-                    ArtistRowViewBuilder()
-                        .withItem(item)
-                        .build()
-                        .onAppear() {
-                            if items.last == item {
-                                OLLogger.info("Last Row: \(item.name)")
-                            }
+        ScrollView {
+            LazyVStack {
+                ForEach(items) { item in
+                    NavigationLink(
+                        destination: MessageViewBuilder()
+                            .withMessage("Test")
+                            .build(),
+                        label: {
+                            ArtistRowViewBuilder()
+                                .withItem(item)
+                                .build()
+                                .onAppear() {
+                                    if items.last == item {
+                                        OLLogger.info("Last Row: \(item.name)")
+                                    }
+                                }
                         }
+                    )
                 }
-            )
+            }
         }
     }
 }
