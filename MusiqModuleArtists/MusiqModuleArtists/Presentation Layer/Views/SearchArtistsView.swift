@@ -39,6 +39,7 @@ struct SearchArtistsView_Previews: PreviewProvider {
     enum TestError: Error {
         case dummy
     }
+    
     enum Dependencies {
         static var registerIdleState = { () -> Bool in
             Resolver.register { SearchArtistsViewModel() as SearchArtistsViewModel }

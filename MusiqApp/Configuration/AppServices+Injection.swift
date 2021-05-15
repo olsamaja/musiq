@@ -7,6 +7,7 @@
 
 import MusiqConfiguration
 import MusiqModuleArtists
+import MusiqModuleCharts
 import Resolver
 
 extension Resolver: ResolverRegistering {
@@ -14,5 +15,6 @@ extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         registerConfigurationServices(with: Bundle.main)
         registerModuleArtistsServices()
+        registerModuleChartsServices()
     }
 }

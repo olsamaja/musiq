@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import Resolver
 
 public struct ChartsResultsView: View {
     
     @Binding var chartType: ChartType
-    
+    @Injected var viewModel: ChartTopTracksViewModel
+
     public var body: some View {
         switch chartType {
         case .topTracks:
             ChartTopTracksResultsViewBuilder()
-                .withViewModel(ChartTopTracksViewModel())
+                .withViewModel(viewModel)
                 .build()
                 .navigationTitle("Charts")
         case .topArtists:
@@ -29,7 +31,23 @@ struct ChartsResultsView_Previews: PreviewProvider {
     
     @State static var selectedChartType: ChartType = .topTracks
 
+    enum TestError: Error {
+        case dummy
+    }
+    
+    enum Dependencies {
+        static var registerLoadingState = { () -> Bool in
+            Resolver.register { ChartTopTracksViewModel(state: .loading) as ChartTopTracksViewModel }
+            return true
+        }
+    }
+    
     static var previews: some View {
-        ChartsResultsView(chartType: $selectedChartType)
+        Group {
+            if Dependencies.registerLoadingState() {
+                ChartsResultsView(chartType: $selectedChartType)
+                    .previewDisplayName("state = .loading")
+            }
+        }
     }
 }
