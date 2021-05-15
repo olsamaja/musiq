@@ -12,7 +12,7 @@ import Combine
 @testable import MusiqConfiguration
 @testable import MusiqModuleArtists
 
-final class DataRequesterTests: XCTestCase {
+final class ArtistsDataRequesterTests: XCTestCase {
     
     var dataRequester: DataRequester!
     private var cancellable: AnyCancellable?
@@ -83,10 +83,10 @@ final class DataRequesterTests: XCTestCase {
         cancellable = dataRequester.searchArtists(term: "Elvis")
             .sink(receiveCompletion: { _ in }) { response in
             let artists = response.results.artistMatches.artist
-            XCTAssertTrue(artists.count == 1, "Expected 1 artist, but got \(artists.count) instead.")
-            XCTAssertTrue(artists[0].listeners == "2593020", "Expected 2593020, but got \(String(describing: artists[0].listeners)) instead.")
-            XCTAssertTrue(artists[0].name == "Elvis Presley", "Expected 'Elvis Presley', but got \(String(describing: artists[0].name)) instead.")
-            XCTAssertTrue(artists[0].mbid == "01809552-4f87-45b0-afff-2c6f0730a3be", "Expected '01809552-4f87-45b0-afff-2c6f0730a3be', but got \(String(describing: artists[0].mbid)) instead.")
+            XCTAssertEqual(artists.count, 1)
+            XCTAssertEqual(artists[0].listeners, "2593020")
+            XCTAssertEqual(artists[0].name, "Elvis Presley")
+            XCTAssertEqual(artists[0].mbid, "01809552-4f87-45b0-afff-2c6f0730a3be")
             expectation.fulfill()
         }
 
@@ -102,10 +102,10 @@ final class DataRequesterTests: XCTestCase {
         
         cancellable = dataRequester.searchArtists(term: "Elvis").sink(receiveCompletion: { _ in }) { response in
             let artists = response.results.artistMatches.artist
-            XCTAssertTrue(artists.count == 30, "Expected 30 artists, but got \(artists.count) instead.")
-            XCTAssertTrue(artists[2].listeners == "529665", "Expected 529665, but got \(String(describing: artists[2].listeners)) instead.")
-            XCTAssertTrue(artists[2].name == "Elvis Costello & The Attractions", "Expected 'Elvis Costello & The Attractions', but got \(String(describing: artists[2].name)) instead.")
-            XCTAssertTrue(artists[2].mbid == "8a338e06-d182-46f2-bd16-30a09bc840ba", "Expected '8a338e06-d182-46f2-bd16-30a09bc840ba', but got \(String(describing: artists[2].mbid)) instead.")
+            XCTAssertEqual(artists.count, 30)
+            XCTAssertEqual(artists[2].listeners, "529665")
+            XCTAssertEqual(artists[2].name, "Elvis Costello & The Attractions")
+            XCTAssertEqual(artists[2].mbid, "8a338e06-d182-46f2-bd16-30a09bc840ba")
             expectation.fulfill()
         }
 

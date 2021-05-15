@@ -24,6 +24,7 @@
       }
     },
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:MusiqApp.xcodeproj",
         "identifier" : "7D833FBE25916A940093B94C",

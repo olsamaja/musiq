@@ -26,6 +26,20 @@ public extension ChartTopTracksViewModel {
     }
 }
 
+extension ChartTopTracksViewModel.State: Equatable {
+    public static func == (lhs: ChartTopTracksViewModel.State, rhs: ChartTopTracksViewModel.State) -> Bool {
+        switch (lhs, rhs) {
+        case (.idle, .idle),
+             (.loading, .loading),
+             (.loaded, .loaded),
+             (.error, .error):
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 extension ChartTopTracksViewModel {
     
     public static func reduce(_ state: State, _ event: Event) -> State {
