@@ -11,11 +11,13 @@ import Logging
 public struct OLLogger {
     
     private static var shared = OLLogger()
-    private lazy var logger = {
-        Logger(label: Bundle.main.bundleIdentifier ?? "Unknown application")
-    }()
     
-    public static func info(_ message: Logger.Message) {
-        OLLogger.shared.logger.info(message)
+    private func logger(with bundleIdentifier: String?) -> Logger {
+        Logger(label: bundleIdentifier ?? "Unknown application")
+    }
+    
+    public static func info(_ message: Logger.Message,
+                            with bundleIdentifier: String? = Bundle.main.bundleIdentifier) {
+        OLLogger.shared.logger(with: bundleIdentifier).info(message)
     }
 }
