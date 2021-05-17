@@ -6,10 +6,11 @@
 //
 
 import XCTest
+import Combine
 @testable import MusiqCore
 @testable import MusiqModuleArtists
 
-class ArtistsViewModelTests: XCTestCase {
+class ArtistsViewModelReduceTests: XCTestCase {
 
     enum TestError: Error {
         case dummy
@@ -47,5 +48,36 @@ class ArtistsViewModelTests: XCTestCase {
         XCTAssertEqual(SearchArtistsViewModel.reduce(.loaded([]), .onPerform(.search("term"))), .searching("term"))
         XCTAssertEqual(SearchArtistsViewModel.reduce(.loaded([]), .onAppear), .loaded([]))
     }
+}
 
+class ArtistsViewModelTests: XCTestCase {
+    
+    enum TestError: Error {
+        case dummy
+    }
+    
+    private var viewModel: SearchArtistsViewModel!
+    private var cancellable: AnyCancellable?
+    
+    override func setUp() {
+        viewModel = SearchArtistsViewModel(state: .idle)
+    }
+    
+    override func tearDown() {
+        cancellable?.cancel()
+    }
+
+    func testViewModel() {
+        
+        let expectation = XCTestExpectation(description: "Send event")
+        
+        _ = viewModel.$state.sink { state in
+            XCTAssertEqual(state, .idle)
+            expectation.fulfill()
+        }
+        
+        viewModel.send(event: .onPerform(.search("Elvis")))
+//        viewModel.clear()
+        wait(for: [expectation], timeout: 1)
+    }
 }
