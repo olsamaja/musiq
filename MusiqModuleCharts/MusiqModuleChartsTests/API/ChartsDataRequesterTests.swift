@@ -7,6 +7,7 @@
 
 import XCTest
 import Combine
+import Resolver
 @testable import MusiqNetwork
 @testable import MusiqConfiguration
 @testable import MusiqModuleCharts
@@ -17,7 +18,8 @@ class ChartsDataRequesterTests: XCTestCase {
     private var cancellable: AnyCancellable?
 
     override func setUp() {
-        dataRequester = DataRequester(session: URLSession.makeMockURLSession())
+        Resolver.register { URLSession.makeMockURLSession() as URLSession }
+        dataRequester = DataRequester()
     }
     
     override func tearDown() {
