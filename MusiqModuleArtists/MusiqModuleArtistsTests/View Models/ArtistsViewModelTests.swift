@@ -4,10 +4,15 @@
 //
 //  Created by Olivier Rigault on 11/04/2021.
 //
+//  Test a pubisher which never complete:
+//  https://www.swiftbysundell.com/articles/unit-testing-combine-based-swift-code/
+//
 
 import XCTest
 import Combine
+import Resolver
 @testable import MusiqCore
+@testable import MusiqNetwork
 @testable import MusiqModuleArtists
 
 class ArtistsViewModelReduceTests: XCTestCase {
@@ -56,28 +61,41 @@ class ArtistsViewModelTests: XCTestCase {
         case dummy
     }
     
-    private var viewModel: SearchArtistsViewModel!
-    private var cancellable: AnyCancellable?
-    
+    private var cancellables: Set<AnyCancellable>!
+
     override func setUp() {
-        viewModel = SearchArtistsViewModel(state: .idle)
-    }
-    
-    override func tearDown() {
-        cancellable?.cancel()
+        super.setUp()
+        Resolver.register { URLSession.makeMockURLSession() as URLSession }
+        cancellables = []
     }
 
-    func testViewModel() {
+    func testSearch() {
         
-        let expectation = XCTestExpectation(description: "Send event")
-        
-        _ = viewModel.$state.sink { state in
-            XCTAssertEqual(state, .idle)
-            expectation.fulfill()
-        }
-        
+        let expectation = XCTestExpectation(description: "Search event")
+        let viewModel = SearchArtistsViewModel()
+
+        let bundle = Bundle(for: type(of: self))
+        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(in: bundle, with: "MockSearchArtistsSuccessful")
+
+        let expected = [
+            SearchArtistsViewModel.State.idle,
+            SearchArtistsViewModel.State.searching("Elvis"),
+            SearchArtistsViewModel.State.loaded([])
+        ]
+        var states = [SearchArtistsViewModel.State]()
+
+        viewModel.$state
+            .sink { value in
+                states.append(value)
+                if states.count == expected.count {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
         viewModel.send(event: .onPerform(.search("Elvis")))
-//        viewModel.clear()
-        wait(for: [expectation], timeout: 1)
+        wait(for: [expectation], timeout: 3)
+
+        XCTAssertEqual(states, expected)
     }
 }

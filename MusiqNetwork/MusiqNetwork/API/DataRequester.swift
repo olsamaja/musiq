@@ -13,12 +13,12 @@ import Resolver
 
 public final class DataRequester {
     
-    private let session: URLSession
+    @OptionalInjected var session: URLSession?
     @OptionalInjected var configuration: Configuration?
     
-    public init(session: URLSession = .shared) {
-        self.session = session
-    }
+    public static var shared = DataRequester()
+    
+    public init() {}
     
     public func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
         
@@ -26,7 +26,8 @@ public final class DataRequester {
             let error = DataError.network(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
-
-        return session.execute(URLRequest(url: url))
+        
+        let urlSession = session ?? URLSession.shared
+        return urlSession.execute(URLRequest(url: url))
     }
 }

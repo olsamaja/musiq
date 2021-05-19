@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Resolver
 import MusiqNetwork
 import MusiqCore
 
@@ -49,11 +50,6 @@ struct ArtistLocalRepository: ArtistRepositoryProtocol, CachedDataProtocol {
 struct ArtistRemoteRepository: ArtistRepositoryProtocol {
     
     typealias T = Artist
-    private var dataRequester: DataRequester
-
-    public init() {
-        self.dataRequester = DataRequester()
-    }
 
     func getAll() -> AnyPublisher<[Artist], DataError> {
         let artists = [Artist]()
@@ -65,7 +61,8 @@ struct ArtistRemoteRepository: ArtistRepositoryProtocol {
     }
     
     func search(with term: String) -> AnyPublisher<[Artist], DataError> {
-        return dataRequester.searchArtists(term: term)
+        
+        return DataRequester.shared.searchArtists(term: term)
             .mapError { $0 }
             .map { dto in
                 return SearchArtistsDTOMapper.map(dto)

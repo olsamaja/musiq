@@ -14,7 +14,7 @@ extension URLSession {
     func execute<T: Decodable>(_ request: URLRequest,
                                resultQueue: DispatchQueue = .main) -> AnyPublisher<T, DataError> {
         
-        OLLogger.info("URLSession: \(request)")
+        OLLogger.info("URLRequest: \(String(describing: request.url?.absoluteURL))")
         
         return self.dataTaskPublisher(for: request)
             .mapError { error in

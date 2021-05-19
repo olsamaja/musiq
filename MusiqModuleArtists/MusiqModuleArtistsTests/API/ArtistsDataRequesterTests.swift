@@ -8,9 +8,11 @@
 
 import XCTest
 import Combine
+import Resolver
 @testable import MusiqNetwork
 @testable import MusiqConfiguration
 @testable import MusiqModuleArtists
+@testable import MusiqCore
 
 final class ArtistsDataRequesterTests: XCTestCase {
     
@@ -18,7 +20,8 @@ final class ArtistsDataRequesterTests: XCTestCase {
     private var cancellable: AnyCancellable?
 
     override func setUp() {
-        dataRequester = DataRequester(session: URLSession.makeMockURLSession())
+        Resolver.register { URLSession.makeMockURLSession() as URLSession }
+        dataRequester = DataRequester()
     }
     
     override func tearDown() {
@@ -111,5 +114,33 @@ final class ArtistsDataRequesterTests: XCTestCase {
 
         wait(for: [expectation], timeout: 2)
     }
+    
+    func testSearchFailWithInvalidFormat() {
+        
+        let expectation = XCTestExpectation(description: "Search with invalid format")
+        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(with: "Invalid")
+        
+        cancellable = dataRequester.searchArtists(term: "Elvis")
+            .sink(receiveCompletion: { completion in
+                XCTAssertEqual(completion, .failure(DataError.parsing(description: "The data couldn’t be read because it isn’t in the correct format.")))
+                  expectation.fulfill()
+            }) { _ in }
 
+        wait(for: [expectation], timeout: 2)
+    }
+    
+    func testSearchFailWithMissingData() {
+        
+        let expectation = XCTestExpectation(description: "Search with missing data")
+        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(with: "{}")
+        
+        cancellable = dataRequester.searchArtists(term: "Elvis")
+            .sink(receiveCompletion: { completion in
+                XCTAssertEqual(completion, .failure(DataError.parsing(description: "The data couldn’t be read because it is missing.")))
+                  expectation.fulfill()
+            }) { _ in }
+
+        wait(for: [expectation], timeout: 2)
+    }
+    
 }
