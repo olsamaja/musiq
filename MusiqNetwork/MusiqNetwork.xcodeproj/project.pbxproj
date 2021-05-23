@@ -17,6 +17,8 @@
 		7D834056259171980093B94C /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D834054259171980093B94C /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D834061259173670093B94C /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D834060259173670093B94C /* URLSession+Extensions.swift */; };
 		7D8D12AE2655CFBC006316BF /* URLComponentsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */; };
+		7D8D12B02656FD3E006316BF /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */; };
+		7D8D12B2265A796E006316BF /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B1265A796E006316BF /* DataRequesterTests.swift */; };
 		7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */; };
 		7DDE3A4925929369005750CC /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A4825929369005750CC /* DataRequester.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		7D834054259171980093B94C /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D834060259173670093B94C /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilderTests.swift; sourceTree = "<group>"; };
+		7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
+		7D8D12B1265A796E006316BF /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
 		7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilder.swift; sourceTree = "<group>"; };
 		7DDE3A4825929369005750CC /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +122,8 @@
 			children = (
 				7D834044259171650093B94C /* Info.plist */,
 				7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */,
+				7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */,
+				7D8D12B1265A796E006316BF /* DataRequesterTests.swift */,
 			);
 			path = MusiqNetworkTests;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8D12B02656FD3E006316BF /* URLSessionTests.swift in Sources */,
+				7D8D12B2265A796E006316BF /* DataRequesterTests.swift in Sources */,
 				7D8D12AE2655CFBC006316BF /* URLComponentsBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -143,4 +143,18 @@ final class ArtistsDataRequesterTests: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     
+    func testSearchFailWithInvalidRequest() {
+        
+        let expectation = XCTestExpectation(description: "Search with invalid request")
+        MockURLProtocol.requestHandler = MockURLProtocol.makeInvalidRequestHandler()
+        
+        cancellable = dataRequester.searchArtists(term: "Elvis")
+            .sink(receiveCompletion: { completion in
+                XCTAssertEqual(completion, .failure(DataError.network(description: "The operation couldn’t be completed. (NSURLErrorDomain error -1.)")))
+                  expectation.fulfill()
+            }) { _ in }
+
+        wait(for: [expectation], timeout: 2)
+    }
+    
 }
