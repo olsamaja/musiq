@@ -19,6 +19,7 @@
 		7D8D12AE2655CFBC006316BF /* URLComponentsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */; };
 		7D8D12B02656FD3E006316BF /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */; };
 		7D8D12B2265A796E006316BF /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B1265A796E006316BF /* DataRequesterTests.swift */; };
+		7D8D12B4265C5FB4006316BF /* NetworkServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */; };
 		7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */; };
 		7DDE3A4925929369005750CC /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A4825929369005750CC /* DataRequester.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilderTests.swift; sourceTree = "<group>"; };
 		7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		7D8D12B1265A796E006316BF /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
+		7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkServices+Injection.swift"; sourceTree = "<group>"; };
 		7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilder.swift; sourceTree = "<group>"; };
 		7DDE3A4825929369005750CC /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			children = (
 				7D834037259171650093B94C /* MusiqNetwork.h */,
 				7D834038259171650093B94C /* Info.plist */,
+				7D8D12B5265C5FC3006316BF /* Configuration */,
 				7D834066259174AE0093B94C /* API */,
 				7D8340682591E0FC0093B94C /* Helpers */,
 			);
@@ -154,6 +157,14 @@
 				7D5E7F36259A90200058DDDA /* MockURLSession.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7D8D12B5265C5FC3006316BF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 				7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */,
 				7D5E7F37259A90200058DDDA /* MockURLSession.swift in Sources */,
 				7DDE3A4925929369005750CC /* DataRequester.swift in Sources */,
+				7D8D12B4265C5FB4006316BF /* NetworkServices+Injection.swift in Sources */,
 				7D5E7F34259A8FDE0058DDDA /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

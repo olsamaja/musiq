@@ -18,10 +18,9 @@ class ChartTopTrackDTOTests: XCTestCase {
     override func tearDown() {
         cancellable?.cancel()
     }
-
-    func testTopTrackDTOSuccessful() throws {
-
-        let jsonString = """
+    
+    enum Constants {
+        static let jsonString = """
             {
                 "listeners": "233254",
                 "url": "https://www.last.fm/music/Kali+Uchis/_/telepatía",
@@ -56,10 +55,13 @@ class ChartTopTrackDTOTests: XCTestCase {
                 "name": "telepatía",
                 "playcount": "3078840"
             }
-        """
-        
+            """
+    }
+
+    func testTopTrackDTOSuccessful() throws {
+
         let expectation = XCTestExpectation(description: "Decoding TopTrackDTO")
-        let publisher: AnyPublisher<ChartTopTrackDTO, DataError> = jsonString.parse()
+        let publisher: AnyPublisher<ChartTopTrackDTO, DataError> = Constants.jsonString.parse()
 
         cancellable = publisher
             .receive(on: DispatchQueue.main)

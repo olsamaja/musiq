@@ -27,7 +27,11 @@ public final class DataRequester {
             return Fail(error: error).eraseToAnyPublisher()
         }
         
-        let urlSession = session ?? URLSession.shared
+        guard let urlSession = session else {
+            let error = DataError.network(description: "Couldn't find a url session")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
         return urlSession.execute(URLRequest(url: url))
     }
 }

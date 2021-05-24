@@ -27,10 +27,9 @@ final class ArtistsDataRequesterTests: XCTestCase {
     override func tearDown() {
         cancellable?.cancel()
     }
-
-    func testSearchArtistsWithString() {
-
-        let jsonString = """
+    
+    enum Constants {
+        static let jsonString = """
             {
                 "results": {
                     "opensearch:itemsPerPage": "30",
@@ -77,11 +76,14 @@ final class ArtistsDataRequesterTests: XCTestCase {
                     }
                 }
             }
-        """
+            """
+    }
+
+    func testSearchArtistsWithString() {
 
         let expectation = XCTestExpectation(description: "Search Elvis with String")
 
-        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(with: jsonString)
+        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(with: Constants.jsonString)
         
         cancellable = dataRequester.searchArtists(term: "Elvis")
             .sink(receiveCompletion: { _ in }) { response in
