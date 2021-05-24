@@ -11,7 +11,6 @@
 		7D01564825A5304A001BDAB6 /* MusiqCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D01563A25A5304A001BDAB6 /* MusiqCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D01565525A53060001BDAB6 /* MusiqCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01565425A53060001BDAB6 /* MusiqCore.framework */; };
 		7D01565625A53060001BDAB6 /* MusiqCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01565425A53060001BDAB6 /* MusiqCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D4D785325AA4643007C46DC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D785225AA4643007C46DC /* Keyboard+Extensions.swift */; };
 		7D5A15EA260E4B5F0064E34E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15E9260E4B5F0064E34E /* MessageView.swift */; };
 		7D5A15F6260E93610064E34E /* MessageViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F5260E93610064E34E /* MessageViewBuilderTests.swift */; };
 		7D5A15F9260F48430064E34E /* SearchNavigationViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A15F8260F48430064E34E /* SearchNavigationViewBuilderTests.swift */; };
@@ -57,7 +56,6 @@
 		7D01564025A5304A001BDAB6 /* MusiqCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiqCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D01564725A5304A001BDAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D01565425A53060001BDAB6 /* MusiqCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MusiqCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D4D785225AA4643007C46DC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		7D5A15E9260E4B5F0064E34E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7D5A15F5260E93610064E34E /* MessageViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewBuilderTests.swift; sourceTree = "<group>"; };
 		7D5A15F8260F48430064E34E /* SearchNavigationViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationViewBuilderTests.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		7D4D785525AA4647007C46DC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7D4D785225AA4643007C46DC /* Keyboard+Extensions.swift */,
 				7DAB17DB261A1DAB00BD134B /* Color+Extensions.swift */,
 			);
 			path = Helpers;
@@ -321,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5A15EA260E4B5F0064E34E /* MessageView.swift in Sources */,
-				7D4D785325AA4643007C46DC /* Keyboard+Extensions.swift in Sources */,
 				7DAB17DC261A1DAB00BD134B /* Color+Extensions.swift in Sources */,
 				7DF1AC1E25CDEDBF003CB716 /* BadgeView.swift in Sources */,
 				7D90A168260B2BE7002F31D1 /* SearchNavigationView.swift in Sources */,

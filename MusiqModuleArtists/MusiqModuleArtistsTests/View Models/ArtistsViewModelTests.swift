@@ -93,9 +93,78 @@ class ArtistsViewModelTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        viewModel.send(event: .onPerform(.search("Elvis")))
+        viewModel.search(with: "Elvis")
         wait(for: [expectation], timeout: 3)
 
         XCTAssertEqual(states, expected)
+    }
+
+    func testClearEvent() {
+        
+        let expectation = XCTestExpectation(description: "Clear event")
+        let viewModel = SearchArtistsViewModel(state: .loaded([]))
+
+        let expected = [
+            SearchArtistsViewModel.State.loaded([]),
+            SearchArtistsViewModel.State.idle
+        ]
+        var states = [SearchArtistsViewModel.State]()
+
+        viewModel.$state
+            .sink { value in
+                states.append(value)
+                if states.count == expected.count {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        viewModel.clear()
+        wait(for: [expectation], timeout: 1)
+
+        XCTAssertEqual(states, expected)
+    }
+
+    func testSearchAndClear() {
+        
+        let expectation1 = XCTestExpectation(description: "Search event")
+        let expectation2 = XCTestExpectation(description: "Clear after search event")
+        
+        let viewModel = SearchArtistsViewModel()
+
+        let bundle = Bundle(for: type(of: self))
+        MockURLProtocol.requestHandler = MockURLProtocol.makeRequestHandler(in: bundle, with: "MockSearchArtistsSuccessful")
+
+        let expected1 = [
+            SearchArtistsViewModel.State.idle,
+            SearchArtistsViewModel.State.searching("Elvis"),
+            SearchArtistsViewModel.State.loaded([])
+        ]
+
+        let expected2 = expected1 + [SearchArtistsViewModel.State.idle]
+        
+        var states = [SearchArtistsViewModel.State]()
+
+        viewModel.$state
+            .sink { value in
+                states.append(value)
+                if states.count == expected1.count {
+                    expectation1.fulfill()
+                }
+                if states.count == expected2.count {
+                    expectation2.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        viewModel.search(with: "Elvis")
+        wait(for: [expectation1], timeout: 3)
+
+        XCTAssertEqual(states, expected1)
+
+        viewModel.clear()
+        wait(for: [expectation2], timeout: 3)
+        
+        XCTAssertEqual(states, expected2)
     }
 }
