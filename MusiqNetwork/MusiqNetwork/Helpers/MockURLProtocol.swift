@@ -20,14 +20,13 @@ class MockURLProtocol: URLProtocol {
         return request
     }
     
-    override func stopLoading() {
-
-    }
+    override func stopLoading() {}
     
     override func startLoading() {
          guard let handler = MockURLProtocol.requestHandler else {
             return
         }
+        
         do {
             let (response, data)  = try handler(request)
             client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
@@ -44,24 +43,8 @@ extension MockURLProtocol {
     
     static func makeInvalidRequestHandler() -> ((URLRequest) throws -> (HTTPURLResponse, Data))? {
 
-        guard let data = "".data(using: .utf8) else {
-            OLLogger.info("Unable to convert empty string")
-            return nil
-        }
-        
-        return { request in
-            
-            guard let url = request.url else {
-                throw DataError.invalidRequest
-            }
-            
-            guard let response = HTTPURLResponse.init(url: url, statusCode: 200, httpVersion: "2.0", headerFields: nil) else {
-                throw DataError.invalidResponse
-            }
-            
+        return { _ in
             throw DataError.invalidResponse
-
-            return (response, data)
         }
     }
 
