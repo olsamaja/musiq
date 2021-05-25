@@ -11,11 +11,7 @@ import Resolver
 import MusiqNetwork
 import MusiqCore
 
-protocol ArtistRepositoryProtocol: RepositoryProtocol {
-    func search(with term: String) -> AnyPublisher<[Artist], DataError>
-}
-
-struct ArtistLocalRepository: ArtistRepositoryProtocol, CachedDataProtocol {
+struct ArtistLocalRepository: CachedDataProtocol {
     
     typealias T = Artist
     
@@ -37,28 +33,11 @@ struct ArtistLocalRepository: ArtistRepositoryProtocol, CachedDataProtocol {
             .eraseToAnyPublisher()
     }
     
-    func search(with term: String) -> AnyPublisher<[Artist], DataError> {
-        return Just(cachedData)
-            .mapError { error in
-                .parsing(description: error.localizedDescription)
-            }
-            .eraseToAnyPublisher()
-    }
-    
 }
 
-struct ArtistRemoteRepository: ArtistRepositoryProtocol {
+struct ArtistRemoteRepository {
     
     typealias T = Artist
-
-    func getAll() -> AnyPublisher<[Artist], DataError> {
-        let artists = [Artist]()
-        return Just(artists)
-            .mapError { error in
-                .parsing(description: error.localizedDescription)
-            }
-            .eraseToAnyPublisher()
-    }
     
     func search(with term: String) -> AnyPublisher<[Artist], DataError> {
         

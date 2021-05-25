@@ -10,7 +10,6 @@
 		7D552A3D261A46D90062E958 /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A3C261A46D90062E958 /* Data+Decode.swift */; };
 		7D552A43261A46EB0062E958 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A42261A46EB0062E958 /* DataError.swift */; };
 		7D552A4C261A47110062E958 /* String+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A4B261A47110062E958 /* String+Parse.swift */; };
-		7D552A63261A48520062E958 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A51261A47D70062E958 /* RepositoryProtocol.swift */; };
 		7D552A66261A48560062E958 /* CachedDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A52261A47D70062E958 /* CachedDataProtocol.swift */; };
 		7D552A84261A71130062E958 /* DataParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A83261A71130062E958 /* DataParseTests.swift */; };
 		7D552A88261A77320062E958 /* PublisherSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D552A87261A77320062E958 /* PublisherSystemTests.swift */; };
@@ -48,7 +47,6 @@
 		7D552A3C261A46D90062E958 /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
 		7D552A42261A46EB0062E958 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		7D552A4B261A47110062E958 /* String+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parse.swift"; sourceTree = "<group>"; };
-		7D552A51261A47D70062E958 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		7D552A52261A47D70062E958 /* CachedDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDataProtocol.swift; sourceTree = "<group>"; };
 		7D552A83261A71130062E958 /* DataParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParseTests.swift; sourceTree = "<group>"; };
 		7D552A87261A77320062E958 /* PublisherSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherSystemTests.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				7DAB179E26171B1C00BD134B /* BuilderProtocol.swift */,
-				7D552A51261A47D70062E958 /* RepositoryProtocol.swift */,
 				7D552A52261A47D70062E958 /* CachedDataProtocol.swift */,
 			);
 			path = Protocols;
@@ -324,7 +321,6 @@
 				7D83401F25916EB90093B94C /* Data+PrintDescription.swift in Sources */,
 				7D552A4C261A47110062E958 /* String+Parse.swift in Sources */,
 				7DE1370A2613B7A800FFABE7 /* Feedback.swift in Sources */,
-				7D552A63261A48520062E958 /* RepositoryProtocol.swift in Sources */,
 				7D83401325916DAB0093B94C /* String+Extensions.swift in Sources */,
 				7D83400B25916D140093B94C /* Bundle+Extensions.swift in Sources */,
 				7D552A3D261A46D90062E958 /* Data+Decode.swift in Sources */,
