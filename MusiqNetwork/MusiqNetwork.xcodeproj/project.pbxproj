@@ -20,6 +20,8 @@
 		7D8D12B02656FD3E006316BF /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */; };
 		7D8D12B2265A796E006316BF /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B1265A796E006316BF /* DataRequesterTests.swift */; };
 		7D8D12B4265C5FB4006316BF /* NetworkServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */; };
+		7D8D12B7265DA205006316BF /* DataRequesterUrlSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B6265DA205006316BF /* DataRequesterUrlSessionTests.swift */; };
+		7D8D12B9265DA3E3006316BF /* DataRequesterTests+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12B8265DA3E3006316BF /* DataRequesterTests+Extensions.swift */; };
 		7DAB17B52617E1B700BD134B /* URLComponentsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */; };
 		7DDE3A4925929369005750CC /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE3A4825929369005750CC /* DataRequester.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		7D8D12B1265A796E006316BF /* DataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
 		7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkServices+Injection.swift"; sourceTree = "<group>"; };
+		7D8D12B6265DA205006316BF /* DataRequesterUrlSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequesterUrlSessionTests.swift; sourceTree = "<group>"; };
+		7D8D12B8265DA3E3006316BF /* DataRequesterTests+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequesterTests+Extensions.swift"; sourceTree = "<group>"; };
 		7DAB17B42617E1B700BD134B /* URLComponentsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilder.swift; sourceTree = "<group>"; };
 		7DDE3A4825929369005750CC /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +130,7 @@
 				7D834044259171650093B94C /* Info.plist */,
 				7D8D12AD2655CFBC006316BF /* URLComponentsBuilderTests.swift */,
 				7D8D12AF2656FD3E006316BF /* URLSessionTests.swift */,
-				7D8D12B1265A796E006316BF /* DataRequesterTests.swift */,
+				7D8D12BA265DA42D006316BF /* API */,
 			);
 			path = MusiqNetworkTests;
 			sourceTree = "<group>";
@@ -165,6 +169,16 @@
 				7D8D12B3265C5FB4006316BF /* NetworkServices+Injection.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7D8D12BA265DA42D006316BF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7D8D12B1265A796E006316BF /* DataRequesterTests.swift */,
+				7D8D12B8265DA3E3006316BF /* DataRequesterTests+Extensions.swift */,
+				7D8D12B6265DA205006316BF /* DataRequesterUrlSessionTests.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D8D12B02656FD3E006316BF /* URLSessionTests.swift in Sources */,
+				7D8D12B7265DA205006316BF /* DataRequesterUrlSessionTests.swift in Sources */,
 				7D8D12B2265A796E006316BF /* DataRequesterTests.swift in Sources */,
+				7D8D12B9265DA3E3006316BF /* DataRequesterTests+Extensions.swift in Sources */,
 				7D8D12AE2655CFBC006316BF /* URLComponentsBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

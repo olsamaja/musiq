@@ -20,12 +20,13 @@ class DataRequesterTests: XCTestCase {
     }
     
     override func tearDown() {
+        Resolver.register { nil as URLSession? }
         cancellable?.cancel()
     }
 
     func testSuccesful() throws {
         
-        let expectation = XCTestExpectation(description: "Failure: invalid data")
+        let expectation = XCTestExpectation(description: "Success: load data")
         let dataRequester = DataRequester()
         
         let jsonString = """
@@ -46,7 +47,7 @@ class DataRequesterTests: XCTestCase {
     }
 
     func testInvalidURLComponents() throws {
-        
+
         let expectation = XCTestExpectation(description: "Failure: invalid data")
         let dataRequester = DataRequester()
         
@@ -57,26 +58,5 @@ class DataRequesterTests: XCTestCase {
             }) { _ in }
 
         wait(for: [expectation], timeout: 1)
-    }
-}
-
-struct DataRequesterTestDTO: Decodable {
-    let message: String
-}
-
-extension DataRequester {
-    
-    func loadTestData() -> AnyPublisher<DataRequesterTestDTO, DataError> {
-        return loadData(with: URLComponents())
-    }
-    
-    func loadTestDataWithInvalidComponents() -> AnyPublisher<DataRequesterTestDTO, DataError> {
-        
-        // Build URLComponents with an invalid url
-        // https://stackoverflow.com/questions/39852659/urlcomponents-url-is-nil
-        var urlComponents = URLComponents(string: "http://google.com")!
-        urlComponents.path = "auth/login"
-
-        return loadData(with: urlComponents)
     }
 }
