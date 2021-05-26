@@ -19,4 +19,13 @@ extension DataRequester {
         
         return loadData(with: urlComponents)
     }
+    
+    func getTopArtists() -> AnyPublisher<ChartTopArtistsDTO, DataError> {
+        
+        let urlComponents = URLComponentsBuilder()
+            .with(key: "method", value: "chart.gettopartists")
+            .build()
+        
+        return loadData(with: urlComponents)
+    }
 }

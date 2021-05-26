@@ -1,0 +1,21 @@
+{
+    "artists": {
+        "artist": [{
+                "name": "Bob Dylan",
+                "playcount": "1233254",
+                "listeners": "912345"
+            },
+            {
+                "name": "Bob Dylan",
+                "playcount": "233254",
+                "listeners": "12345"
+            }
+        ],
+        "@attr": {
+            "totalPages": "576043",
+            "perPage": "50",
+            "total": "28802144",
+            "page": "1"
+        }
+    }
+}
