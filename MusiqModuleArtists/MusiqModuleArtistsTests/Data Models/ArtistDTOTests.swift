@@ -18,10 +18,9 @@ class ArtistDTOTests: XCTestCase {
     override func tearDown() {
         cancellable?.cancel()
     }
-
-    func testArtistDTOSuccessful() throws {
-
-        let jsonString = """
+    
+    enum Constants {
+        static let jsonString = """
             {
                 "listeners": "2593020",
                 "streamable": "0",
@@ -50,10 +49,13 @@ class ArtistDTOTests: XCTestCase {
                 "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
                 "url": "https://www.last.fm/music/Elvis+Presley"
             }
-        """
-        
+            """
+    }
+
+    func testArtistDTOSuccessful() throws {
+
         let expectation = XCTestExpectation(description: "Decoding ArtistDTO")
-        let publisher: AnyPublisher<ArtistDTO, DataError> = jsonString.parse()
+        let publisher: AnyPublisher<ArtistDTO, DataError> = Constants.jsonString.parse()
 
         cancellable = publisher
             .receive(on: DispatchQueue.main)

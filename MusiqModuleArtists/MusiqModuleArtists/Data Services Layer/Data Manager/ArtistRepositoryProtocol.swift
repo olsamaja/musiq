@@ -32,7 +32,6 @@ struct ArtistLocalRepository: CachedDataProtocol {
             }
             .eraseToAnyPublisher()
     }
-    
 }
 
 struct ArtistRemoteRepository {
