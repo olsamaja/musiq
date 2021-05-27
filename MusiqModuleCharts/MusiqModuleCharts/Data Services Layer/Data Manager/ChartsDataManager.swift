@@ -22,4 +22,11 @@ public class ChartsDataManager {
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
+    
+    public func getTopArtists() -> AnyPublisher<[ChartTopArtist], Error> {
+        
+        return remoteRepository.getTopArtists()
+            .mapError { $0 as Error }
+            .eraseToAnyPublisher()
+    }
 }

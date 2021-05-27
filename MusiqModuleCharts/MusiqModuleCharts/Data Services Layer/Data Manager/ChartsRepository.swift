@@ -12,6 +12,7 @@ import MusiqCore
 
 protocol ChartsRepositoryProtocol {
     func getTopTracks() -> AnyPublisher<[ChartTopTrack], DataError>
+    func getTopArtists() -> AnyPublisher<[ChartTopArtist], DataError>
 }
 
 struct ChartsRemoteRepository: ChartsRepositoryProtocol {
@@ -28,6 +29,15 @@ struct ChartsRemoteRepository: ChartsRepositoryProtocol {
             .mapError { $0 }
             .map {
                 ChartTopTracksDTOMapper.map($0)
+            }
+            .eraseToAnyPublisher()
+    }
+
+    func getTopArtists() -> AnyPublisher<[ChartTopArtist], DataError> {
+        return dataRequester.getTopArtists()
+            .mapError { $0 }
+            .map {
+                ChartTopArtistsDTOMapper.map($0)
             }
             .eraseToAnyPublisher()
     }

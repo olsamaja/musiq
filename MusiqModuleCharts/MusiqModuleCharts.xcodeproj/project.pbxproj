@@ -42,6 +42,14 @@
 		7DD3CDBD265EC00700427861 /* ChartTopArtistDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDBC265EC00700427861 /* ChartTopArtistDTOTests.swift */; };
 		7DD3CDBF265EC1FB00427861 /* MockChartGetTopArtistsSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DD3CDBE265EC1FB00427861 /* MockChartGetTopArtistsSuccessful.json */; };
 		7DD3CDC1265EC43600427861 /* ChartsTopArtistsDataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDC0265EC43600427861 /* ChartsTopArtistsDataRequesterTests.swift */; };
+		7DD3CDC3265FC0BF00427861 /* ChartTopArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDC2265FC0BF00427861 /* ChartTopArtist.swift */; };
+		7DD3CDC8265FC15F00427861 /* ChartTopArtistDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDC7265FC15F00427861 /* ChartTopArtistDTOMapper.swift */; };
+		7DD3CDCA265FC16800427861 /* ChartTopArtistsDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDC9265FC16800427861 /* ChartTopArtistsDTOMapper.swift */; };
+		7DD3CDCD265FE3D600427861 /* ChartTopArtistRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDCC265FE3D600427861 /* ChartTopArtistRowItem.swift */; };
+		7DD3CDCF265FE4A000427861 /* ChartTopArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDCE265FE4A000427861 /* ChartTopArtistRowView.swift */; };
+		7DD3CDD1265FE57800427861 /* ChartTopArtistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDD0265FE57800427861 /* ChartTopArtistsListView.swift */; };
+		7DD3CDD3265FE6DE00427861 /* ChartTopArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDD2265FE6DE00427861 /* ChartTopArtistsViewModel.swift */; };
+		7DD3CDD6265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CDD5265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift */; };
 		7DFF42A9262DBF76009A743D /* MusiqModuleCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */; };
 		7DFF42B0262DBF76009A743D /* MusiqModuleCharts.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -103,6 +111,14 @@
 		7DD3CDBC265EC00700427861 /* ChartTopArtistDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistDTOTests.swift; sourceTree = "<group>"; };
 		7DD3CDBE265EC1FB00427861 /* MockChartGetTopArtistsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChartGetTopArtistsSuccessful.json; sourceTree = "<group>"; };
 		7DD3CDC0265EC43600427861 /* ChartsTopArtistsDataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTopArtistsDataRequesterTests.swift; sourceTree = "<group>"; };
+		7DD3CDC2265FC0BF00427861 /* ChartTopArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtist.swift; sourceTree = "<group>"; };
+		7DD3CDC7265FC15F00427861 /* ChartTopArtistDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistDTOMapper.swift; sourceTree = "<group>"; };
+		7DD3CDC9265FC16800427861 /* ChartTopArtistsDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistsDTOMapper.swift; sourceTree = "<group>"; };
+		7DD3CDCC265FE3D600427861 /* ChartTopArtistRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistRowItem.swift; sourceTree = "<group>"; };
+		7DD3CDCE265FE4A000427861 /* ChartTopArtistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistRowView.swift; sourceTree = "<group>"; };
+		7DD3CDD0265FE57800427861 /* ChartTopArtistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistsListView.swift; sourceTree = "<group>"; };
+		7DD3CDD2265FE6DE00427861 /* ChartTopArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopArtistsViewModel.swift; sourceTree = "<group>"; };
+		7DD3CDD5265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartTopArtistsViewModel+Reduce.swift"; sourceTree = "<group>"; };
 		7DFF429F262DBF76009A743D /* MusiqModuleCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiqModuleCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFF42A2262DBF76009A743D /* MusiqModuleCharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiqModuleCharts.h; sourceTree = "<group>"; };
 		7DFF42A3262DBF76009A743D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				7DB0863F262DBFD10076B0EF /* ChartTopTracksDTO.swift */,
-				7DD3CDBA265EBF6700427861 /* ChartTopArtistDTO.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -291,6 +306,9 @@
 			isa = PBXGroup;
 			children = (
 				7DCAEC3B2630D67A0052A4B9 /* Views */,
+				7DD3CDD4265FE6E400427861 /* View Models */,
+				7DD3CDC6265FC12400427861 /* Domain Models */,
+				7DD3CDC5265FC11700427861 /* Data Models */,
 			);
 			path = "Top Artists";
 			sourceTree = "<group>";
@@ -309,8 +327,46 @@
 			isa = PBXGroup;
 			children = (
 				7DCAEC312630C2110052A4B9 /* ChartTopArtistsResultsView.swift */,
+				7DD3CDD0265FE57800427861 /* ChartTopArtistsListView.swift */,
+				7DD3CDCE265FE4A000427861 /* ChartTopArtistRowView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		7DD3CDC5265FC11700427861 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DD3CDBA265EBF6700427861 /* ChartTopArtistDTO.swift */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		7DD3CDC6265FC12400427861 /* Domain Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DD3CDC2265FC0BF00427861 /* ChartTopArtist.swift */,
+				7DD3CDCC265FE3D600427861 /* ChartTopArtistRowItem.swift */,
+				7DD3CDCB265FC17300427861 /* Data Mappers */,
+			);
+			name = "Domain Models";
+			sourceTree = "<group>";
+		};
+		7DD3CDCB265FC17300427861 /* Data Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				7DD3CDC9265FC16800427861 /* ChartTopArtistsDTOMapper.swift */,
+				7DD3CDC7265FC15F00427861 /* ChartTopArtistDTOMapper.swift */,
+			);
+			name = "Data Mappers";
+			sourceTree = "<group>";
+		};
+		7DD3CDD4265FE6E400427861 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DD3CDD2265FE6DE00427861 /* ChartTopArtistsViewModel.swift */,
+				7DD3CDD5265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift */,
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 		7DFF4295262DBF76009A743D = {
@@ -501,12 +557,20 @@
 				7DCAEC14262E309A0052A4B9 /* ChartsRepository.swift in Sources */,
 				7DCAEC19262E35180052A4B9 /* ChartTopTracksDTOMapper.swift in Sources */,
 				7DCAEC0F262E30000052A4B9 /* ChartsDataManager.swift in Sources */,
+				7DD3CDD3265FE6DE00427861 /* ChartTopArtistsViewModel.swift in Sources */,
+				7DD3CDD6265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift in Sources */,
 				7D1837ED262DC1350017058C /* ChartsView.swift in Sources */,
+				7DD3CDCF265FE4A000427861 /* ChartTopArtistRowView.swift in Sources */,
+				7DD3CDD1265FE57800427861 /* ChartTopArtistsListView.swift in Sources */,
+				7DD3CDC8265FC15F00427861 /* ChartTopArtistDTOMapper.swift in Sources */,
+				7DD3CDCD265FE3D600427861 /* ChartTopArtistRowItem.swift in Sources */,
 				7D17AE92264FCB9400DB11A3 /* ModuleChartsServices+Injection.swift in Sources */,
 				7DCAEC0C262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift in Sources */,
+				7DD3CDC3265FC0BF00427861 /* ChartTopArtist.swift in Sources */,
 				7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */,
 				7DCAEC28262EB6660052A4B9 /* ChartTopTrackRowView.swift in Sources */,
 				7DCAEC322630C2110052A4B9 /* ChartTopArtistsResultsView.swift in Sources */,
+				7DD3CDCA265FC16800427861 /* ChartTopArtistsDTOMapper.swift in Sources */,
 				7DCAEC03262E218A0052A4B9 /* ChartTopTrackDTOMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

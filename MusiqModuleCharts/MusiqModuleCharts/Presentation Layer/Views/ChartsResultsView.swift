@@ -11,17 +11,20 @@ import Resolver
 public struct ChartsResultsView: View {
     
     @Binding var chartType: ChartType
-    @Injected var viewModel: ChartTopTracksViewModel
+    @Injected var topTracksViewModel: ChartTopTracksViewModel
+    @Injected var topArtistsiewModel: ChartTopArtistsViewModel
 
     public var body: some View {
         switch chartType {
         case .topTracks:
             ChartTopTracksResultsViewBuilder()
-                .withViewModel(viewModel)
+                .withViewModel(topTracksViewModel)
                 .build()
                 .navigationTitle("Charts")
         case .topArtists:
-            ChartTopArtistsResultsView()
+            ChartTopArtistsResultsViewBuilder()
+                .withViewModel(topArtistsiewModel)
+                .build()
                 .navigationTitle("Charts")
         }
     }
