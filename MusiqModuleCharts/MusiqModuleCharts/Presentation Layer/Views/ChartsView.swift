@@ -12,6 +12,7 @@ import MusiqCore
 enum ChartType: String, CaseIterable {
     case topTracks = "Top Tracks"
     case topArtists = "Top Artists"
+    case topTags = "Top Tags"
 }
 
 public struct ChartsView: View {

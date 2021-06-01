@@ -29,4 +29,11 @@ public class ChartsDataManager {
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
+    
+    public func getTopTags() -> AnyPublisher<[ChartTopTag], Error> {
+        
+        return remoteRepository.getTopTags()
+            .mapError { $0 as Error }
+            .eraseToAnyPublisher()
+    }
 }

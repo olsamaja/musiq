@@ -13,5 +13,6 @@ public extension Resolver {
     static func registerModuleChartsServices() {
         register { ChartTopTracksViewModel() as ChartTopTracksViewModel }
         register { ChartTopArtistsViewModel() as ChartTopArtistsViewModel }
+        register { ChartTopTagsViewModel() as ChartTopTagsViewModel }
     }
 }

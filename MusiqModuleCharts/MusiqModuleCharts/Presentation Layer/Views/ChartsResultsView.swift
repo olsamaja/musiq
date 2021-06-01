@@ -13,6 +13,7 @@ public struct ChartsResultsView: View {
     @Binding var chartType: ChartType
     @Injected var topTracksViewModel: ChartTopTracksViewModel
     @Injected var topArtistsiewModel: ChartTopArtistsViewModel
+    @Injected var topTagsViewModel: ChartTopTagsViewModel
 
     public var body: some View {
         switch chartType {
@@ -24,6 +25,11 @@ public struct ChartsResultsView: View {
         case .topArtists:
             ChartTopArtistsResultsViewBuilder()
                 .withViewModel(topArtistsiewModel)
+                .build()
+                .navigationTitle("Charts")
+        case .topTags:
+            ChartTopTagsResultsViewBuilder()
+                .withViewModel(topTagsViewModel)
                 .build()
                 .navigationTitle("Charts")
         }

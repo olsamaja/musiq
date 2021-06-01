@@ -15,9 +15,13 @@ class ArtistsServicesTests: XCTestCase {
     func testSuccessfulInjection() throws {
         
         Resolver.registerModuleChartsServices()
-        let viewModel: ChartTopTracksViewModel = Resolver.resolve()
-        
-        XCTAssertNotNil(viewModel)
+        let topTracksViewModel: ChartTopTracksViewModel = Resolver.resolve()
+        let topArtistsViewModel: ChartTopArtistsViewModel = Resolver.resolve()
+        let topTagsViewModel: ChartTopTagsViewModel = Resolver.resolve()
+
+        XCTAssertNotNil(topTracksViewModel)
+        XCTAssertNotNil(topArtistsViewModel)
+        XCTAssertNotNil(topTagsViewModel)
     }
 
 }

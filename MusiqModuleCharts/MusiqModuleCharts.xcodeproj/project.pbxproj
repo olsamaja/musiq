@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0BA2842660CBDA00A514A2 /* ChartTopTagsResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BA2832660CBDA00A514A2 /* ChartTopTagsResultsView.swift */; };
 		7D17AE92264FCB9400DB11A3 /* ModuleChartsServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AE91264FCB9400DB11A3 /* ModuleChartsServices+Injection.swift */; };
 		7D1837ED262DC1350017058C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BD262DBF9C009A743D /* ChartsView.swift */; };
 		7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF42BE262DBF9C009A743D /* ChartTopTracksResultsView.swift */; };
 		7D1837F3262DC13F0017058C /* ChartTopTracksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0863F262DBFD10076B0EF /* ChartTopTracksDTO.swift */; };
 		7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB08641262DBFD10076B0EF /* DataRequester+Tracks.swift */; };
 		7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1837FC262DC23C0017058C /* ChartTopTrack.swift */; };
+		7D60D9252660CE5300B78BCD /* MockChartGetTopTagsSuccessful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D60D9242660CE5300B78BCD /* MockChartGetTopTagsSuccessful.json */; };
+		7D60D9272660CF3600B78BCD /* ChartTopTagsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D9262660CF3600B78BCD /* ChartTopTagsDTO.swift */; };
+		7D60D92C2660D24500B78BCD /* ChartTopTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D92B2660D24500B78BCD /* ChartTopTag.swift */; };
+		7D60D92F2660D29100B78BCD /* ChartTopTagDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D92E2660D29100B78BCD /* ChartTopTagDTOMapper.swift */; };
+		7D60D9322660D34300B78BCD /* ChartTopTagsDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D9312660D34300B78BCD /* ChartTopTagsDTOMapper.swift */; };
+		7D60D9342666CCBC00B78BCD /* ChartTopTagRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D9332666CCBC00B78BCD /* ChartTopTagRowItem.swift */; };
+		7D60D9362666CEED00B78BCD /* ChartTopTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D9352666CEED00B78BCD /* ChartTopTagsViewModel.swift */; };
+		7D60D9392666CF5900B78BCD /* ChartTopTagsViewModel+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D9382666CF5900B78BCD /* ChartTopTagsViewModel+Reduce.swift */; };
+		7D60D93B2666DBD600B78BCD /* ChartTopTagRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D93A2666DBD600B78BCD /* ChartTopTagRowView.swift */; };
+		7D60D93D2666DCAD00B78BCD /* ChartTopTagsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D93C2666DCAD00B78BCD /* ChartTopTagsListView.swift */; };
+		7D60D93F2667559500B78BCD /* ChartsTopTagsDataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D93E2667559500B78BCD /* ChartsTopTagsDataRequesterTests.swift */; };
+		7D60D94126697B1700B78BCD /* ChartTopTagDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D94026697B1700B78BCD /* ChartTopTagDTOTests.swift */; };
+		7D60D943266ADAA300B78BCD /* ChartTopTagDTOMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60D942266ADAA300B78BCD /* ChartTopTagDTOMapperTests.swift */; };
 		7DAFB2B9265038C000EB7E12 /* ChartsServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFB2B8265038C000EB7E12 /* ChartsServicesTests.swift */; };
 		7DAFB2BC2650404900EB7E12 /* ChartTopTracksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFB2BB2650404900EB7E12 /* ChartTopTracksViewModelTests.swift */; };
 		7DAFB2BF2650493E00EB7E12 /* ChartTopTrackRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFB2BE2650493E00EB7E12 /* ChartTopTrackRowTests.swift */; };
@@ -81,8 +95,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D0BA2832660CBDA00A514A2 /* ChartTopTagsResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagsResultsView.swift; sourceTree = "<group>"; };
 		7D17AE91264FCB9400DB11A3 /* ModuleChartsServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleChartsServices+Injection.swift"; sourceTree = "<group>"; };
 		7D1837FC262DC23C0017058C /* ChartTopTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrack.swift; sourceTree = "<group>"; };
+		7D60D9242660CE5300B78BCD /* MockChartGetTopTagsSuccessful.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChartGetTopTagsSuccessful.json; sourceTree = "<group>"; };
+		7D60D9262660CF3600B78BCD /* ChartTopTagsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagsDTO.swift; sourceTree = "<group>"; };
+		7D60D92B2660D24500B78BCD /* ChartTopTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTag.swift; sourceTree = "<group>"; };
+		7D60D92E2660D29100B78BCD /* ChartTopTagDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagDTOMapper.swift; sourceTree = "<group>"; };
+		7D60D9312660D34300B78BCD /* ChartTopTagsDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagsDTOMapper.swift; sourceTree = "<group>"; };
+		7D60D9332666CCBC00B78BCD /* ChartTopTagRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagRowItem.swift; sourceTree = "<group>"; };
+		7D60D9352666CEED00B78BCD /* ChartTopTagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagsViewModel.swift; sourceTree = "<group>"; };
+		7D60D9382666CF5900B78BCD /* ChartTopTagsViewModel+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartTopTagsViewModel+Reduce.swift"; sourceTree = "<group>"; };
+		7D60D93A2666DBD600B78BCD /* ChartTopTagRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagRowView.swift; sourceTree = "<group>"; };
+		7D60D93C2666DCAD00B78BCD /* ChartTopTagsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagsListView.swift; sourceTree = "<group>"; };
+		7D60D93E2667559500B78BCD /* ChartsTopTagsDataRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTopTagsDataRequesterTests.swift; sourceTree = "<group>"; };
+		7D60D94026697B1700B78BCD /* ChartTopTagDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagDTOTests.swift; sourceTree = "<group>"; };
+		7D60D942266ADAA300B78BCD /* ChartTopTagDTOMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTagDTOMapperTests.swift; sourceTree = "<group>"; };
 		7DAFB2B8265038C000EB7E12 /* ChartsServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsServicesTests.swift; sourceTree = "<group>"; };
 		7DAFB2BB2650404900EB7E12 /* ChartTopTracksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTracksViewModelTests.swift; sourceTree = "<group>"; };
 		7DAFB2BE2650493E00EB7E12 /* ChartTopTrackRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTopTrackRowTests.swift; sourceTree = "<group>"; };
@@ -158,6 +186,63 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		7D60D9222660CDD500B78BCD /* Top Tags */ = {
+			isa = PBXGroup;
+			children = (
+				7D60D9232660CDED00B78BCD /* Views */,
+				7D60D9372666CEF900B78BCD /* View Models */,
+				7D60D92D2660D24900B78BCD /* Domain Models */,
+				7D60D9282660CF3C00B78BCD /* Data Models */,
+			);
+			path = "Top Tags";
+			sourceTree = "<group>";
+		};
+		7D60D9232660CDED00B78BCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BA2832660CBDA00A514A2 /* ChartTopTagsResultsView.swift */,
+				7D60D93C2666DCAD00B78BCD /* ChartTopTagsListView.swift */,
+				7D60D93A2666DBD600B78BCD /* ChartTopTagRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D60D9282660CF3C00B78BCD /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D60D9262660CF3600B78BCD /* ChartTopTagsDTO.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		7D60D92D2660D24900B78BCD /* Domain Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D60D92B2660D24500B78BCD /* ChartTopTag.swift */,
+				7D60D9332666CCBC00B78BCD /* ChartTopTagRowItem.swift */,
+				7D60D9302660D29500B78BCD /* Data Mappers */,
+			);
+			path = "Domain Models";
+			sourceTree = "<group>";
+		};
+		7D60D9302660D29500B78BCD /* Data Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				7D60D9312660D34300B78BCD /* ChartTopTagsDTOMapper.swift */,
+				7D60D92E2660D29100B78BCD /* ChartTopTagDTOMapper.swift */,
+			);
+			path = "Data Mappers";
+			sourceTree = "<group>";
+		};
+		7D60D9372666CEF900B78BCD /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D60D9352666CEED00B78BCD /* ChartTopTagsViewModel.swift */,
+				7D60D9382666CF5900B78BCD /* ChartTopTagsViewModel+Reduce.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		7DAFB2BA26503F9D00EB7E12 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +273,7 @@
 			children = (
 				7DAFB2C126507E6C00EB7E12 /* ChartsTopTracksDataRequesterTests.swift */,
 				7DD3CDC0265EC43600427861 /* ChartsTopArtistsDataRequesterTests.swift */,
+				7D60D93E2667559500B78BCD /* ChartsTopTagsDataRequesterTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -197,6 +283,7 @@
 			children = (
 				7DAFB2C4265088C400EB7E12 /* ChartTopTrackDTOTests.swift */,
 				7DD3CDBC265EC00700427861 /* ChartTopArtistDTOTests.swift */,
+				7D60D94026697B1700B78BCD /* ChartTopTagDTOTests.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -205,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAFB2C726508E2200EB7E12 /* ChartTopTrackDTOMapperTests.swift */,
+				7D60D942266ADAA300B78BCD /* ChartTopTagDTOMapperTests.swift */,
 			);
 			path = "Data Mappers";
 			sourceTree = "<group>";
@@ -287,6 +375,7 @@
 			children = (
 				7DCAEC1C262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json */,
 				7DD3CDBE265EC1FB00427861 /* MockChartGetTopArtistsSuccessful.json */,
+				7D60D9242660CE5300B78BCD /* MockChartGetTopTagsSuccessful.json */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -397,6 +486,7 @@
 				7DFF42C0262DBF9C009A743D /* Presentation Layer */,
 				7DCAEC342630C2170052A4B9 /* Top Artists */,
 				7DCAEC2C2630BE7C0052A4B9 /* Top Tracks */,
+				7D60D9222660CDD500B78BCD /* Top Tags */,
 				7DB08643262DBFD10076B0EF /* Data Services Layer */,
 			);
 			path = MusiqModuleCharts;
@@ -534,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DD3CDBF265EC1FB00427861 /* MockChartGetTopArtistsSuccessful.json in Resources */,
+				7D60D9252660CE5300B78BCD /* MockChartGetTopTagsSuccessful.json in Resources */,
 				7DCAEC1D262E48740052A4B9 /* MockChartGetTopTracksSuccessful.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +636,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D60D9362666CEED00B78BCD /* ChartTopTagsViewModel.swift in Sources */,
 				7DD3CDBB265EBF6700427861 /* ChartTopArtistDTO.swift in Sources */,
+				7D60D93D2666DCAD00B78BCD /* ChartTopTagsListView.swift in Sources */,
+				7D0BA2842660CBDA00A514A2 /* ChartTopTagsResultsView.swift in Sources */,
+				7D60D92F2660D29100B78BCD /* ChartTopTagDTOMapper.swift in Sources */,
+				7D60D93B2666DBD600B78BCD /* ChartTopTagRowView.swift in Sources */,
 				7D1837F3262DC13F0017058C /* ChartTopTracksDTO.swift in Sources */,
 				7D1837F0262DC1380017058C /* ChartTopTracksResultsView.swift in Sources */,
 				7D1837F6262DC1440017058C /* DataRequester+Tracks.swift in Sources */,
@@ -560,11 +656,16 @@
 				7DD3CDD3265FE6DE00427861 /* ChartTopArtistsViewModel.swift in Sources */,
 				7DD3CDD6265FE75F00427861 /* ChartTopArtistsViewModel+Reduce.swift in Sources */,
 				7D1837ED262DC1350017058C /* ChartsView.swift in Sources */,
+				7D60D92C2660D24500B78BCD /* ChartTopTag.swift in Sources */,
+				7D60D9342666CCBC00B78BCD /* ChartTopTagRowItem.swift in Sources */,
 				7DD3CDCF265FE4A000427861 /* ChartTopArtistRowView.swift in Sources */,
 				7DD3CDD1265FE57800427861 /* ChartTopArtistsListView.swift in Sources */,
+				7D60D9322660D34300B78BCD /* ChartTopTagsDTOMapper.swift in Sources */,
+				7D60D9272660CF3600B78BCD /* ChartTopTagsDTO.swift in Sources */,
 				7DD3CDC8265FC15F00427861 /* ChartTopArtistDTOMapper.swift in Sources */,
 				7DD3CDCD265FE3D600427861 /* ChartTopArtistRowItem.swift in Sources */,
 				7D17AE92264FCB9400DB11A3 /* ModuleChartsServices+Injection.swift in Sources */,
+				7D60D9392666CF5900B78BCD /* ChartTopTagsViewModel+Reduce.swift in Sources */,
 				7DCAEC0C262E2F0E0052A4B9 /* ChartTopTracksViewModel+Reduce+Debug.swift in Sources */,
 				7DD3CDC3265FC0BF00427861 /* ChartTopArtist.swift in Sources */,
 				7D1837FD262DC23C0017058C /* ChartTopTrack.swift in Sources */,
@@ -584,9 +685,12 @@
 				7DD3CDC1265EC43600427861 /* ChartsTopArtistsDataRequesterTests.swift in Sources */,
 				7DAFB2BC2650404900EB7E12 /* ChartTopTracksViewModelTests.swift in Sources */,
 				7DAFB2BF2650493E00EB7E12 /* ChartTopTrackRowTests.swift in Sources */,
+				7D60D93F2667559500B78BCD /* ChartsTopTagsDataRequesterTests.swift in Sources */,
 				7DAFB2C5265088C400EB7E12 /* ChartTopTrackDTOTests.swift in Sources */,
 				7DAFB2C226507E6C00EB7E12 /* ChartsTopTracksDataRequesterTests.swift in Sources */,
 				7DAFB2C826508E2200EB7E12 /* ChartTopTrackDTOMapperTests.swift in Sources */,
+				7D60D94126697B1700B78BCD /* ChartTopTagDTOTests.swift in Sources */,
+				7D60D943266ADAA300B78BCD /* ChartTopTagDTOMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

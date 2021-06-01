@@ -1,0 +1,19 @@
+{
+    "tags": {
+        "tag": [{
+                "name": "rock",
+                "taggings": "1233254"
+            },
+            {
+                "name": "rock",
+                "taggings": "1233254"
+            }
+        ],
+        "@attr": {
+            "totalPages": "576043",
+            "perPage": "50",
+            "total": "28802144",
+            "page": "1"
+        }
+    }
+}

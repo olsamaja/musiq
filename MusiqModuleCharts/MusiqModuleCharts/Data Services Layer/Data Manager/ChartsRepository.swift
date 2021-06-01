@@ -41,4 +41,13 @@ struct ChartsRemoteRepository: ChartsRepositoryProtocol {
             }
             .eraseToAnyPublisher()
     }
+
+    func getTopTags() -> AnyPublisher<[ChartTopTag], DataError> {
+        return dataRequester.getTopTags()
+            .mapError { $0 }
+            .map {
+                ChartTopTagsDTOMapper.map($0)
+            }
+            .eraseToAnyPublisher()
+    }
 }

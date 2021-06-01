@@ -28,4 +28,13 @@ extension DataRequester {
         
         return loadData(with: urlComponents)
     }
+    
+    func getTopTags() -> AnyPublisher<ChartTopTagsDTO, DataError> {
+        
+        let urlComponents = URLComponentsBuilder()
+            .with(key: "method", value: "chart.gettoptags")
+            .build()
+        
+        return loadData(with: urlComponents)
+    }
 }

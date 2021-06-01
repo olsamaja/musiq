@@ -11,9 +11,7 @@ public struct ChartTopArtistsDTOMapper {
     
     static func map(_ dto: ChartTopArtistsDTO) -> [ChartTopArtist] {
         dto.artists.artist.map {
-            ChartTopArtist(name: $0.name,
-                          listeners: $0.listeners,
-                          playcount: $0.playcount)
+            ChartTopArtistDTOMapper.map($0)
         }
     }
 }
