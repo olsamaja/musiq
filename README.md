@@ -3,11 +3,14 @@
 ![Language](https://img.shields.io/badge/language-Swift%205.4-orange.svg)
 [![GitHub followers](https://img.shields.io/github/followers/olsamaja.svg?style=social&label=Follow&style=flat-square)]()
 
-A very sample app developed in Swift.
+A very sample app developed in Swift, which I use as a playground to test frameworks, design patterns and some other tricks.
 
 ## Features
 
 - [x] Search artists
+- [x] Top Tracks Chart
+- [x] Top Artists Chart
+- [x] Top Tags Chart
 
 ## Requirements
 
@@ -28,6 +31,7 @@ The Xcodde workspace contains the following projects.
 
     ├─ MusiqApp
     ├─ MusiqModuleArtsists
+    ├─ MusiqModuleCharts
     ├─ MusiqConfiguration
     ├─ MusiqShared
     ├─ MusiqCoreUI
@@ -40,6 +44,10 @@ This is the project of the main application.
 ### MusiqModuleArtsists Project
 
 This project contains the Seach Artists module.
+
+### MusiqModuleCharts Project
+
+This project contains the Charts module.
 
 ### MusiqConfiguration Project
 
