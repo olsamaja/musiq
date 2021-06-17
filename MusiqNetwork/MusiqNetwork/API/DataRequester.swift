@@ -20,6 +20,18 @@ public final class DataRequester {
     
     public init() {}
     
+    /**
+     Fetch decodable data from the server.
+     
+     - returns:
+     A publisher of decoable data or an error.
+     
+     - parameters:
+        - components: URL compoments used in the request.
+     
+     This function returns data from the LastFM server.
+     */
+    
     public func loadData<T>(with components: URLComponents) -> AnyPublisher<T, DataError> where T: Decodable {
         
         guard let url = components.url else {
