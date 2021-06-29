@@ -15,7 +15,7 @@ A very sample app developed in Swift, which I use as a playground to test framew
 ## Requirements
 
 - iOS 14.0+
-- Xcode 12.2
+- Xcode 12.4
 
 ## Installation
 
@@ -27,7 +27,7 @@ git clone https://github.com/olsamaja/musiq.git
 
 ## Project Structure
 
-The Xcodde workspace contains the following projects.
+The Xcode workspace contains the following projects.
 
     ├─ MusiqApp
     ├─ MusiqModuleArtsists
@@ -41,15 +41,34 @@ The Xcodde workspace contains the following projects.
 
 This is the project of the main application.
 
-### MusiqModuleArtsists Project
+### Domain Modules
+
+#### Module Structure
+
+    +- Module
+        +─ Configuration
+        +─ Presentation Layer
+            +- Views
+        +─ Domain Layer
+            +- View Models
+            +- Domain Models
+                +- Data Mappers
+        +─ Data Services Layer
+            +- Data Manager
+            +- Data Models
+            +- API
+    +- Tests
+
+
+#### MusiqModuleArtsists Project
 
 This project contains the Seach Artists module.
 
-### MusiqModuleCharts Project
+#### MusiqModuleCharts Project
 
 This project contains the Charts module.
 
-### MusiqConfiguration Project
+#### MusiqConfiguration Project
 
 This project contains ressources, classes and functions needed for configuring the application.
 
