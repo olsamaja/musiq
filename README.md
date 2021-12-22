@@ -60,6 +60,8 @@ This is the project of the main application.
     +- Tests
 
 
+![Anatomy of a module](Diagrams/module-arch.png)
+
 #### MusiqModuleArtsists Project
 
 This project contains the Seach Artists module.
